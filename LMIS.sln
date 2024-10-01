@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMIS.Web", "LMIS\LMIS.Web\LMIS.Web.csproj", "{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93094A95-A79B-42D3-9EB7-ACEE2870A157}
+	EndGlobalSection
+EndGlobal

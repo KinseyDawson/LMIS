@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\KinseyLin\\Desktop\\Dawson\\LMIS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}|LMIS\\LMIS.Web\\LMIS.Web.csproj|c:\\users\\kinseylin\\desktop\\dawson\\lmis\\lmis\\lmis.web\\migrations\\defaultdb\\defaultdb_20240903_0004_exceptionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}|LMIS\\LMIS.Web\\LMIS.Web.csproj|solutionrelative:lmis\\lmis.web\\migrations\\defaultdb\\defaultdb_20240903_0004_exceptionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}|LMIS\\LMIS.Web\\LMIS.Web.csproj|c:\\users\\kinseylin\\desktop\\dawson\\lmis\\lmis\\lmis.web\\migrations\\defaultdb\\defaultdb_20240903_0003_userpreferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}|LMIS\\LMIS.Web\\LMIS.Web.csproj|solutionrelative:lmis\\lmis.web\\migrations\\defaultdb\\defaultdb_20240903_0003_userpreferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}|LMIS\\LMIS.Web\\LMIS.Web.csproj|c:\\users\\kinseylin\\desktop\\dawson\\lmis\\lmis\\lmis.web\\migrations\\defaultdb\\defaultdb_20240903_0002_permissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}|LMIS\\LMIS.Web\\LMIS.Web.csproj|solutionrelative:lmis\\lmis.web\\migrations\\defaultdb\\defaultdb_20240903_0002_permissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}|LMIS\\LMIS.Web\\LMIS.Web.csproj|c:\\users\\kinseylin\\desktop\\dawson\\lmis\\lmis\\lmis.web\\migrations\\defaultdb\\defaultdb_20240903_0001_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}|LMIS\\LMIS.Web\\LMIS.Web.csproj|solutionrelative:lmis\\lmis.web\\migrations\\defaultdb\\defaultdb_20240903_0001_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}|LMIS\\LMIS.Web\\LMIS.Web.csproj|c:\\users\\kinseylin\\desktop\\dawson\\lmis\\lmis\\lmis.web\\initialization\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE83F754-5EF7-40EF-9B16-0D427C5D8C62}|LMIS\\LMIS.Web\\LMIS.Web.csproj|solutionrelative:lmis\\lmis.web\\initialization\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DefaultDB_20240903_0004_ExceptionLog.cs",
+              "DocumentMoniker": "C:\\Users\\KinseyLin\\Desktop\\Dawson\\LMIS\\LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0004_ExceptionLog.cs",
+              "RelativeDocumentMoniker": "LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0004_ExceptionLog.cs",
+              "ToolTip": "C:\\Users\\KinseyLin\\Desktop\\Dawson\\LMIS\\LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0004_ExceptionLog.cs",
+              "RelativeToolTip": "LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0004_ExceptionLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T07:41:00.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DefaultDB_20240903_0003_UserPreferences.cs",
+              "DocumentMoniker": "C:\\Users\\KinseyLin\\Desktop\\Dawson\\LMIS\\LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0003_UserPreferences.cs",
+              "RelativeDocumentMoniker": "LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0003_UserPreferences.cs",
+              "ToolTip": "C:\\Users\\KinseyLin\\Desktop\\Dawson\\LMIS\\LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0003_UserPreferences.cs",
+              "RelativeToolTip": "LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0003_UserPreferences.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T07:39:48.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DefaultDB_20240903_0002_Permissions.cs",
+              "DocumentMoniker": "C:\\Users\\KinseyLin\\Desktop\\Dawson\\LMIS\\LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0002_Permissions.cs",
+              "RelativeDocumentMoniker": "LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0002_Permissions.cs",
+              "ToolTip": "C:\\Users\\KinseyLin\\Desktop\\Dawson\\LMIS\\LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0002_Permissions.cs",
+              "RelativeToolTip": "LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0002_Permissions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T07:39:46.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DefaultDB_20240903_0001_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\KinseyLin\\Desktop\\Dawson\\LMIS\\LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0001_Initial.cs",
+              "RelativeDocumentMoniker": "LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0001_Initial.cs",
+              "ToolTip": "C:\\Users\\KinseyLin\\Desktop\\Dawson\\LMIS\\LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0001_Initial.cs",
+              "RelativeToolTip": "LMIS\\LMIS.Web\\Migrations\\DefaultDB\\DefaultDB_20240903_0001_Initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T07:34:04.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\KinseyLin\\Desktop\\Dawson\\LMIS\\LMIS\\LMIS.Web\\Initialization\\Startup.cs",
+              "RelativeDocumentMoniker": "LMIS\\LMIS.Web\\Initialization\\Startup.cs",
+              "ToolTip": "C:\\Users\\KinseyLin\\Desktop\\Dawson\\LMIS\\LMIS\\LMIS.Web\\Initialization\\Startup.cs",
+              "RelativeToolTip": "LMIS\\LMIS.Web\\Initialization\\Startup.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAowIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T07:30:16.134Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
