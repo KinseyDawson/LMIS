@@ -1,0 +1,10 @@
+.idea/
+.DS_Store
+bin/
+obj/
+*.cache
+.vs/
+DawsonErp/DawsonErp.Web/wwwroot/esm/
+DawsonErp/DawsonErp.Web/node_modules/
+
+*.log
