@@ -6,7 +6,7 @@ public class DefaultDB_20240903_0003_UserPreferences : AutoReversingMigration
 {
     public override void Up()
     {
-        this.CreateTableWithId32("UserPreferences", "UserPreferenceId", s => s
+        this.CreateTableWithId64("UserPreferences", "UserPreferenceId", s => s
             .WithColumn("UserId").AsInt64().NotNullable()
             .WithColumn("PreferenceType").AsString(100).NotNullable()
             .WithColumn("Name").AsString(200).NotNullable()

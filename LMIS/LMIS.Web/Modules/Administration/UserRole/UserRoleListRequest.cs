@@ -1,6 +1,6 @@
-﻿namespace LMIS.Administration;
+namespace LMIS.Administration;
 
 public class UserRoleListRequest : ServiceRequest
 {
-    public int? UserID { get; set; }
+    public long? UserID { get; set; }
 }

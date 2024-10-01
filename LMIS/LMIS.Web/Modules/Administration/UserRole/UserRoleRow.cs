@@ -1,4 +1,4 @@
-﻿namespace LMIS.Administration;
+namespace LMIS.Administration;
 
 [ConnectionKey("Default"), Module("Administration"), TableName("UserRoles")]
 [DisplayName("UserRoles"), InstanceName("UserRoles")]
@@ -13,10 +13,10 @@ public sealed class UserRoleRow : Row<UserRoleRow.RowFields>, IIdRow
     public long? UserRoleId { get => fields.UserRoleId[this]; set => fields.UserRoleId[this] = value; }
 
     [DisplayName("User Id"), NotNull, ForeignKey(typeof(UserRow)), LeftJoin(jUser)]
-    public int? UserId { get => fields.UserId[this]; set => fields.UserId[this] = value; }
+    public long? UserId { get => fields.UserId[this]; set => fields.UserId[this] = value; }
 
     [DisplayName("Role Id"), NotNull, ForeignKey(typeof(RoleRow)), LeftJoin(jRole)]
-    public int? RoleId { get => fields.RoleId[this]; set => fields.RoleId[this] = value; }
+    public long? RoleId { get => fields.RoleId[this]; set => fields.RoleId[this] = value; }
 
     [DisplayName("Username"), Expression($"{jUser}.[Username]")]
     public string Username { get => fields.Username[this]; set => fields.Username[this] = value; }
@@ -30,8 +30,8 @@ public sealed class UserRoleRow : Row<UserRoleRow.RowFields>, IIdRow
     public class RowFields : RowFieldsBase
     {
         public Int64Field UserRoleId;
-        public Int32Field UserId;
-        public Int32Field RoleId;
+        public Int64Field UserId;
+        public Int64Field RoleId;
 
         public StringField Username;
         public StringField User;

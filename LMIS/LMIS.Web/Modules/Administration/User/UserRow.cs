@@ -1,4 +1,4 @@
-﻿using Serenity.Extensions.Entities;
+using Serenity.Extensions.Entities;
 
 namespace LMIS.Administration;
 [ConnectionKey("Default"), Module("Administration"), TableName("Users")]
@@ -9,13 +9,10 @@ namespace LMIS.Administration;
 public sealed class UserRow : Serenity.Extensions.Entities.LoggingRow<UserRow.RowFields>, IIdRow, INameRow, IIsActiveRow, IDisplayNameRow, IEmailRow, IPasswordRow
 {
     [DisplayName("User Id"), Identity, IdProperty]
-    public int? UserId { get => fields.UserId[this]; set => fields.UserId[this] = value; }
+    public long? UserId { get => fields.UserId[this]; set => fields.UserId[this] = value; }
 
     [DisplayName("Username"), Size(100), NotNull, QuickSearch, LookupInclude, NameProperty]
     public string Username { get => fields.Username[this]; set => fields.Username[this] = value; }
-
-    [DisplayName("Source"), Size(4), NotNull, Insertable(false), Updatable(false), DefaultValue("site")]
-    public string Source { get => fields.Source[this]; set => fields.Source[this] = value; }
 
     [DisplayName("Password Hash"), Size(86), NotNull, Insertable(false), Updatable(false), MinSelectLevel(SelectLevel.Never)]
     public string PasswordHash { get => fields.PasswordHash[this]; set => fields.PasswordHash[this] = value; }
@@ -55,11 +52,10 @@ public sealed class UserRow : Serenity.Extensions.Entities.LoggingRow<UserRow.Ro
     StringField IPasswordRow.PasswordHashField => fields.PasswordHash;
     StringField IPasswordRow.PasswordSaltField => fields.PasswordSalt;
 
-    public class RowFields : Serenity.Extensions.Entities.LoggingRowFields
+    public class RowFields : LoggingRowFields
     {
-        public Int32Field UserId;
+        public Int64Field UserId;
         public StringField Username;
-        public StringField Source;
         public StringField PasswordHash;
         public StringField PasswordSalt;
         public StringField DisplayName;

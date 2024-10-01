@@ -1,4 +1,4 @@
-﻿using MyRequest = Serenity.Services.SaveRequest<LMIS.Administration.UserRow>;
+using MyRequest = Serenity.Services.SaveRequest<LMIS.Administration.UserRow>;
 using MyResponse = Serenity.Services.SaveResponse;
 using MyRow = LMIS.Administration.UserRow;
 
@@ -24,12 +24,11 @@ public class UserSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>,
 
         if (!Permissions.HasPermission(PermissionKeys.Security))
         {
-            editable.Remove(Fld.Source);
             editable.Remove(Fld.IsActive);
         }
     }
 
-    public static string ValidateUsername(IDbConnection connection, string username, int? existingUserId,
+    public static string ValidateUsername(IDbConnection connection, string username, long? existingUserId,
         ITextLocalizer localizer)
     {
         username = username.TrimToNull();
@@ -89,7 +88,6 @@ public class UserSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>,
 
         if (IsCreate)
         {
-            Row.Source = "site";
             Row.IsActive = Row.IsActive ?? 1;
         }
 

@@ -1,4 +1,4 @@
-﻿using LMIS.Administration;
+using LMIS.Administration;
 using LMIS.Administration.Repositories;
 using Microsoft.AspNetCore.DataProtection;
 using System.IO;
@@ -50,7 +50,6 @@ public partial class AccountPage : Controller
             var userId = (int)connection.InsertAndGetID(new UserRow
             {
                 Username = username,
-                Source = "sign",
                 DisplayName = displayName,
                 Email = email,
                 PasswordHash = hash,

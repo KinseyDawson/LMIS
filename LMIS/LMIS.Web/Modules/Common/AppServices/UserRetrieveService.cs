@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+using System.Globalization;
 using MyRow = LMIS.Administration.UserRow;
 
 namespace LMIS.AppServices;
@@ -21,7 +21,6 @@ public class UserRetrieveService(ITwoLevelCache cache, ISqlConnections sqlConnec
                 UserImage = user.UserImage,
                 DisplayName = user.DisplayName,
                 IsActive = user.IsActive.Value,
-                Source = user.Source,
                 PasswordHash = user.PasswordHash,
                 PasswordSalt = user.PasswordSalt,
                 UpdateDate = user.UpdateDate,
@@ -53,7 +52,7 @@ public class UserRetrieveService(ITwoLevelCache cache, ISqlConnections sqlConnec
         });
     }
 
-    public static void RemoveCachedUser(ITwoLevelCache cache, int? userId, string username)
+    public static void RemoveCachedUser(ITwoLevelCache cache, long? userId, string username)
     {
         if (userId != null)
             cache.Remove("UserByID_" + userId);

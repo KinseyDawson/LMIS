@@ -1,10 +1,10 @@
-﻿using MyRow = LMIS.Administration.RoleRow;
+using MyRow = LMIS.Administration.RoleRow;
 
 namespace LMIS.Administration;
 public static class RoleHelper
 {
     private static MyRow.RowFields Fld { get { return MyRow.Fields; } }
-    public static Dictionary<int, MyRow> GetRoleById(ITwoLevelCache cache, ISqlConnections sqlConnections)
+    public static Dictionary<long, MyRow> GetRoleById(ITwoLevelCache cache, ISqlConnections sqlConnections)
     {
         if (cache is null)
             throw new ArgumentNullException(nameof(cache));

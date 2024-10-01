@@ -1,4 +1,4 @@
-﻿using LMIS.Administration;
+using LMIS.Administration;
 
 namespace LMIS;
 [Serializable]
@@ -9,7 +9,7 @@ public class UserDefinition : IUserDefinition, IHasPassword
     public string Email { get; set; }
     public string UserImage { get; set; }
     public short IsActive { get; set; }
-    public int UserId { get; set; }
+    public long UserId { get; set; }
     public string Username { get; set; }
     public string PasswordHash { get; set; }
     public string PasswordSalt { get; set; }

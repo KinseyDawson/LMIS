@@ -1,4 +1,4 @@
-﻿using System.Data;
+using System.Data;
 using MyRow = LMIS.Administration.UserRoleRow;
 
 namespace LMIS.Administration.Repositories;
@@ -21,11 +21,11 @@ public class UserRoleRepository : BaseRepository
             throw new ArgumentNullException(nameof(request.Roles));
 
         var userID = request.UserID.Value;
-        var oldList = new HashSet<int>(
+        var oldList = new HashSet<long>(
             GetExisting(uow.Connection, userID)
             .Select(x => x.RoleId.Value));
 
-        var newList = new HashSet<int>(request.Roles.ToList());
+        var newList = new HashSet<long>(request.Roles.ToList());
 
         if (oldList.SetEquals(newList))
             return new SaveResponse();
@@ -60,7 +60,7 @@ public class UserRoleRepository : BaseRepository
         return new SaveResponse();
     }
 
-    private List<MyRow> GetExisting(IDbConnection connection, int userId)
+    private List<MyRow> GetExisting(IDbConnection connection, long userId)
     {
         return connection.List<MyRow>(q =>
         {

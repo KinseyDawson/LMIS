@@ -1,4 +1,4 @@
-﻿using LMIS.Administration;
+using LMIS.Administration;
 using Microsoft.Extensions.Logging;
 
 namespace LMIS.AppServices;
@@ -169,7 +169,6 @@ public class UserPasswordValidator(ITwoLevelCache cache, ISqlConnections sqlConn
             var userId = (int)connection.InsertAndGetID(new UserRow
             {
                 Username = username,
-                Source = "ldap",
                 DisplayName = displayName,
                 Email = email,
                 PasswordHash = hash,

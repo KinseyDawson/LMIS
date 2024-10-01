@@ -1,5 +1,5 @@
-﻿namespace LMIS.Administration;
+namespace LMIS.Administration;
 
-public class UserRoleListResponse : ListResponse<int>
+public class UserRoleListResponse : ListResponse<long>
 {
 }

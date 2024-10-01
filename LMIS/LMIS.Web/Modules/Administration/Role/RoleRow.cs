@@ -1,4 +1,4 @@
-﻿namespace LMIS.Administration;
+namespace LMIS.Administration;
 
 [ConnectionKey("Default"), Module("Administration"), TableName("Roles")]
 [DisplayName("Roles"), InstanceName("Role")]
@@ -8,14 +8,14 @@
 public sealed class RoleRow : Row<RoleRow.RowFields>, IIdRow, INameRow
 {
     [DisplayName("Role Id"), Identity, ForeignKey("Roles", "RoleId"), LeftJoin("jRole"), IdProperty]
-    public int? RoleId { get => fields.RoleId[this]; set => fields.RoleId[this] = value; }
+    public long? RoleId { get => fields.RoleId[this]; set => fields.RoleId[this] = value; }
 
     [DisplayName("Role Name"), Size(100), NotNull, QuickSearch, NameProperty]
     public string RoleName { get => fields.RoleName[this]; set => fields.RoleName[this] = value; }
 
     public class RowFields : RowFieldsBase
     {
-        public Int32Field RoleId;
+        public Int64Field RoleId;
         public StringField RoleName;
     }
 }

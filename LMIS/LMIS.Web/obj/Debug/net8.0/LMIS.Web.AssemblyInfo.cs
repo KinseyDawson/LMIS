@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LMIS.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+472a4e46862cc78360e2b284f21f7ed44d8f36b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3a677faaa0496cb7c34a6b8076b30cf73800592")]
 [assembly: System.Reflection.AssemblyProductAttribute("LMIS.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LMIS.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

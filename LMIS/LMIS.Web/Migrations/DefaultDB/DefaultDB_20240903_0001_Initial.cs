@@ -6,7 +6,7 @@ public class DefaultDB_20240903_0001_Initial : AutoReversingMigration
 {
     public override void Up()
     {
-        this.CreateTableWithId32("Users", "UserId", s => s
+        this.CreateTableWithId64("Users", "UserId", s => s
             .WithColumn("Username").AsString(100).NotNullable().Unique("IX_Users_Username")
             .WithColumn("DisplayName").AsString(100).NotNullable()
             .WithColumn("Email").AsString(100).Nullable()
@@ -30,7 +30,7 @@ public class DefaultDB_20240903_0001_Initial : AutoReversingMigration
             InsertUserId = 1,
             IsActive = 1
         });
-        this.CreateTableWithId32("Languages", "Id", s => s
+        this.CreateTableWithId64("Languages", "Id", s => s
             .WithColumn("LanguageId").AsString(10).NotNullable().Unique("IX_Languages_LanguageId")
             .WithColumn("LanguageName").AsString(50).NotNullable());
 

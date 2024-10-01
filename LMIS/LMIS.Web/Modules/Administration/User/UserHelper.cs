@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.Extensions.Caching.Memory;
 using Serenity.Web.Providers;
 using System.Data;
@@ -11,7 +11,7 @@ public static class UserHelper
 {
     private static MyRow.RowFields Fld { get { return MyRow.Fields; } }
 
-    public static void CheckPublicDemo(this IOptions<EnvironmentSettings> environmentSettings, int? userID)
+    public static void CheckPublicDemo(this IOptions<EnvironmentSettings> environmentSettings, long? userID)
     {
         if (userID == 1 && environmentSettings.Value.IsPublicDemo)
             throw new ValidationError("Sorry, but no changes " +

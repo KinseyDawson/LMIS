@@ -1,4 +1,4 @@
-﻿namespace LMIS.Administration;
+namespace LMIS.Administration;
 
 [ConnectionKey("Default"), Module("Administration"), TableName("RolePermissions")]
 [DisplayName("Role Permissions"), InstanceName("Role Permission")]
@@ -10,7 +10,7 @@ public sealed class RolePermissionRow : Row<RolePermissionRow.RowFields>, IIdRow
     public long? RolePermissionId { get => fields.RolePermissionId[this]; set => fields.RolePermissionId[this] = value; }
 
     [DisplayName("Role Id"), NotNull, ForeignKey("Roles", "RoleId"), LeftJoin("jRole")]
-    public int? RoleId { get => fields.RoleId[this]; set => fields.RoleId[this] = value; }
+    public long? RoleId { get => fields.RoleId[this]; set => fields.RoleId[this] = value; }
 
     [DisplayName("Permission Key"), Size(100), NotNull, QuickSearch, NameProperty]
     public string PermissionKey { get => fields.PermissionKey[this]; set => fields.PermissionKey[this] = value; }
@@ -21,7 +21,7 @@ public sealed class RolePermissionRow : Row<RolePermissionRow.RowFields>, IIdRow
     public class RowFields : RowFieldsBase
     {
         public Int64Field RolePermissionId;
-        public Int32Field RoleId;
+        public Int64Field RoleId;
         public StringField PermissionKey;
 
         public StringField RoleName;

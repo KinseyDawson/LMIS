@@ -1,4 +1,4 @@
-﻿namespace LMIS.Administration;
+namespace LMIS.Administration;
 
 [ConnectionKey("Default"), Module("Administration"), TableName("Languages")]
 [DisplayName("Languages"), InstanceName("Language")]
@@ -8,7 +8,7 @@
 public sealed class LanguageRow : Row<LanguageRow.RowFields>, IIdRow, INameRow
 {
     [DisplayName("Id"), Identity, IdProperty]
-    public int? Id { get => fields.Id[this]; set => fields.Id[this] = value; }
+    public long? Id { get => fields.Id[this]; set => fields.Id[this] = value; }
 
     [DisplayName("Language Id"), Size(10), NotNull, QuickSearch]
     public string LanguageId { get => fields.LanguageId[this]; set => fields.LanguageId[this] = value; }
@@ -18,7 +18,7 @@ public sealed class LanguageRow : Row<LanguageRow.RowFields>, IIdRow, INameRow
 
     public class RowFields : RowFieldsBase
     {
-        public Int32Field Id;
+        public Int64Field Id;
         public StringField LanguageId;
         public StringField LanguageName;
     }

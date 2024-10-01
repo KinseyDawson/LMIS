@@ -4,7 +4,7 @@ bin/
 obj/
 *.cache
 .vs/
-DawsonErp/DawsonErp.Web/wwwroot/esm/
-DawsonErp/DawsonErp.Web/node_modules/
+LMIS/LMIS.Web/wwwroot/esm/
+LMIS/LMIS.Web/node_modules/
 
 *.log
