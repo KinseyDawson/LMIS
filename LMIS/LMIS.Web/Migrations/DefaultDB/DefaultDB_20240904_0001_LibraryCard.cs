@@ -10,7 +10,9 @@ public class DefaultDB_20240904_0001_LibraryCard : AutoReversingMigration
         this.CreateTableWithId64("CardLevels", "CardLevelId", s => s
             .WithColumn("Name").AsString(50).NotNullable()
             .WithColumn("Discount").AsDecimal().NotNullable().WithDefaultValue(1)
-            .WithColumn("Penalty").AsDecimal().NotNullable().WithDefaultValue(0));
+            .WithColumn("Penalty").AsDecimal().NotNullable().WithDefaultValue(0)
+            .WithColumn("CreateTime").AsDateTime().NotNullable()
+            .WithColumn("UpdateTime").AsDateTime().NotNullable());
 
         this.CreateTableWithId64("LibraryCards", "LibraryCardId", s => s
           .WithColumn("CardNo").AsString(50).NotNullable()
