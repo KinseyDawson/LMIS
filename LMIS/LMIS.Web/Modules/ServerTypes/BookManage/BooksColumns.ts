@@ -5,9 +5,9 @@ import { BooksRow } from "./BooksRow";
 export interface BooksColumns {
     BookId: Column<BooksRow>;
     BookName: Column<BooksRow>;
-    Cn: Column<BooksRow>;
-    Issn: Column<BooksRow>;
-    Isbn: Column<BooksRow>;
+    CN: Column<BooksRow>;
+    ISSN: Column<BooksRow>;
+    ISBN: Column<BooksRow>;
     AuthorName: Column<BooksRow>;
     PublisherName: Column<BooksRow>;
     PublisheDate: Column<BooksRow>;

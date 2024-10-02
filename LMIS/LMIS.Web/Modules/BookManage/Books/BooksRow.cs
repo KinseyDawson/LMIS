@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System;
@@ -22,14 +22,14 @@ public sealed class BooksRow : Row<BooksRow.RowFields>, IIdRow, INameRow
     [DisplayName("Book Name"), Size(100), NotNull, QuickSearch, NameProperty]
     public string BookName { get => fields.BookName[this]; set => fields.BookName[this] = value; }
 
-    [DisplayName("Cn"), Column("CN"), Size(20)]
-    public string Cn { get => fields.Cn[this]; set => fields.Cn[this] = value; }
+    [DisplayName("CN"), Size(20)]
+    public string CN { get => fields.CN[this]; set => fields.CN[this] = value; }
 
-    [DisplayName("Issn"), Column("ISSN"), Size(20)]
-    public string Issn { get => fields.Issn[this]; set => fields.Issn[this] = value; }
+    [DisplayName("ISSN"), Size(20)]
+    public string ISSN { get => fields.ISSN[this]; set => fields.ISSN[this] = value; }
 
-    [DisplayName("Isbn"), Column("ISBN"), Size(20)]
-    public string Isbn { get => fields.Isbn[this]; set => fields.Isbn[this] = value; }
+    [DisplayName("ISBN"), Size(20)]
+    public string ISBN { get => fields.ISBN[this]; set => fields.ISBN[this] = value; }
 
     [DisplayName("Author"), NotNull, ForeignKey(typeof(AuthorsRow)), LeftJoin(jAuthor), TextualField(nameof(AuthorName))]
     [ServiceLookupEditor(typeof(AuthorsRow))]
@@ -73,9 +73,9 @@ public sealed class BooksRow : Row<BooksRow.RowFields>, IIdRow, INameRow
     {
         public Int64Field BookId;
         public StringField BookName;
-        public StringField Cn;
-        public StringField Issn;
-        public StringField Isbn;
+        public StringField CN;
+        public StringField ISSN;
+        public StringField ISBN;
         public Int64Field AuthorId;
         public Int64Field PublisherId;
         public DateTimeField PublisheDate;

@@ -3,9 +3,9 @@
 export interface BooksRow {
     BookId?: number;
     BookName?: string;
-    Cn?: string;
-    Issn?: string;
-    Isbn?: string;
+    CN?: string;
+    ISSN?: string;
+    ISBN?: string;
     AuthorId?: number;
     PublisherId?: number;
     PublisheDate?: string;

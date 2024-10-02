@@ -51,6 +51,8 @@
   "Db.Administration.UserRole.Username": "用户名",
   "Db.Administration.UserRole.UserRoleId": "用户角色ID",
 
+  "Db.ReaderManage.CardLevels.EntityPlural": "等级",
+  "Db.ReaderManage.CardLevels.EntitySingular": "等级",
   "Db.ReaderManage.CardLevels.CardLevelId": "等级ID",
   "Db.ReaderManage.CardLevels.CardLevelName": "等级名",
   "Db.ReaderManage.CardLevels.Discount": "折扣",
@@ -60,6 +62,9 @@
   "Db.ReaderManage.CardLevels.CreateTime": "创建时间",
   "Db.ReaderManage.CardLevels.UpdateTime": "更新时间",
 
+
+  "Db.ReaderManage.LibraryCards.EntityPlural": "借阅卡",
+  "Db.ReaderManage.LibraryCards.EntitySingular": "借阅卡",
   "Db.ReaderManage.LibraryCards.LibraryCardId": "借阅卡ID",
   "Db.ReaderManage.LibraryCards.LibraryCardNo": "借阅卡号",
   "Db.ReaderManage.LibraryCards.UserId": "读者",
@@ -69,21 +74,29 @@
   "Db.ReaderManage.LibraryCards.UpdateTime": "更新时间",
 
 
+  "Db.ReaderManage.LibraryCardLose.EntityPlural": "挂失",
+  "Db.ReaderManage.LibraryCardLose.EntitySingular": "挂失",
   "Db.ReaderManage.LibraryCardLose.LibraryCardLostId": "挂失ID",
   "Db.ReaderManage.LibraryCardLose.LibraryCardId": "借阅卡",
   "Db.ReaderManage.LibraryCardLose.OperateUserId": "操作人",
+  "Db.ReaderManage.LibraryCardLose.OperateUserName": "操作人",
   "Db.ReaderManage.LibraryCardLose.CreateTime": "创建时间",
   "Db.ReaderManage.LibraryCardLose.UpdateTime": "更新时间",
 
 
+  "Db.BookManage.Categories.EntityPlural": "类别",
+  "Db.BookManage.Categories.EntitySingular": "类别",
   "Db.BookManage.Categories.CategoryId": "类别ID",
   "Db.BookManage.Categories.CategoryName": "类别名",
   "Db.BookManage.Categories.CreateTime": "创建时间",
   "Db.BookManage.Categories.UpdateTime": "更新时间",
 
+  "Db.BookManage.Bookshelfs.EntityPlural": "书架",
+  "Db.BookManage.Bookshelfs.EntitySingular": "书架",
   "Db.BookManage.Bookshelfs.BookshelfId": "书架ID",
   "Db.BookManage.Bookshelfs.Location": "位置",
   "Db.BookManage.Bookshelfs.CategoryId": "类别",
+  "Db.BookManage.Bookshelfs.CategoryName": "类别",
   "Db.BookManage.Bookshelfs.BookshelfImage": "书架图片",
   "Db.BookManage.Bookshelfs.BookCount": "书籍数量",
   "Db.BookManage.Bookshelfs.BookCapacity": "书籍容量",
@@ -91,6 +104,8 @@
   "Db.BookManage.Bookshelfs.UpdateTime": "更新时间",
 
 
+  "Db.BookManage.Authors.EntityPlural": "作者",
+  "Db.BookManage.Authors.EntitySingular": "作者",
   "Db.BookManage.Authors.AuthorId": "作者ID",
   "Db.BookManage.Authors.AuthorName": "作者名",
   "Db.BookManage.Authors.Sex": "性别",
@@ -100,6 +115,8 @@
   "Db.BookManage.Authors.UpdateTime": "更新时间",
 
 
+  "Db.BookManage.Publishers.EntityPlural": "出版社",
+  "Db.BookManage.Publishers.EntitySingular": "出版社",
   "Db.BookManage.Publishers.PublisherId": "出版社ID",
   "Db.BookManage.Publishers.PublisherName": "出版社名",
   "Db.BookManage.Publishers.Contact": "联系人",
@@ -109,8 +126,10 @@
   "Db.BookManage.Publishers.UpdateTime": "更新时间",
 
 
-  "Db.BookManage.Books.BookId": "出版社ID",
-  "Db.BookManage.Books.BookName": "出版社名",
+  "Db.BookManage.Books.EntityPlural": "书籍",
+  "Db.BookManage.Books.EntitySingular": "书籍",
+  "Db.BookManage.Books.BookId": "书籍ID",
+  "Db.BookManage.Books.BookName": "书籍名",
   "Db.BookManage.Books.CN": "书籍CN",
   "Db.BookManage.Books.ISSN": "书籍ISSN",
   "Db.BookManage.Books.ISBN": "书籍ISBN",
@@ -125,20 +144,24 @@
   "Db.BookManage.Books.CreateTime": "创建时间",
   "Db.BookManage.Books.UpdateTime": "更新时间",
 
-
+  "Db.InventoryManage.UpBookshelfs.EntityPlural": "上架",
+  "Db.InventoryManage.UpBookshelfs.EntitySingular": "上架",
   "Db.InventoryManage.UpBookshelfs.UpBookshelfId": "上架ID",
   "Db.InventoryManage.UpBookshelfs.BookId": "书籍",
   "Db.InventoryManage.UpBookshelfs.BookshelfId": "书架",
   "Db.InventoryManage.UpBookshelfs.Inventory": "数量",
   "Db.InventoryManage.UpBookshelfs.OperateUserId": "操作人",
+  "Db.InventoryManage.UpBookshelfs.OperateUserName": "操作人",
   "Db.InventoryManage.UpBookshelfs.CreateTime": "创建时间",
   "Db.InventoryManage.UpBookshelfs.UpdateTime": "更新时间",
 
-
+  "Db.InventoryManage.DownBookshelfs.EntityPlural": "下架",
+  "Db.InventoryManage.DownBookshelfs.EntitySingular": "下架",
   "Db.InventoryManage.DownBookshelfs.DownBookshelfId": "下架ID",
   "Db.InventoryManage.DownBookshelfs.BookId": "书籍",
   "Db.InventoryManage.DownBookshelfs.BookshelfId": "书架",
   "Db.InventoryManage.DownBookshelfs.OperateUserId": "操作人",
+  "Db.InventoryManage.DownBookshelfs.OperateUserName": "操作人",
   "Db.InventoryManage.DownBookshelfs.CreateTime": "创建时间",
   "Db.InventoryManage.DownBookshelfs.UpdateTime": "更新时间",
 

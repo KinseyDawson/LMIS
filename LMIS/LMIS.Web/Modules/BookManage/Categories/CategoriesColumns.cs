@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using System;
 using System.ComponentModel;
 
@@ -8,10 +8,14 @@ namespace LMIS.BookManage.Columns;
 [BasedOnRow(typeof(CategoriesRow), CheckNames = true)]
 public class CategoriesColumns
 {
-    [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+    [EditLink,  AlignRight]
     public long CategoryId { get; set; }
     [EditLink]
     public string CategoryName { get; set; }
+    [Width(150)]
+    [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
     public DateTime CreateTime { get; set; }
+    [Width(150)]
+    [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
     public DateTime UpdateTime { get; set; }
 }

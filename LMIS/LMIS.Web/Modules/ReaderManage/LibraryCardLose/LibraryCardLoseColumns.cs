@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using System;
 using System.ComponentModel;
 
@@ -8,10 +8,14 @@ namespace LMIS.ReaderManage.Columns;
 [BasedOnRow(typeof(LibraryCardLoseRow), CheckNames = true)]
 public class LibraryCardLoseColumns
 {
-    [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+    [EditLink, AlignRight]
     public long LibraryCardLostId { get; set; }
     public string LibraryCardNo { get; set; }
     public string OperateUserUsername { get; set; }
+    [Width(150)]
+    [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
     public DateTime CreateTime { get; set; }
+    [Width(150)]
+    [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
     public DateTime UpdateTime { get; set; }
 }
