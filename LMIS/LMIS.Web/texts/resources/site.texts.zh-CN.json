@@ -1,4 +1,4 @@
-﻿{
+{
   "Db.Administration.Language.EntityPlural": "语言",
   "Db.Administration.Language.EntitySingular": "语言",
   "Db.Administration.Language.Id": "ID",
@@ -50,6 +50,100 @@
   "Db.Administration.UserRole.UserId": "用户ID",
   "Db.Administration.UserRole.Username": "用户名",
   "Db.Administration.UserRole.UserRoleId": "用户角色ID",
+
+  "Db.ReaderManage.CardLevels.CardLevelId": "等级ID",
+  "Db.ReaderManage.CardLevels.CardLevelName": "等级名",
+  "Db.ReaderManage.CardLevels.Discount": "折扣",
+  "Db.ReaderManage.CardLevels.Penalty": "罚金（每天）",
+  "Db.ReaderManage.CardLevels.BorrowDays": "借阅期限（天）",
+  "Db.ReaderManage.CardLevels.BorrowBooks": "借阅数量（本）",
+  "Db.ReaderManage.CardLevels.CreateTime": "创建时间",
+  "Db.ReaderManage.CardLevels.UpdateTime": "更新时间",
+
+  "Db.ReaderManage.LibraryCards.LibraryCardId": "借阅卡ID",
+  "Db.ReaderManage.LibraryCards.LibraryCardNo": "借阅卡号",
+  "Db.ReaderManage.LibraryCards.UserId": "读者",
+  "Db.ReaderManage.LibraryCards.LevelId": "等级",
+  "Db.ReaderManage.LibraryCards.Status": "状态",
+  "Db.ReaderManage.LibraryCards.CreateTime": "创建时间",
+  "Db.ReaderManage.LibraryCards.UpdateTime": "更新时间",
+
+
+  "Db.ReaderManage.LibraryCardLose.LibraryCardLostId": "挂失ID",
+  "Db.ReaderManage.LibraryCardLose.LibraryCardId": "借阅卡",
+  "Db.ReaderManage.LibraryCardLose.OperateUserId": "操作人",
+  "Db.ReaderManage.LibraryCardLose.CreateTime": "创建时间",
+  "Db.ReaderManage.LibraryCardLose.UpdateTime": "更新时间",
+
+
+  "Db.BookManage.Categories.CategoryId": "类别ID",
+  "Db.BookManage.Categories.CategoryName": "类别名",
+  "Db.BookManage.Categories.CreateTime": "创建时间",
+  "Db.BookManage.Categories.UpdateTime": "更新时间",
+
+  "Db.BookManage.Bookshelfs.BookshelfId": "书架ID",
+  "Db.BookManage.Bookshelfs.Location": "位置",
+  "Db.BookManage.Bookshelfs.CategoryId": "类别",
+  "Db.BookManage.Bookshelfs.BookshelfImage": "书架图片",
+  "Db.BookManage.Bookshelfs.BookCount": "书籍数量",
+  "Db.BookManage.Bookshelfs.BookCapacity": "书籍容量",
+  "Db.BookManage.Bookshelfs.CreateTime": "创建时间",
+  "Db.BookManage.Bookshelfs.UpdateTime": "更新时间",
+
+
+  "Db.BookManage.Authors.AuthorId": "作者ID",
+  "Db.BookManage.Authors.AuthorName": "作者名",
+  "Db.BookManage.Authors.Sex": "性别",
+  "Db.BookManage.Authors.Email": "电子邮件",
+  "Db.BookManage.Authors.AuthorImage": "作者图片",
+  "Db.BookManage.Authors.CreateTime": "创建时间",
+  "Db.BookManage.Authors.UpdateTime": "更新时间",
+
+
+  "Db.BookManage.Publishers.PublisherId": "出版社ID",
+  "Db.BookManage.Publishers.PublisherName": "出版社名",
+  "Db.BookManage.Publishers.Contact": "联系人",
+  "Db.BookManage.Publishers.ContactPhone": "联系方式",
+  "Db.BookManage.Publishers.Email": "电子邮件",
+  "Db.BookManage.Publishers.CreateTime": "创建时间",
+  "Db.BookManage.Publishers.UpdateTime": "更新时间",
+
+
+  "Db.BookManage.Books.BookId": "出版社ID",
+  "Db.BookManage.Books.BookName": "出版社名",
+  "Db.BookManage.Books.CN": "书籍CN",
+  "Db.BookManage.Books.ISSN": "书籍ISSN",
+  "Db.BookManage.Books.ISBN": "书籍ISBN",
+  "Db.BookManage.Books.AuthorId": "作者",
+  "Db.BookManage.Books.PublisherId": "出版社",
+  "Db.BookManage.Books.PublisheDate": "出版日期",
+  "Db.BookManage.Books.Page": "页数",
+  "Db.BookManage.Books.Price": "单价",
+  "Db.BookManage.Books.Inventory": "库存",
+  "Db.BookManage.Books.BookStatus": "状态",
+  "Db.BookManage.Books.BookImage": "书籍图片",
+  "Db.BookManage.Books.CreateTime": "创建时间",
+  "Db.BookManage.Books.UpdateTime": "更新时间",
+
+
+  "Db.InventoryManage.UpBookshelfs.UpBookshelfId": "上架ID",
+  "Db.InventoryManage.UpBookshelfs.BookId": "书籍",
+  "Db.InventoryManage.UpBookshelfs.BookshelfId": "书架",
+  "Db.InventoryManage.UpBookshelfs.Inventory": "数量",
+  "Db.InventoryManage.UpBookshelfs.OperateUserId": "操作人",
+  "Db.InventoryManage.UpBookshelfs.CreateTime": "创建时间",
+  "Db.InventoryManage.UpBookshelfs.UpdateTime": "更新时间",
+
+
+  "Db.InventoryManage.DownBookshelfs.DownBookshelfId": "下架ID",
+  "Db.InventoryManage.DownBookshelfs.BookId": "书籍",
+  "Db.InventoryManage.DownBookshelfs.BookshelfId": "书架",
+  "Db.InventoryManage.DownBookshelfs.OperateUserId": "操作人",
+  "Db.InventoryManage.DownBookshelfs.CreateTime": "创建时间",
+  "Db.InventoryManage.DownBookshelfs.UpdateTime": "更新时间",
+
+
+
   "Forms.Membership.ChangePassword.ConfirmPassword": "确认密码",
   "Forms.Membership.ChangePassword.FormTitle": "修改密码",
   "Forms.Membership.ChangePassword.NewPassword": "新密码",
@@ -109,6 +203,19 @@
   "Navigation.Dashboard": "仪表盘",
   "Navigation.LogoutLink": "退出",
   "Navigation.SiteTitle": null,
+  "Navigation.BookManage": "藏书",
+  "Navigation.BookManage/Authors": "作者",
+  "Navigation.BookManage/Books": "书籍",
+  "Navigation.BookManage/Bookshelfs": "书架",
+  "Navigation.BookManage/Categories": "分类",
+  "Navigation.BookManage/Publishers": "出版社",
+  "Navigation.InventoryManage": "库存",
+  "Navigation.InventoryManage/DownBookshelfs": "上架",
+  "Navigation.InventoryManage/UpBookshelfs": "下架",
+  "Navigation.ReaderManage": "读者",
+  "Navigation.ReaderManage/CardLevels": "等级",
+  "Navigation.ReaderManage/LibraryCardLose": "挂失",
+  "Navigation.ReaderManage/LibraryCards": "借阅卡",
   "Permission.Administration:": "管理",
   "Permission.Administration:Security": "用户，角色管理和权限",
   "Permission.Administration:Translation": "语言和翻译",

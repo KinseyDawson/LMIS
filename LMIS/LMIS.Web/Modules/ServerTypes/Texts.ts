@@ -73,6 +73,132 @@ namespace LMIS.Texts {
                 export const Username: string;
             }
         }
+
+        namespace BookManage {
+
+            namespace Authors {
+                export const AuthorId: string;
+                export const AuthorImage: string;
+                export const AuthorName: string;
+                export const CreateTime: string;
+                export const Email: string;
+                export const Sex: string;
+                export const UpdateTime: string;
+            }
+
+            namespace Books {
+                export const AuthorId: string;
+                export const AuthorName: string;
+                export const BookId: string;
+                export const BookImage: string;
+                export const BookName: string;
+                export const BookStatus: string;
+                export const Cn: string;
+                export const CreateTime: string;
+                export const Inventory: string;
+                export const Isbn: string;
+                export const Issn: string;
+                export const Page: string;
+                export const Price: string;
+                export const PublisheDate: string;
+                export const PublisherId: string;
+                export const PublisherName: string;
+                export const UpdateTime: string;
+            }
+
+            namespace Bookshelfs {
+                export const BookCapacity: string;
+                export const BookCount: string;
+                export const BookshelfId: string;
+                export const BookshelfImage: string;
+                export const CategoryId: string;
+                export const CategoryName: string;
+                export const CreateTime: string;
+                export const Location: string;
+                export const UpdateTime: string;
+            }
+
+            namespace Categories {
+                export const CategoryId: string;
+                export const CategoryName: string;
+                export const CreateTime: string;
+                export const UpdateTime: string;
+            }
+
+            namespace Publishers {
+                export const Contact: string;
+                export const ContactPhone: string;
+                export const CreateTime: string;
+                export const Email: string;
+                export const PublisherId: string;
+                export const PublisherName: string;
+                export const UpdateTime: string;
+            }
+        }
+
+        namespace InventoryManage {
+
+            namespace DownBookshelfs {
+                export const BookId: string;
+                export const BookName: string;
+                export const BookshelfId: string;
+                export const BookshelfLocation: string;
+                export const CreateTime: string;
+                export const DownBookshelfId: string;
+                export const OperateUserId: string;
+                export const UpdateTime: string;
+                export const Username: string;
+            }
+
+            namespace UpBookshelfs {
+                export const BookId: string;
+                export const BookName: string;
+                export const BookshelfId: string;
+                export const BookshelfLocation: string;
+                export const CreateTime: string;
+                export const Inventory: string;
+                export const OperateUserId: string;
+                export const UpBookshelfId: string;
+                export const UpdateTime: string;
+                export const Username: string;
+            }
+        }
+
+        namespace ReaderManage {
+
+            namespace CardLevels {
+                export const BorrowBooks: string;
+                export const BorrowDays: string;
+                export const CardLevelId: string;
+                export const CardLevelName: string;
+                export const CreateTime: string;
+                export const Discount: string;
+                export const Penalty: string;
+                export const UpdateTime: string;
+            }
+
+            namespace LibraryCardLose {
+                export const CreateTime: string;
+                export const LibraryCardId: string;
+                export const LibraryCardLostId: string;
+                export const LibraryCardNo: string;
+                export const OperateUserId: string;
+                export const OperateUserUsername: string;
+                export const UpdateTime: string;
+            }
+
+            namespace LibraryCards {
+                export const CreateTime: string;
+                export const LevelCardLevelName: string;
+                export const LevelId: string;
+                export const LibraryCardId: string;
+                export const LibraryCardNo: string;
+                export const Status: string;
+                export const UpdateTime: string;
+                export const UserId: string;
+                export const Username: string;
+            }
+        }
     }
 
     export declare namespace Forms {
@@ -179,6 +305,22 @@ namespace LMIS.Texts {
                 User: {},
                 UserPermission: {},
                 UserRole: {}
+            },
+            BookManage: {
+                Authors: {},
+                Books: {},
+                Bookshelfs: {},
+                Categories: {},
+                Publishers: {}
+            },
+            InventoryManage: {
+                DownBookshelfs: {},
+                UpBookshelfs: {}
+            },
+            ReaderManage: {
+                CardLevels: {},
+                LibraryCardLose: {},
+                LibraryCards: {}
             }
         },
         Forms: {

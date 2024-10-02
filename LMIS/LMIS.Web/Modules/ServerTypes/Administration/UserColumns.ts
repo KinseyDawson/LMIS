@@ -7,7 +7,6 @@ export interface UserColumns {
     Username: Column<UserRow>;
     DisplayName: Column<UserRow>;
     Email: Column<UserRow>;
-    Source: Column<UserRow>;
     Roles: Column<UserRow>;
 }
 

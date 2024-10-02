@@ -11,11 +11,14 @@ public class DefaultDB_20240904_0002_Book : AutoReversingMigration
             .WithColumn("CategoryName").AsString(50).NotNullable().Unique("UK_Categories_CategoryName")
             .WithColumn("CreateTime").AsDateTime().NotNullable()
             .WithColumn("UpdateTime").AsDateTime().NotNullable());
+
         this.CreateTableWithId64("Bookshelfs", "BookshelfId", s => s
           .WithColumn("Location").AsString(100).NotNullable()
           .WithColumn("CategoryId").AsInt64().NotNullable()
           .ForeignKey("FK_Bookshelfs_CategoryId", "Categories", "CategoryId")
           .WithColumn("BookshelfImage").AsString(100).Nullable()
+          .WithColumn("BookCount").AsInt64().NotNullable()
+          .WithColumn("BookCapacity").AsInt64().NotNullable()
           .WithColumn("CreateTime").AsDateTime().NotNullable()
           .WithColumn("UpdateTime").AsDateTime().NotNullable());
 
@@ -47,8 +50,33 @@ public class DefaultDB_20240904_0002_Book : AutoReversingMigration
           .ForeignKey("FK_Books_AuthorId", "Authors", "AuthorId")
           .WithColumn("PublisherId").AsInt64().NotNullable()
           .ForeignKey("FK_Books_PublisherId", "Publishers", "PublisherId")
+          .WithColumn("PublisheDate").AsDateTime().NotNullable()
+          .WithColumn("Page").AsInt32().NotNullable()
+          .WithColumn("Price").AsDecimal().NotNullable()
           .WithColumn("Inventory").AsInt64().NotNullable()
+          .WithColumn("BookStatus").AsInt16().NotNullable()
           .WithColumn("BookImage").AsString(100).Nullable()
+          .WithColumn("CreateTime").AsDateTime().NotNullable()
+          .WithColumn("UpdateTime").AsDateTime().NotNullable());
+
+        this.CreateTableWithId64("UpBookshelfs", "UpBookshelfId", s => s
+          .WithColumn("BookId").AsInt64().NotNullable()
+          .ForeignKey("FK_UpBookshelfs_BookId", "Books", "BookId")
+          .WithColumn("BookshelfId").AsInt64().NotNullable()
+          .ForeignKey("FK_UpBookshelfs_BookshelfId", "Bookshelfs", "BookshelfId")
+          .WithColumn("Inventory").AsInt64().NotNullable()
+          .WithColumn("OperateUserId").AsInt64().NotNullable()
+          .ForeignKey("FK_UpBookshelfs_OperateUserId", "Users", "UserId")
+          .WithColumn("CreateTime").AsDateTime().NotNullable()
+          .WithColumn("UpdateTime").AsDateTime().NotNullable());
+
+        this.CreateTableWithId64("DownBookshelfs", "DownBookshelfId", s => s
+          .WithColumn("BookId").AsInt64().NotNullable()
+          .ForeignKey("FK_DownBookshelfs_BookId", "Books", "BookId")
+          .WithColumn("BookshelfId").AsInt64().NotNullable()
+          .ForeignKey("FK_DownBookshelfs_BookshelfId", "Bookshelfs", "BookshelfId")
+          .WithColumn("OperateUserId").AsInt64().NotNullable()
+          .ForeignKey("FK_DownBookshelfs_OperateUserId", "Users", "UserId")
           .WithColumn("CreateTime").AsDateTime().NotNullable()
           .WithColumn("UpdateTime").AsDateTime().NotNullable());
     }
