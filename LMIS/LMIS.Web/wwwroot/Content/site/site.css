@@ -83,3 +83,12 @@
 .s-PermissionCheckEditor .effective-permission.deny {
   background-image: url(../serenity/images/slash.png);
 }
+
+.slick-group-toggle {
+  display: inline-block;
+  width: 1.3rem;
+  margin-right: .2rem;
+  cursor: pointer;
+  text-indent: 20px;
+  line-height: 17px;
+}

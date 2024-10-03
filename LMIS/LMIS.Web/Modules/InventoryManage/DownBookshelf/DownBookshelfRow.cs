@@ -32,7 +32,11 @@ public sealed class DownBookshelfRow : Row<DownBookshelfRow.RowFields>, IIdRow
     [DisplayName("Operate User"), NotNull, ForeignKey(typeof(Administration.UserRow)), LeftJoin(jOperateUser)]
     [TextualField(nameof(OperateUserName)), LookupEditor(typeof(Administration.UserRow), Async = true)]
     public long? OperateUserId { get => fields.OperateUserId[this]; set => fields.OperateUserId[this] = value; }
+    [DisplayName("Inventory"), NotNull]
+    public long? Inventory { get => fields.Inventory[this]; set => fields.Inventory[this] = value; }
 
+    [DisplayName("Remark")]
+    public string Remark { get => fields.Remark[this]; set => fields.Remark[this] = value; }
     [DisplayName("Create Time"), NotNull]
     public DateTime? CreateTime { get => fields.CreateTime[this]; set => fields.CreateTime[this] = value; }
 
@@ -54,6 +58,8 @@ public sealed class DownBookshelfRow : Row<DownBookshelfRow.RowFields>, IIdRow
         public Int64Field BookId;
         public Int64Field BookshelfId;
         public Int64Field OperateUserId;
+        public Int64Field Inventory;
+        public StringField Remark;
         public DateTimeField CreateTime;
         public DateTimeField UpdateTime;
 

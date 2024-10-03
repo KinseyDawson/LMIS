@@ -1,4 +1,7 @@
-﻿using Serenity.Services;
+using LMIS.Modules.BookManage.Book;
+using LMIS.Modules.BookManage.Bookshelf;
+using LMIS.Modules.InventoryManage.BookStore;
+using Serenity.Services;
 using MyRequest = Serenity.Services.SaveRequest<LMIS.InventoryManage.DownBookshelfRow>;
 using MyResponse = Serenity.Services.SaveResponse;
 using MyRow = LMIS.InventoryManage.DownBookshelfRow;
@@ -9,8 +12,42 @@ public interface IDownBookshelfSaveHandler : ISaveHandler<MyRow, MyRequest, MyRe
 
 public class DownBookshelfSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IDownBookshelfSaveHandler
 {
-    public DownBookshelfSaveHandler(IRequestContext context)
+    private readonly IUserRetrieveService _userRetrieveService;
+    public DownBookshelfSaveHandler(IRequestContext context, IUserRetrieveService userRetrieveService)
             : base(context)
     {
+        _userRetrieveService = userRetrieveService;
+    }
+    protected override void ValidateRequest()
+    {
+        if (IsCreate)
+        {
+            var userId = _userRetrieveService.ByUsername(User.Identity?.Name ?? throw new InvalidOperationException()).Id;
+            Row.CreateTime = DateTime.Now;
+            Row.UpdateTime = DateTime.Now;
+            Row.OperateUserId = int.Parse(userId);
+        }
+        var bookStoreRow = BookStoreHelper.QueryByBookIdAndBookshelfId(Connection,
+            Request.Entity.BookId ?? 0,
+            Request.Entity.BookshelfId ?? 0);
+        if (bookStoreRow == null || bookStoreRow.Inventory < Request.Entity.Inventory)
+        {
+            throw new ValidationError(Texts.Validation.BookStoreHasNotEnoughInventory.ToString(Localizer));
+        }
+        base.ValidateRequest();
+    }
+    protected override void AfterSave()
+    {
+        BookHelper.DncreaseInventory(Connection,
+            Request.Entity.BookId ?? 0,
+            Request.Entity.Inventory ?? 0);
+        BookStoreHelper.Decrease(Connection,
+            Request.Entity.BookId ?? 0,
+            Request.Entity.BookshelfId ?? 0,
+            Request.Entity.Inventory ?? 0);
+        BookshelfHelper.Down(Connection,
+            Request.Entity.BookshelfId ?? 0,
+            Request.Entity.Inventory ?? 0);
+        base.AfterSave();
     }
 }

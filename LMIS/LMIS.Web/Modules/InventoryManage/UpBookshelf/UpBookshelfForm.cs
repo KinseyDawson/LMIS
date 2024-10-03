@@ -11,4 +11,5 @@ public class UpBookshelfForm
     public long BookshelfId { get; set; }
     [IntegerEditor]
     public long Inventory { get; set; }
+    public string Remark { get; set; }
 }

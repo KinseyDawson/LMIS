@@ -6,7 +6,9 @@ export interface DownBookshelfColumns {
     DownBookshelfId: Column<DownBookshelfRow>;
     BookName: Column<DownBookshelfRow>;
     BookshelfLocation: Column<DownBookshelfRow>;
+    Inventory: Column<DownBookshelfRow>;
     OperateUserName: Column<DownBookshelfRow>;
+    Remark: Column<DownBookshelfRow>;
     CreateTime: Column<DownBookshelfRow>;
     UpdateTime: Column<DownBookshelfRow>;
 }

@@ -6,6 +6,7 @@ export interface UpBookshelfRow {
     BookshelfId?: number;
     Inventory?: number;
     OperateUserId?: number;
+    Remark?: string;
     CreateTime?: string;
     UpdateTime?: string;
     BookName?: string;

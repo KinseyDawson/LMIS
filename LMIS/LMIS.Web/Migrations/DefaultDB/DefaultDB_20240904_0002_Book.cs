@@ -81,6 +81,7 @@ public class DefaultDB_20240904_0002_Book : AutoReversingMigration
           .WithColumn("Inventory").AsInt64().NotNullable()
           .WithColumn("OperateUserId").AsInt64().NotNullable()
           .ForeignKey("FK_UpBookshelfs_OperateUserId", "Users", "UserId")
+          .WithColumn("Remark").AsString(50).NotNullable()
           .WithColumn("CreateTime").AsDateTime().NotNullable()
           .WithColumn("UpdateTime").AsDateTime().NotNullable());
 
@@ -92,6 +93,7 @@ public class DefaultDB_20240904_0002_Book : AutoReversingMigration
           .WithColumn("OperateUserId").AsInt64().NotNullable()
           .ForeignKey("FK_DownBookshelfs_OperateUserId", "Users", "UserId")
           .WithColumn("Inventory").AsInt64().NotNullable()
+          .WithColumn("Remark").AsString(50).NotNullable()
           .WithColumn("CreateTime").AsDateTime().NotNullable()
           .WithColumn("UpdateTime").AsDateTime().NotNullable());
     }

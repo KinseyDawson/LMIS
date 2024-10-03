@@ -157,8 +157,10 @@ namespace LMIS.Texts {
                 export const BookshelfLocation: string;
                 export const CreateTime: string;
                 export const DownBookshelfId: string;
+                export const Inventory: string;
                 export const OperateUserId: string;
                 export const OperateUserName: string;
+                export const Remark: string;
                 export const UpdateTime: string;
             }
 
@@ -171,6 +173,7 @@ namespace LMIS.Texts {
                 export const Inventory: string;
                 export const OperateUserId: string;
                 export const OperateUserName: string;
+                export const Remark: string;
                 export const UpBookshelfId: string;
                 export const UpdateTime: string;
             }
@@ -297,6 +300,7 @@ namespace LMIS.Texts {
     export declare namespace Validation {
         export const AuthenticationError: string;
         export const AuthorUniqueError: string;
+        export const BookStoreHasNotEnoughInventory: string;
         export const BookUniqueError: string;
         export const BookshelfUniqueError: string;
         export const BookshlefExceedCapacity: string;

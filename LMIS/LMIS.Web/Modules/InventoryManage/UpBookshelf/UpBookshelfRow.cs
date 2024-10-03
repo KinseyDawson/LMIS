@@ -36,6 +36,9 @@ public sealed class UpBookshelfRow : Row<UpBookshelfRow.RowFields>, IIdRow
     [TextualField(nameof(OperateUserName)), LookupEditor(typeof(Administration.UserRow), Async = true)]
     public long? OperateUserId { get => fields.OperateUserId[this]; set => fields.OperateUserId[this] = value; }
 
+    [DisplayName("Remark")]
+    public string Remark { get => fields.Remark[this]; set => fields.Remark[this] = value; }
+
     [DisplayName("Create Time"), NotNull]
     public DateTime? CreateTime { get => fields.CreateTime[this]; set => fields.CreateTime[this] = value; }
 
@@ -58,6 +61,7 @@ public sealed class UpBookshelfRow : Row<UpBookshelfRow.RowFields>, IIdRow
         public Int64Field BookshelfId;
         public Int64Field Inventory;
         public Int64Field OperateUserId;
+        public StringField Remark;
         public DateTimeField CreateTime;
         public DateTimeField UpdateTime;
 

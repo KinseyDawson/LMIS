@@ -5,6 +5,8 @@ export interface DownBookshelfRow {
     BookId?: number;
     BookshelfId?: number;
     OperateUserId?: number;
+    Inventory?: number;
+    Remark?: string;
     CreateTime?: string;
     UpdateTime?: string;
     BookName?: string;

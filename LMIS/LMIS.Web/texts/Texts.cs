@@ -134,7 +134,8 @@ public static partial class Texts
         public static readonly LocalText PublisherUniqueError = "Publisher duplicates. Please type new Name!";
         public static readonly LocalText AuthorUniqueError = "Author duplicates. Please type new Name and Email!";
         public static readonly LocalText BookshelfUniqueError = "Bookshelf duplicates. Please type new location!";
-        public static readonly LocalText BookshlefExceedCapacity = "Bookshelf Exceeds Capacity. Please reduce inventory!";
         public static readonly LocalText BookUniqueError = "Book duplicates. Please type new ISBN!";
+        public static readonly LocalText BookshlefExceedCapacity = "Bookshelf exceeds capacity. Please reduce inventory!";
+        public static readonly LocalText BookStoreHasNotEnoughInventory = "BookStore has not enough inventory. Please reduce inventory!";
     }
 }

@@ -20,12 +20,20 @@ public class BookshelfHelper
         }
         return null;
     }
-    public static void Up(IDbConnection connection, long bookshelfId, long amount)
+    public static void Up(IDbConnection connection, long bookshelfId, long inventory)
     {
         var sqlText = @"update Bookshelfs
                         set
-                        BookCount =BookCount +@Amount
+                        BookCount =BookCount +@Inventory
                         where BookshelfId=@BookshelfId";
-        connection.Execute(sqlText, new { BookshelfId = bookshelfId, Amount = amount });
+        connection.Execute(sqlText, new { BookshelfId = bookshelfId, Inventory = inventory });
+    }
+    public static void Down(IDbConnection connection, long bookshelfId, long inventory)
+    {
+        var sqlText = @"update Bookshelfs
+                        set
+                        BookCount =BookCount -@Inventory
+                        where BookshelfId=@BookshelfId";
+        connection.Execute(sqlText, new { BookshelfId = bookshelfId, Inventory = inventory });
     }
 }

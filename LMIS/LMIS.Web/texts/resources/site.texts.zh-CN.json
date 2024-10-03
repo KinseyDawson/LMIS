@@ -159,6 +159,7 @@
   "Db.InventoryManage.UpBookshelf.OperateUserName": "操作人",
   "Db.InventoryManage.UpBookshelf.CreateTime": "创建时间",
   "Db.InventoryManage.UpBookshelf.UpdateTime": "更新时间",
+  "Db.InventoryManage.UpBookshelf.Remark": "备注",
 
   "Db.InventoryManage.DownBookshelf.EntityPlural": "下架",
   "Db.InventoryManage.DownBookshelf.EntitySingular": "下架",
@@ -167,10 +168,12 @@
   "Db.InventoryManage.DownBookshelf.BookName": "书籍",
   "Db.InventoryManage.DownBookshelf.BookshelfId": "书架",
   "Db.InventoryManage.DownBookshelf.BookshelfLocation": "书架",
+  "Db.InventoryManage.DownBookshelf.Inventory": "数量",
   "Db.InventoryManage.DownBookshelf.OperateUserId": "操作人",
   "Db.InventoryManage.DownBookshelf.OperateUserName": "操作人",
   "Db.InventoryManage.DownBookshelf.CreateTime": "创建时间",
   "Db.InventoryManage.DownBookshelf.UpdateTime": "更新时间",
+  "Db.InventoryManage.DownBookshelf.Remark": "备注",
 
 
   "Db.InventoryManage.BookStore.EntityPlural": "收录",
@@ -296,5 +299,6 @@
   "Validation.AuthorUniqueError": "作者重复，请重新输入姓名以及邮件！",
   "Validation.BookshelfUniqueError": "书架重复，请重新输入位置！",
   "Validation.BookUniqueError": "书籍重复，请重新输入LSBN！",
-  "Validation.BookshlefExceedCapacity": "书架容量超限，请减少上架库存！"
+  "Validation.BookshlefExceedCapacity": "书架容量超限，请减少上架数量！",
+  "Validation.BookStoreHasNotEnoughInventory": "当前收录库存不够，请减少下架数量！"
 }
