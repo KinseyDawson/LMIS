@@ -1,9 +1,7 @@
-﻿import { StringEditor, DateEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
+﻿import { StringEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
 
 export interface CategoriesForm {
     CategoryName: StringEditor;
-    CreateTime: DateEditor;
-    UpdateTime: DateEditor;
 }
 
 export class CategoriesForm extends PrefixedContext {
@@ -17,12 +15,9 @@ export class CategoriesForm extends PrefixedContext {
             CategoriesForm.init = true;
 
             var w0 = StringEditor;
-            var w1 = DateEditor;
 
             initFormType(CategoriesForm, [
-                'CategoryName', w0,
-                'CreateTime', w1,
-                'UpdateTime', w1
+                'CategoryName', w0
             ]);
         }
     }

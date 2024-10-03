@@ -272,5 +272,7 @@
   "Validation.MinRequiredPasswordLength": "输入的密码字符不足（最小{0}）！",
   "Validation.PasswordConfirmMismatch": "输入的密码不匹配！",
   "Validation.SavePrimaryKeyError": "无法保存记录。 有另一条记录具有相同的{1}值！",
+  "Validation.CategoryUniqueError": "类别重复，请重新输入名称！",
+  "Validation.PublisherUniqueError": "出版社重复，请重新输入名称！",
   "Validation.AuthorUniqueError": "作者重复，请重新输入姓名以及邮件！"
 }

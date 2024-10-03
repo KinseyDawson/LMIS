@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using System;
 
 namespace LMIS.BookManage.Forms;
@@ -11,6 +11,4 @@ public class PublishersForm
     public string Contact { get; set; }
     public string ContactPhone { get; set; }
     public string Email { get; set; }
-    public DateTime CreateTime { get; set; }
-    public DateTime UpdateTime { get; set; }
 }

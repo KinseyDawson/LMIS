@@ -1,4 +1,5 @@
-﻿using Serenity.Services;
+using MySql.Data.MySqlClient;
+using Serenity.Services;
 using MyRequest = Serenity.Services.SaveRequest<LMIS.BookManage.CategoriesRow>;
 using MyResponse = Serenity.Services.SaveResponse;
 using MyRow = LMIS.BookManage.CategoriesRow;
@@ -12,5 +13,29 @@ public class CategoriesSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResp
     public CategoriesSaveHandler(IRequestContext context)
             : base(context)
     {
+    }
+    protected override void ExecuteSave()
+    {
+        try
+        {
+            base.ExecuteSave();
+        }
+        catch (MySqlException ex) when (ex.Message.StartsWith("Duplicate"))
+        {
+            throw new ValidationError(Texts.Validation.CategoryUniqueError.ToString(Localizer));
+        }
+    }
+    protected override void ValidateRequest()
+    {
+        if (IsCreate)
+        {
+            Row.CreateTime = DateTime.Now;
+            Row.UpdateTime = DateTime.Now;
+        }
+        else
+        {
+            Row.UpdateTime = DateTime.Now;
+        }
+        base.ValidateRequest();
     }
 }

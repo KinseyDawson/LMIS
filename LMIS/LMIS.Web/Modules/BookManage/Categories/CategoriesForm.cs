@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using System;
 
 namespace LMIS.BookManage.Forms;
@@ -8,6 +8,4 @@ namespace LMIS.BookManage.Forms;
 public class CategoriesForm
 {
     public string CategoryName { get; set; }
-    public DateTime CreateTime { get; set; }
-    public DateTime UpdateTime { get; set; }
 }
