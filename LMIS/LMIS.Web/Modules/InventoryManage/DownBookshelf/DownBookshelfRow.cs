@@ -1,4 +1,5 @@
-﻿using Serenity.ComponentModel;
+using LMIS.BookManage;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System;
@@ -20,14 +21,16 @@ public sealed class DownBookshelfRow : Row<DownBookshelfRow.RowFields>, IIdRow
     public long? DownBookshelfId { get => fields.DownBookshelfId[this]; set => fields.DownBookshelfId[this] = value; }
 
     [DisplayName("Book"), NotNull, ForeignKey("books", "BookId"), LeftJoin(jBook), TextualField(nameof(BookName))]
+    [ServiceLookupEditor(typeof(BookRow))]
     public long? BookId { get => fields.BookId[this]; set => fields.BookId[this] = value; }
 
     [DisplayName("Bookshelf"), NotNull, ForeignKey("bookshelfs", "BookshelfId"), LeftJoin(jBookshelf)]
     [TextualField(nameof(BookshelfLocation))]
+    [ServiceLookupEditor(typeof(BookshelfRow))]
     public long? BookshelfId { get => fields.BookshelfId[this]; set => fields.BookshelfId[this] = value; }
 
     [DisplayName("Operate User"), NotNull, ForeignKey(typeof(Administration.UserRow)), LeftJoin(jOperateUser)]
-    [TextualField(nameof(OperateUserUsername)), LookupEditor(typeof(Administration.UserRow), Async = true)]
+    [TextualField(nameof(OperateUserName)), LookupEditor(typeof(Administration.UserRow), Async = true)]
     public long? OperateUserId { get => fields.OperateUserId[this]; set => fields.OperateUserId[this] = value; }
 
     [DisplayName("Create Time"), NotNull]
@@ -36,14 +39,14 @@ public sealed class DownBookshelfRow : Row<DownBookshelfRow.RowFields>, IIdRow
     [DisplayName("Update Time"), NotNull]
     public DateTime? UpdateTime { get => fields.UpdateTime[this]; set => fields.UpdateTime[this] = value; }
 
-    [DisplayName("Book Book Name"), Expression($"{jBook}.[BookName]")]
+    [DisplayName("Book Name"), Expression($"{jBook}.[BookName]")]
     public string BookName { get => fields.BookName[this]; set => fields.BookName[this] = value; }
 
     [DisplayName("Bookshelf Location"), Expression($"{jBookshelf}.[Location]")]
     public string BookshelfLocation { get => fields.BookshelfLocation[this]; set => fields.BookshelfLocation[this] = value; }
 
-    [DisplayName("Operate User Username"), Origin(jOperateUser, nameof(Administration.UserRow.Username))]
-    public string OperateUserUsername { get => fields.OperateUserUsername[this]; set => fields.OperateUserUsername[this] = value; }
+    [DisplayName("Operate UserName"), Origin(jOperateUser, nameof(Administration.UserRow.DisplayName))]
+    public string OperateUserName { get => fields.OperateUserName[this]; set => fields.OperateUserName[this] = value; }
 
     public class RowFields : RowFieldsBase
     {
@@ -56,6 +59,6 @@ public sealed class DownBookshelfRow : Row<DownBookshelfRow.RowFields>, IIdRow
 
         public StringField BookName;
         public StringField BookshelfLocation;
-        public StringField OperateUserUsername;
+        public StringField OperateUserName;
     }
 }

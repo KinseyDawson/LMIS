@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using System;
 
 namespace LMIS.InventoryManage.Forms;
@@ -9,8 +9,6 @@ public class UpBookshelfForm
 {
     public long BookId { get; set; }
     public long BookshelfId { get; set; }
+    [IntegerEditor]
     public long Inventory { get; set; }
-    public long OperateUserId { get; set; }
-    public DateTime CreateTime { get; set; }
-    public DateTime UpdateTime { get; set; }
 }

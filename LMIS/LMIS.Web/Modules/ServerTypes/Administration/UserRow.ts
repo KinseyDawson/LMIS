@@ -22,7 +22,7 @@ export interface UserRow {
 export abstract class UserRow {
     static readonly idProperty = 'UserId';
     static readonly isActiveProperty = 'IsActive';
-    static readonly nameProperty = 'Username';
+    static readonly nameProperty = 'DisplayName';
     static readonly localTextPrefix = 'Administration.User';
     static readonly lookupKey = 'Administration.User';
 

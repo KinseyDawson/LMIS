@@ -11,7 +11,5 @@ public class BookshelfForm
     public long CategoryId { get; set; }
     public string BookshelfImage { get; set; }
     [IntegerEditor]
-    public long BookCount { get; set; }
-    [IntegerEditor]
     public long BookCapacity { get; set; }
 }

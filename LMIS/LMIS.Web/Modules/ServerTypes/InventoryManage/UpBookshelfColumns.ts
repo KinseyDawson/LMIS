@@ -7,7 +7,7 @@ export interface UpBookshelfColumns {
     BookName: Column<UpBookshelfRow>;
     BookshelfLocation: Column<UpBookshelfRow>;
     Inventory: Column<UpBookshelfRow>;
-    OperateUserUsername: Column<UpBookshelfRow>;
+    OperateUserName: Column<UpBookshelfRow>;
     CreateTime: Column<UpBookshelfRow>;
     UpdateTime: Column<UpBookshelfRow>;
 }

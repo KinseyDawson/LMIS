@@ -1,12 +1,9 @@
-﻿import { StringEditor, LookupEditor, DateEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
+﻿import { ServiceLookupEditor, IntegerEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
 
 export interface UpBookshelfForm {
-    BookId: StringEditor;
-    BookshelfId: StringEditor;
-    Inventory: StringEditor;
-    OperateUserId: LookupEditor;
-    CreateTime: DateEditor;
-    UpdateTime: DateEditor;
+    BookId: ServiceLookupEditor;
+    BookshelfId: ServiceLookupEditor;
+    Inventory: IntegerEditor;
 }
 
 export class UpBookshelfForm extends PrefixedContext {
@@ -19,17 +16,13 @@ export class UpBookshelfForm extends PrefixedContext {
         if (!UpBookshelfForm.init)  {
             UpBookshelfForm.init = true;
 
-            var w0 = StringEditor;
-            var w1 = LookupEditor;
-            var w2 = DateEditor;
+            var w0 = ServiceLookupEditor;
+            var w1 = IntegerEditor;
 
             initFormType(UpBookshelfForm, [
                 'BookId', w0,
                 'BookshelfId', w0,
-                'Inventory', w0,
-                'OperateUserId', w1,
-                'CreateTime', w2,
-                'UpdateTime', w2
+                'Inventory', w1
             ]);
         }
     }

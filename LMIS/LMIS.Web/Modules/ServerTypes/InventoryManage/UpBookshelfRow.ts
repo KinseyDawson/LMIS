@@ -10,7 +10,7 @@ export interface UpBookshelfRow {
     UpdateTime?: string;
     BookName?: string;
     BookshelfLocation?: string;
-    OperateUserUsername?: string;
+    OperateUserName?: string;
 }
 
 export abstract class UpBookshelfRow {

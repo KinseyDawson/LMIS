@@ -29,6 +29,7 @@ public class BookshelfSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyRespo
     {
         if (IsCreate)
         {
+            Row.BookCount= 0;
             Row.CreateTime = DateTime.Now;
         }
         Row.UpdateTime = DateTime.Now;

@@ -147,7 +147,7 @@ namespace LMIS.Texts {
                 export const CreateTime: string;
                 export const DownBookshelfId: string;
                 export const OperateUserId: string;
-                export const OperateUserUsername: string;
+                export const OperateUserName: string;
                 export const UpdateTime: string;
             }
 
@@ -159,7 +159,7 @@ namespace LMIS.Texts {
                 export const CreateTime: string;
                 export const Inventory: string;
                 export const OperateUserId: string;
-                export const OperateUserUsername: string;
+                export const OperateUserName: string;
                 export const UpBookshelfId: string;
                 export const UpdateTime: string;
             }
@@ -288,6 +288,7 @@ namespace LMIS.Texts {
         export const AuthorUniqueError: string;
         export const BookUniqueError: string;
         export const BookshelfUniqueError: string;
+        export const BookshlefExceedCapacity: string;
         export const CategoryUniqueError: string;
         export const CurrentPasswordMismatch: string;
         export const DeleteForeignKeyError: string;

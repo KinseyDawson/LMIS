@@ -9,7 +9,7 @@ export interface DownBookshelfRow {
     UpdateTime?: string;
     BookName?: string;
     BookshelfLocation?: string;
-    OperateUserUsername?: string;
+    OperateUserName?: string;
 }
 
 export abstract class DownBookshelfRow {

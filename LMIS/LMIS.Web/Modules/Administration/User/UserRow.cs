@@ -11,7 +11,7 @@ public sealed class UserRow : Serenity.Extensions.Entities.LoggingRow<UserRow.Ro
     [DisplayName("User Id"), Identity, IdProperty]
     public long? UserId { get => fields.UserId[this]; set => fields.UserId[this] = value; }
 
-    [DisplayName("Username"), Size(100), NotNull, QuickSearch, LookupInclude, NameProperty]
+    [DisplayName("Username"), Size(100), NotNull, QuickSearch, LookupInclude]
     public string Username { get => fields.Username[this]; set => fields.Username[this] = value; }
 
     [DisplayName("Password Hash"), Size(86), NotNull, Insertable(false), Updatable(false), MinSelectLevel(SelectLevel.Never)]
@@ -20,7 +20,7 @@ public sealed class UserRow : Serenity.Extensions.Entities.LoggingRow<UserRow.Ro
     [DisplayName("Password Salt"), Size(10), NotNull, Insertable(false), Updatable(false), MinSelectLevel(SelectLevel.Never)]
     public string PasswordSalt { get => fields.PasswordSalt[this]; set => fields.PasswordSalt[this] = value; }
 
-    [DisplayName("Display Name"), Size(100), NotNull, LookupInclude]
+    [DisplayName("Display Name"), Size(100), NotNull, NameProperty,LookupInclude]
     public string DisplayName { get => fields.DisplayName[this]; set => fields.DisplayName[this] = value; }
 
     [DisplayName("Email"), Size(100)]

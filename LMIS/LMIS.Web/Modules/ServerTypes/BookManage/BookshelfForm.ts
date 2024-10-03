@@ -4,7 +4,6 @@ export interface BookshelfForm {
     Location: StringEditor;
     CategoryId: ServiceLookupEditor;
     BookshelfImage: ImageUploadEditor;
-    BookCount: IntegerEditor;
     BookCapacity: IntegerEditor;
 }
 
@@ -27,7 +26,6 @@ export class BookshelfForm extends PrefixedContext {
                 'Location', w0,
                 'CategoryId', w1,
                 'BookshelfImage', w2,
-                'BookCount', w3,
                 'BookCapacity', w3
             ]);
         }
