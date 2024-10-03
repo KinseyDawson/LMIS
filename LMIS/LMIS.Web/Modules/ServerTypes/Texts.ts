@@ -93,11 +93,12 @@ namespace LMIS.Texts {
                 export const BookImage: string;
                 export const BookName: string;
                 export const BookStatus: string;
-                export const Cn: string;
+                export const BorrowableInventory: string;
+                export const CN: string;
                 export const CreateTime: string;
+                export const ISBN: string;
+                export const ISSN: string;
                 export const Inventory: string;
-                export const Isbn: string;
-                export const Issn: string;
                 export const Page: string;
                 export const Price: string;
                 export const PublisheDate: string;
@@ -285,6 +286,7 @@ namespace LMIS.Texts {
     export declare namespace Validation {
         export const AuthenticationError: string;
         export const AuthorUniqueError: string;
+        export const BookUniqueError: string;
         export const BookshelfUniqueError: string;
         export const CategoryUniqueError: string;
         export const CurrentPasswordMismatch: string;

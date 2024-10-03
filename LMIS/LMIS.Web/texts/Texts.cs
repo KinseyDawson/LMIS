@@ -134,5 +134,6 @@ public static partial class Texts
         public static readonly LocalText PublisherUniqueError = "Publisher duplicates. Please type new Name!";
         public static readonly LocalText AuthorUniqueError = "Author duplicates. Please type new Name and Email!";
         public static readonly LocalText BookshelfUniqueError = "Bookshelf duplicates. Please type new location!";
+        public static readonly LocalText BookUniqueError = "Book duplicates. Please type new ISBN!";
     }
 }

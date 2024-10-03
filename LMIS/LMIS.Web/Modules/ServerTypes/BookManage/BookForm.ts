@@ -1,20 +1,18 @@
-﻿import { StringEditor, ServiceLookupEditor, DateEditor, IntegerEditor, DecimalEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
+﻿import { StringEditor, ServiceLookupEditor, DateEditor, IntegerEditor, DecimalEditor, EnumEditor, ImageUploadEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
+import { BookStatusEnum } from "../Modules/BookManage.Book.BookStatusEnum";
 
 export interface BookForm {
     BookName: StringEditor;
-    Cn: StringEditor;
-    Issn: StringEditor;
-    Isbn: StringEditor;
+    CN: StringEditor;
+    ISSN: StringEditor;
+    ISBN: StringEditor;
     AuthorId: ServiceLookupEditor;
     PublisherId: ServiceLookupEditor;
     PublisheDate: DateEditor;
     Page: IntegerEditor;
     Price: DecimalEditor;
-    Inventory: StringEditor;
-    BookStatus: IntegerEditor;
-    BookImage: StringEditor;
-    CreateTime: DateEditor;
-    UpdateTime: DateEditor;
+    BookStatus: EnumEditor;
+    BookImage: ImageUploadEditor;
 }
 
 export class BookForm extends PrefixedContext {
@@ -32,23 +30,24 @@ export class BookForm extends PrefixedContext {
             var w2 = DateEditor;
             var w3 = IntegerEditor;
             var w4 = DecimalEditor;
+            var w5 = EnumEditor;
+            var w6 = ImageUploadEditor;
 
             initFormType(BookForm, [
                 'BookName', w0,
-                'Cn', w0,
-                'Issn', w0,
-                'Isbn', w0,
+                'CN', w0,
+                'ISSN', w0,
+                'ISBN', w0,
                 'AuthorId', w1,
                 'PublisherId', w1,
                 'PublisheDate', w2,
                 'Page', w3,
                 'Price', w4,
-                'Inventory', w0,
-                'BookStatus', w3,
-                'BookImage', w0,
-                'CreateTime', w2,
-                'UpdateTime', w2
+                'BookStatus', w5,
+                'BookImage', w6
             ]);
         }
     }
 }
+
+[BookStatusEnum]; // referenced types

@@ -6,10 +6,8 @@ export interface BookshelfColumns {
     BookshelfId: Column<BookshelfRow>;
     Location: Column<BookshelfRow>;
     CategoryName: Column<BookshelfRow>;
-    BookshelfImage: Column<BookshelfRow>;
     BookCount: Column<BookshelfRow>;
     BookCapacity: Column<BookshelfRow>;
-    CreateTime: Column<BookshelfRow>;
     UpdateTime: Column<BookshelfRow>;
 }
 

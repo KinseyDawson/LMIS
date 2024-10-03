@@ -3,15 +3,16 @@
 export interface BookRow {
     BookId?: number;
     BookName?: string;
-    Cn?: string;
-    Issn?: string;
-    Isbn?: string;
+    CN?: string;
+    ISSN?: string;
+    ISBN?: string;
     AuthorId?: number;
     PublisherId?: number;
     PublisheDate?: string;
     Page?: number;
     Price?: number;
     Inventory?: number;
+    BorrowableInventory?: number;
     BookStatus?: number;
     BookImage?: string;
     CreateTime?: string;

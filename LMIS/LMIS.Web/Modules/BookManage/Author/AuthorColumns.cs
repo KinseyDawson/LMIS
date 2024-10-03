@@ -14,11 +14,8 @@ public class AuthorColumns
     [EditLink]
     public string AuthorName { get; set; }
     public SexEnum Sex { get; set; }
+    [Width(250)]
     public string Email { get; set; }
-    public string AuthorImage { get; set; }
-    [Width(150)]
-    [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
-    public DateTime CreateTime { get; set; }
     [Width(150)]
     [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
     public DateTime UpdateTime { get; set; }

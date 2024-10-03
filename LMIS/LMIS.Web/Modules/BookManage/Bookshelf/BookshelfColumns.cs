@@ -13,12 +13,8 @@ public class BookshelfColumns
     [EditLink]
     public string Location { get; set; }
     public string CategoryName { get; set; }
-    public string BookshelfImage { get; set; }
     public long BookCount { get; set; }
     public long BookCapacity { get; set; }
-    [Width(150)]
-    [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
-    public DateTime CreateTime { get; set; }
     [Width(150)]
     [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
     public DateTime UpdateTime { get; set; }

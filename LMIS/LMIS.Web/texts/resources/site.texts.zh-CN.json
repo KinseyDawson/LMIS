@@ -141,6 +141,7 @@
   "Db.BookManage.Book.Page": "页数",
   "Db.BookManage.Book.Price": "单价",
   "Db.BookManage.Book.Inventory": "库存",
+  "Db.BookManage.Book.BorrowableInventory": "库存",
   "Db.BookManage.Book.BookStatus": "状态",
   "Db.BookManage.Book.BookImage": "书籍图片",
   "Db.BookManage.Book.CreateTime": "创建时间",
@@ -275,5 +276,6 @@
   "Validation.CategoryUniqueError": "类别重复，请重新输入名称！",
   "Validation.PublisherUniqueError": "出版社重复，请重新输入名称！",
   "Validation.AuthorUniqueError": "作者重复，请重新输入姓名以及邮件！",
-  "Validation.BookshelfUniqueError": "书架重复，请重新输入位置！"
+  "Validation.BookshelfUniqueError": "书架重复，请重新输入位置！",
+  "Validation.BookUniqueError": "书籍重复，请重新输入LSBN！"
 }

@@ -8,7 +8,6 @@ export interface PublisherColumns {
     Contact: Column<PublisherRow>;
     ContactPhone: Column<PublisherRow>;
     Email: Column<PublisherRow>;
-    CreateTime: Column<PublisherRow>;
     UpdateTime: Column<PublisherRow>;
 }
 

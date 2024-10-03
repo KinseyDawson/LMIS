@@ -8,8 +8,6 @@ export interface AuthorColumns {
     AuthorName: Column<AuthorRow>;
     Sex: Column<AuthorRow>;
     Email: Column<AuthorRow>;
-    AuthorImage: Column<AuthorRow>;
-    CreateTime: Column<AuthorRow>;
     UpdateTime: Column<AuthorRow>;
 }
 

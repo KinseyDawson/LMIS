@@ -5,18 +5,17 @@ import { BookRow } from "./BookRow";
 export interface BookColumns {
     BookId: Column<BookRow>;
     BookName: Column<BookRow>;
-    Cn: Column<BookRow>;
-    Issn: Column<BookRow>;
-    Isbn: Column<BookRow>;
+    CN: Column<BookRow>;
+    ISSN: Column<BookRow>;
+    ISBN: Column<BookRow>;
     AuthorName: Column<BookRow>;
     PublisherName: Column<BookRow>;
     PublisheDate: Column<BookRow>;
     Page: Column<BookRow>;
     Price: Column<BookRow>;
     Inventory: Column<BookRow>;
+    BorrowableInventory: Column<BookRow>;
     BookStatus: Column<BookRow>;
-    BookImage: Column<BookRow>;
-    CreateTime: Column<BookRow>;
     UpdateTime: Column<BookRow>;
 }
 
