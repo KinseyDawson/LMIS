@@ -1,9 +1,10 @@
 ﻿import { fieldsProxy } from "@serenity-is/corelib";
+import { SexEnum } from "../Modules/Common.Enums.SexEnum";
 
 export interface AuthorsRow {
     AuthorId?: number;
     AuthorName?: string;
-    Sex?: number;
+    Sex?: SexEnum;
     Email?: string;
     AuthorImage?: string;
     CreateTime?: string;

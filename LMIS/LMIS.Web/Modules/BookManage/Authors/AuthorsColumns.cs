@@ -1,3 +1,4 @@
+using LMIS.Modules.Common.Enums;
 using Serenity.ComponentModel;
 using System;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ public class AuthorsColumns
     public long AuthorId { get; set; }
     [EditLink]
     public string AuthorName { get; set; }
-    public short Sex { get; set; }
+    public SexEnum Sex { get; set; }
     public string Email { get; set; }
     public string AuthorImage { get; set; }
     [Width(150)]

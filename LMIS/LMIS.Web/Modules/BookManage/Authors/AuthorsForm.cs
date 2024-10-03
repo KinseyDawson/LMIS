@@ -1,4 +1,5 @@
-﻿using Serenity.ComponentModel;
+using LMIS.Modules.Common.Enums;
+using Serenity.ComponentModel;
 using System;
 
 namespace LMIS.BookManage.Forms;
@@ -8,9 +9,7 @@ namespace LMIS.BookManage.Forms;
 public class AuthorsForm
 {
     public string AuthorName { get; set; }
-    public short Sex { get; set; }
+    public SexEnum Sex { get; set; }
     public string Email { get; set; }
     public string AuthorImage { get; set; }
-    public DateTime CreateTime { get; set; }
-    public DateTime UpdateTime { get; set; }
 }

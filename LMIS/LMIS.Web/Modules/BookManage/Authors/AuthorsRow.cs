@@ -1,4 +1,5 @@
-﻿using Serenity.ComponentModel;
+using LMIS.Modules.Common.Enums;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System;
@@ -20,7 +21,7 @@ public sealed class AuthorsRow : Row<AuthorsRow.RowFields>, IIdRow, INameRow
     public string AuthorName { get => fields.AuthorName[this]; set => fields.AuthorName[this] = value; }
 
     [DisplayName("Sex"), NotNull]
-    public short? Sex { get => fields.Sex[this]; set => fields.Sex[this] = value; }
+    public SexEnum? Sex { get => fields.Sex[this]; set => fields.Sex[this] = value; }
 
     [DisplayName("Email"), Size(100), NotNull]
     public string Email { get => fields.Email[this]; set => fields.Email[this] = value; }
@@ -38,7 +39,7 @@ public sealed class AuthorsRow : Row<AuthorsRow.RowFields>, IIdRow, INameRow
     {
         public Int64Field AuthorId;
         public StringField AuthorName;
-        public Int16Field Sex;
+        public EnumField<SexEnum> Sex;
         public StringField Email;
         public StringField AuthorImage;
         public DateTimeField CreateTime;

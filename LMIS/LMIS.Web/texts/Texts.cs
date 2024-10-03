@@ -1,4 +1,4 @@
-﻿namespace LMIS;
+namespace LMIS;
 
 [NestedLocalTexts]
 public static partial class Texts
@@ -130,5 +130,6 @@ public static partial class Texts
         public static readonly LocalText DeleteForeignKeyError = "Can't delete record. '{0}' table has " +
             "records that depend on this one!";
         public static readonly LocalText SavePrimaryKeyError = "Can't save record. There is another record with the same {1} value!";
+        public static readonly LocalText AuthorUniqueError = "Author duplicates. Please type new Name and Email!";
     }
 }

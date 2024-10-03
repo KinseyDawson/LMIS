@@ -1,5 +1,6 @@
 ﻿import { ColumnsBase, fieldsProxy } from "@serenity-is/corelib";
 import { Column } from "@serenity-is/sleekgrid";
+import { SexEnum } from "../Modules/Common.Enums.SexEnum";
 import { AuthorsRow } from "./AuthorsRow";
 
 export interface AuthorsColumns {
@@ -16,3 +17,5 @@ export class AuthorsColumns extends ColumnsBase<AuthorsRow> {
     static readonly columnsKey = 'BookManage.Authors';
     static readonly Fields = fieldsProxy<AuthorsColumns>();
 }
+
+[SexEnum]; // referenced types
