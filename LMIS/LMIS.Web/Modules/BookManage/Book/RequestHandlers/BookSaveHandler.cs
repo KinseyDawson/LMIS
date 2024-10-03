@@ -1,3 +1,4 @@
+using LMIS.Modules.BookManage.Book;
 using MySql.Data.MySqlClient;
 using Serenity.Services;
 using MyRequest = Serenity.Services.SaveRequest<LMIS.BookManage.BookRow>;
