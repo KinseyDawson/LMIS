@@ -1,5 +1,6 @@
 ﻿import { ColumnsBase, fieldsProxy } from "@serenity-is/corelib";
 import { Column } from "@serenity-is/sleekgrid";
+import { BookStatusEnum } from "../Modules/BookManage.Book.BookStatusEnum";
 import { BookRow } from "./BookRow";
 
 export interface BookColumns {
@@ -23,3 +24,5 @@ export class BookColumns extends ColumnsBase<BookRow> {
     static readonly columnsKey = 'BookManage.Book';
     static readonly Fields = fieldsProxy<BookColumns>();
 }
+
+[BookStatusEnum]; // referenced types

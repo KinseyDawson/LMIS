@@ -1,3 +1,4 @@
+using LMIS.Modules.BookManage.Book;
 using Serenity.ComponentModel;
 using System;
 using System.ComponentModel;
@@ -24,7 +25,8 @@ public class BookColumns
     public decimal Price { get; set; }
     public long Inventory { get; set; }
     public long BorrowableInventory { get; set; }
-    public short BookStatus { get; set; }
+    [Width(80)]
+    public BookStatusEnum BookStatus { get; set; }
     [Width(150)]
     [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
     public DateTime UpdateTime { get; set; }
