@@ -10,5 +10,6 @@ public class PublishersForm
     public string PublisherName { get; set; }
     public string Contact { get; set; }
     public string ContactPhone { get; set; }
+    [EmailAddressEditor]
     public string Email { get; set; }
 }

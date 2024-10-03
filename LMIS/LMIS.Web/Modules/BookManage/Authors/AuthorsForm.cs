@@ -10,6 +10,7 @@ public class AuthorsForm
 {
     public string AuthorName { get; set; }
     public SexEnum Sex { get; set; }
+    [EmailAddressEditor]
     public string Email { get; set; }
     public string AuthorImage { get; set; }
 }

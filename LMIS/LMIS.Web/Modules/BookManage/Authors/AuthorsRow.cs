@@ -27,6 +27,7 @@ public sealed class AuthorsRow : Row<AuthorsRow.RowFields>, IIdRow, INameRow
     public string Email { get => fields.Email[this]; set => fields.Email[this] = value; }
 
     [DisplayName("Author Image"), Size(100)]
+    [ImageUploadEditor(FilenameFormat = "AuthorImage/~", CopyToHistory = true)]
     public string AuthorImage { get => fields.AuthorImage[this]; set => fields.AuthorImage[this] = value; }
 
     [DisplayName("Create Time"), NotNull]
@@ -44,6 +45,5 @@ public sealed class AuthorsRow : Row<AuthorsRow.RowFields>, IIdRow, INameRow
         public StringField AuthorImage;
         public DateTimeField CreateTime;
         public DateTimeField UpdateTime;
-
     }
 }

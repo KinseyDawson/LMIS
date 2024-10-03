@@ -1,11 +1,11 @@
-﻿import { StringEditor, EnumEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
+﻿import { StringEditor, EnumEditor, EmailAddressEditor, ImageUploadEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
 import { SexEnum } from "../Modules/Common.Enums.SexEnum";
 
 export interface AuthorsForm {
     AuthorName: StringEditor;
     Sex: EnumEditor;
-    Email: StringEditor;
-    AuthorImage: StringEditor;
+    Email: EmailAddressEditor;
+    AuthorImage: ImageUploadEditor;
 }
 
 export class AuthorsForm extends PrefixedContext {
@@ -20,12 +20,14 @@ export class AuthorsForm extends PrefixedContext {
 
             var w0 = StringEditor;
             var w1 = EnumEditor;
+            var w2 = EmailAddressEditor;
+            var w3 = ImageUploadEditor;
 
             initFormType(AuthorsForm, [
                 'AuthorName', w0,
                 'Sex', w1,
-                'Email', w0,
-                'AuthorImage', w0
+                'Email', w2,
+                'AuthorImage', w3
             ]);
         }
     }

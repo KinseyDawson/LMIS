@@ -6,5 +6,6 @@ obj/
 .vs/
 LMIS/LMIS.Web/wwwroot/esm/
 LMIS/LMIS.Web/node_modules/
+LMIS/LMIS.Web/App_Data/
 
 *.log
