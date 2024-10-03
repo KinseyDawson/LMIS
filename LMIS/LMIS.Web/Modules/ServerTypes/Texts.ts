@@ -285,6 +285,7 @@ namespace LMIS.Texts {
     export declare namespace Validation {
         export const AuthenticationError: string;
         export const AuthorUniqueError: string;
+        export const BookshelfUniqueError: string;
         export const CategoryUniqueError: string;
         export const CurrentPasswordMismatch: string;
         export const DeleteForeignKeyError: string;

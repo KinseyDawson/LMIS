@@ -1,13 +1,11 @@
-﻿import { StringEditor, ServiceLookupEditor, ImageUploadEditor, DateEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
+﻿import { StringEditor, ServiceLookupEditor, ImageUploadEditor, IntegerEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
 
 export interface BookshelfForm {
     Location: StringEditor;
     CategoryId: ServiceLookupEditor;
     BookshelfImage: ImageUploadEditor;
-    BookCount: StringEditor;
-    BookCapacity: StringEditor;
-    CreateTime: DateEditor;
-    UpdateTime: DateEditor;
+    BookCount: IntegerEditor;
+    BookCapacity: IntegerEditor;
 }
 
 export class BookshelfForm extends PrefixedContext {
@@ -23,16 +21,14 @@ export class BookshelfForm extends PrefixedContext {
             var w0 = StringEditor;
             var w1 = ServiceLookupEditor;
             var w2 = ImageUploadEditor;
-            var w3 = DateEditor;
+            var w3 = IntegerEditor;
 
             initFormType(BookshelfForm, [
                 'Location', w0,
                 'CategoryId', w1,
                 'BookshelfImage', w2,
-                'BookCount', w0,
-                'BookCapacity', w0,
-                'CreateTime', w3,
-                'UpdateTime', w3
+                'BookCount', w3,
+                'BookCapacity', w3
             ]);
         }
     }

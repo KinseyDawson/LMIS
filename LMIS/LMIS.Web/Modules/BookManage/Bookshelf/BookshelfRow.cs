@@ -29,10 +29,10 @@ public sealed class BookshelfRow : Row<BookshelfRow.RowFields>, IIdRow, INameRow
     [ImageUploadEditor(FilenameFormat = "BookshelfImage/~", CopyToHistory = true)]
     public string BookshelfImage { get => fields.BookshelfImage[this]; set => fields.BookshelfImage[this] = value; }
 
-    [DisplayName("Book Count"), NotNull]
+    [DisplayName("Book Count"), NotNull,Size(4)]
     public long? BookCount { get => fields.BookCount[this]; set => fields.BookCount[this] = value; }
 
-    [DisplayName("Book Capacity"), NotNull]
+    [DisplayName("Book Capacity"), NotNull, Size(4)]
     public long? BookCapacity { get => fields.BookCapacity[this]; set => fields.BookCapacity[this] = value; }
 
     [DisplayName("Create Time"), NotNull]
@@ -41,7 +41,7 @@ public sealed class BookshelfRow : Row<BookshelfRow.RowFields>, IIdRow, INameRow
     [DisplayName("Update Time"), NotNull]
     public DateTime? UpdateTime { get => fields.UpdateTime[this]; set => fields.UpdateTime[this] = value; }
 
-    [DisplayName("Category Category Name"), Origin(jCategory, nameof(CategoryRow.CategoryName))]
+    [DisplayName("Category Name"), Origin(jCategory, nameof(CategoryRow.CategoryName))]
     public string CategoryName { get => fields.CategoryName[this]; set => fields.CategoryName[this] = value; }
 
     public class RowFields : RowFieldsBase

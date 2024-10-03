@@ -274,5 +274,6 @@
   "Validation.SavePrimaryKeyError": "无法保存记录。 有另一条记录具有相同的{1}值！",
   "Validation.CategoryUniqueError": "类别重复，请重新输入名称！",
   "Validation.PublisherUniqueError": "出版社重复，请重新输入名称！",
-  "Validation.AuthorUniqueError": "作者重复，请重新输入姓名以及邮件！"
+  "Validation.AuthorUniqueError": "作者重复，请重新输入姓名以及邮件！",
+  "Validation.BookshelfUniqueError": "书架重复，请重新输入位置！"
 }

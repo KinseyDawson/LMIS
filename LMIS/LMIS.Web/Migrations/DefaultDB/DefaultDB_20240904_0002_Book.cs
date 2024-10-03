@@ -13,7 +13,7 @@ public class DefaultDB_20240904_0002_Book : AutoReversingMigration
             .WithColumn("UpdateTime").AsDateTime().NotNullable());
 
         this.CreateTableWithId64("Bookshelfs", "BookshelfId", s => s
-          .WithColumn("Location").AsString(100).NotNullable()
+          .WithColumn("Location").AsString(100).NotNullable().Unique("UK_Bookshelfs_Location")
           .WithColumn("CategoryId").AsInt64().NotNullable()
           .ForeignKey("FK_Bookshelfs_CategoryId", "Categories", "CategoryId")
           .WithColumn("BookshelfImage").AsString(100).Nullable()

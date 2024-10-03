@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using System;
 
 namespace LMIS.BookManage.Forms;
@@ -10,8 +10,8 @@ public class BookshelfForm
     public string Location { get; set; }
     public long CategoryId { get; set; }
     public string BookshelfImage { get; set; }
+    [IntegerEditor]
     public long BookCount { get; set; }
+    [IntegerEditor]
     public long BookCapacity { get; set; }
-    public DateTime CreateTime { get; set; }
-    public DateTime UpdateTime { get; set; }
 }
