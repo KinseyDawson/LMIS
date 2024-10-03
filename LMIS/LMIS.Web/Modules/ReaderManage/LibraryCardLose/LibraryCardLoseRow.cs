@@ -6,20 +6,20 @@ using System.ComponentModel;
 
 namespace LMIS.ReaderManage;
 
-[ConnectionKey("Default"), Module("ReaderManage"), TableName("librarycardlose")]
+[ConnectionKey("Default"), Module("ReaderManage"), TableName("librarycardloses")]
 [DisplayName("Library Card Lose"), InstanceName("Library Card Lose")]
-[ReadPermission("LibraryCardLose")]
-[ModifyPermission("LibraryCardLose")]
+[ReadPermission("ReaderManage:LibraryCardLose")]
+[ModifyPermission("ReaderManage:LibraryCardLose")]
 public sealed class LibraryCardLoseRow : Row<LibraryCardLoseRow.RowFields>, IIdRow
 {
     const string jLibraryCard = nameof(jLibraryCard);
     const string jOperateUser = nameof(jOperateUser);
 
-    [DisplayName("Library Card Lost Id"), Identity, IdProperty]
-    public long? LibraryCardLostId { get => fields.LibraryCardLostId[this]; set => fields.LibraryCardLostId[this] = value; }
+    [DisplayName("Library Card Lose Id"), Identity, IdProperty]
+    public long? LibraryCardLoseId { get => fields.LibraryCardLoseId[this]; set => fields.LibraryCardLoseId[this] = value; }
 
-    [DisplayName("Library Card"), NotNull, ForeignKey(typeof(LibraryCardsRow)), LeftJoin(jLibraryCard), TextualField(nameof(LibraryCardNo))]
-    [ServiceLookupEditor(typeof(LibraryCardsRow))]
+    [DisplayName("Library Card"), NotNull, ForeignKey(typeof(LibraryCardRow)), LeftJoin(jLibraryCard), TextualField(nameof(LibraryCardNo))]
+    [ServiceLookupEditor(typeof(LibraryCardRow))]
     public long? LibraryCardId { get => fields.LibraryCardId[this]; set => fields.LibraryCardId[this] = value; }
 
     [DisplayName("Operate User"), NotNull, ForeignKey(typeof(Administration.UserRow)), LeftJoin(jOperateUser)]
@@ -32,7 +32,7 @@ public sealed class LibraryCardLoseRow : Row<LibraryCardLoseRow.RowFields>, IIdR
     [DisplayName("Update Time"), NotNull]
     public DateTime? UpdateTime { get => fields.UpdateTime[this]; set => fields.UpdateTime[this] = value; }
 
-    [DisplayName("Library Card Library Card No"), Origin(jLibraryCard, nameof(LibraryCardsRow.LibraryCardNo))]
+    [DisplayName("Library Card Library Card No"), Origin(jLibraryCard, nameof(LibraryCardRow.LibraryCardNo))]
     public string LibraryCardNo { get => fields.LibraryCardNo[this]; set => fields.LibraryCardNo[this] = value; }
 
     [DisplayName("Operate User Username"), Origin(jOperateUser, nameof(Administration.UserRow.Username))]
@@ -40,7 +40,7 @@ public sealed class LibraryCardLoseRow : Row<LibraryCardLoseRow.RowFields>, IIdR
 
     public class RowFields : RowFieldsBase
     {
-        public Int64Field LibraryCardLostId;
+        public Int64Field LibraryCardLoseId;
         public Int64Field LibraryCardId;
         public Int64Field OperateUserId;
         public DateTimeField CreateTime;

@@ -26,11 +26,11 @@ public class DefaultDB_20240904_0001_LibraryCard : AutoReversingMigration
           .WithColumn("CreateTime").AsDateTime().NotNullable()
           .WithColumn("UpdateTime").AsDateTime().NotNullable());
 
-        this.CreateTableWithId64("LibraryCardLose", "LibraryCardLostId", s => s
+        this.CreateTableWithId64("LibraryCardLoses", "LibraryCardLoseId", s => s
           .WithColumn("LibraryCardId").AsInt64().NotNullable()
-          .ForeignKey("FK_LibraryCardLose_LibraryCardId", "LibraryCards", "LibraryCardId")
+          .ForeignKey("FK_LibraryCardLoses_LibraryCardId", "LibraryCards", "LibraryCardId")
           .WithColumn("OperateUserId").AsInt64().NotNullable()
-          .ForeignKey("FK_LibraryCardLose_OperateUserId", "Users", "UserId")
+          .ForeignKey("FK_LibraryCardLoses_OperateUserId", "Users", "UserId")
           .WithColumn("CreateTime").AsDateTime().NotNullable()
           .WithColumn("UpdateTime").AsDateTime().NotNullable());
 

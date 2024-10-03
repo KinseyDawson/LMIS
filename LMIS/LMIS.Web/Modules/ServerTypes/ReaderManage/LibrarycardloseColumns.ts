@@ -3,7 +3,7 @@ import { Column } from "@serenity-is/sleekgrid";
 import { LibraryCardLoseRow } from "./LibraryCardLoseRow";
 
 export interface LibraryCardLoseColumns {
-    LibraryCardLostId: Column<LibraryCardLoseRow>;
+    LibraryCardLoseId: Column<LibraryCardLoseRow>;
     LibraryCardNo: Column<LibraryCardLoseRow>;
     OperateUserUsername: Column<LibraryCardLoseRow>;
     CreateTime: Column<LibraryCardLoseRow>;

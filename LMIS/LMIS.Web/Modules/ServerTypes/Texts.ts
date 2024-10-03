@@ -76,7 +76,7 @@ namespace LMIS.Texts {
 
         namespace BookManage {
 
-            namespace Authors {
+            namespace Author {
                 export const AuthorId: string;
                 export const AuthorImage: string;
                 export const AuthorName: string;
@@ -86,18 +86,18 @@ namespace LMIS.Texts {
                 export const UpdateTime: string;
             }
 
-            namespace Books {
+            namespace Book {
                 export const AuthorId: string;
                 export const AuthorName: string;
                 export const BookId: string;
                 export const BookImage: string;
                 export const BookName: string;
                 export const BookStatus: string;
-                export const CN: string;
+                export const Cn: string;
                 export const CreateTime: string;
-                export const ISBN: string;
-                export const ISSN: string;
                 export const Inventory: string;
+                export const Isbn: string;
+                export const Issn: string;
                 export const Page: string;
                 export const Price: string;
                 export const PublisheDate: string;
@@ -106,7 +106,7 @@ namespace LMIS.Texts {
                 export const UpdateTime: string;
             }
 
-            namespace Bookshelfs {
+            namespace Bookshelf {
                 export const BookCapacity: string;
                 export const BookCount: string;
                 export const BookshelfId: string;
@@ -118,14 +118,14 @@ namespace LMIS.Texts {
                 export const UpdateTime: string;
             }
 
-            namespace Categories {
+            namespace Category {
                 export const CategoryId: string;
                 export const CategoryName: string;
                 export const CreateTime: string;
                 export const UpdateTime: string;
             }
 
-            namespace Publishers {
+            namespace Publisher {
                 export const Contact: string;
                 export const ContactPhone: string;
                 export const CreateTime: string;
@@ -138,7 +138,7 @@ namespace LMIS.Texts {
 
         namespace InventoryManage {
 
-            namespace DownBookshelfs {
+            namespace DownBookshelf {
                 export const BookId: string;
                 export const BookName: string;
                 export const BookshelfId: string;
@@ -146,11 +146,11 @@ namespace LMIS.Texts {
                 export const CreateTime: string;
                 export const DownBookshelfId: string;
                 export const OperateUserId: string;
+                export const OperateUserUsername: string;
                 export const UpdateTime: string;
-                export const Username: string;
             }
 
-            namespace UpBookshelfs {
+            namespace UpBookshelf {
                 export const BookId: string;
                 export const BookName: string;
                 export const BookshelfId: string;
@@ -158,15 +158,15 @@ namespace LMIS.Texts {
                 export const CreateTime: string;
                 export const Inventory: string;
                 export const OperateUserId: string;
+                export const OperateUserUsername: string;
                 export const UpBookshelfId: string;
                 export const UpdateTime: string;
-                export const Username: string;
             }
         }
 
         namespace ReaderManage {
 
-            namespace CardLevels {
+            namespace CardLevel {
                 export const BorrowBooks: string;
                 export const BorrowDays: string;
                 export const CardLevelId: string;
@@ -177,17 +177,7 @@ namespace LMIS.Texts {
                 export const UpdateTime: string;
             }
 
-            namespace LibraryCardLose {
-                export const CreateTime: string;
-                export const LibraryCardId: string;
-                export const LibraryCardLostId: string;
-                export const LibraryCardNo: string;
-                export const OperateUserId: string;
-                export const OperateUserUsername: string;
-                export const UpdateTime: string;
-            }
-
-            namespace LibraryCards {
+            namespace LibraryCard {
                 export const CreateTime: string;
                 export const LevelCardLevelName: string;
                 export const LevelId: string;
@@ -197,6 +187,16 @@ namespace LMIS.Texts {
                 export const UpdateTime: string;
                 export const UserId: string;
                 export const Username: string;
+            }
+
+            namespace LibraryCardLose {
+                export const CreateTime: string;
+                export const LibraryCardId: string;
+                export const LibraryCardLoseId: string;
+                export const LibraryCardNo: string;
+                export const OperateUserId: string;
+                export const OperateUserUsername: string;
+                export const UpdateTime: string;
             }
         }
     }
@@ -310,20 +310,20 @@ namespace LMIS.Texts {
                 UserRole: {}
             },
             BookManage: {
-                Authors: {},
-                Books: {},
-                Bookshelfs: {},
-                Categories: {},
-                Publishers: {}
+                Author: {},
+                Book: {},
+                Bookshelf: {},
+                Category: {},
+                Publisher: {}
             },
             InventoryManage: {
-                DownBookshelfs: {},
-                UpBookshelfs: {}
+                DownBookshelf: {},
+                UpBookshelf: {}
             },
             ReaderManage: {
-                CardLevels: {},
-                LibraryCardLose: {},
-                LibraryCards: {}
+                CardLevel: {},
+                LibraryCard: {},
+                LibraryCardLose: {}
             }
         },
         Forms: {

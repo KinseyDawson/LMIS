@@ -1,7 +1,7 @@
 ﻿import { fieldsProxy } from "@serenity-is/corelib";
 
 export interface LibraryCardLoseRow {
-    LibraryCardLostId?: number;
+    LibraryCardLoseId?: number;
     LibraryCardId?: number;
     OperateUserId?: number;
     CreateTime?: string;
@@ -11,12 +11,12 @@ export interface LibraryCardLoseRow {
 }
 
 export abstract class LibraryCardLoseRow {
-    static readonly idProperty = 'LibraryCardLostId';
+    static readonly idProperty = 'LibraryCardLoseId';
     static readonly localTextPrefix = 'ReaderManage.LibraryCardLose';
-    static readonly deletePermission = 'LibraryCardLose';
-    static readonly insertPermission = 'LibraryCardLose';
-    static readonly readPermission = 'LibraryCardLose';
-    static readonly updatePermission = 'LibraryCardLose';
+    static readonly deletePermission = 'ReaderManage:LibraryCardLose';
+    static readonly insertPermission = 'ReaderManage:LibraryCardLose';
+    static readonly readPermission = 'ReaderManage:LibraryCardLose';
+    static readonly updatePermission = 'ReaderManage:LibraryCardLose';
 
     static readonly Fields = fieldsProxy<LibraryCardLoseRow>();
 }
