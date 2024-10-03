@@ -1,5 +1,6 @@
 using LMIS.Modules.BookManage.Book;
 using LMIS.Modules.BookManage.Bookshelf;
+using LMIS.Modules.InventoryManage.BookStore;
 using OfficeOpenXml.FormulaParsing.Utilities;
 using Serenity.Services;
 using MyRequest = Serenity.Services.SaveRequest<LMIS.InventoryManage.UpBookshelfRow>;
@@ -42,6 +43,23 @@ public class UpBookshelfSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyRes
         BookshelfHelper.Up(Connection,
             Request.Entity.BookshelfId ?? 0,
             Request.Entity.Inventory ?? 0);
+        var bookStoreRow = BookStoreHelper.QueryByBookIdAndBookshelfId(Connection,
+            Request.Entity.BookId ?? 0,
+            Request.Entity.BookshelfId ?? 0);
+        if (bookStoreRow == null)
+        {
+            BookStoreHelper.Insert(Connection,
+                Request.Entity.BookId ?? 0,
+                Request.Entity.BookshelfId ?? 0,
+                Request.Entity.Inventory ?? 0);
+        }
+        else
+        {
+            BookStoreHelper.Increase(Connection,
+                Request.Entity.BookId ?? 0,
+                Request.Entity.BookshelfId ?? 0,
+                Request.Entity.Inventory ?? 0);
+        }
         base.AfterSave();
     }
 }

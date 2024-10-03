@@ -173,6 +173,19 @@
   "Db.InventoryManage.DownBookshelf.UpdateTime": "更新时间",
 
 
+  "Db.InventoryManage.BookStore.EntityPlural": "收录",
+  "Db.InventoryManage.BookStore.EntitySingular": "收录",
+  "Db.InventoryManage.BookStore.BookStoreId": "收录ID",
+  "Db.InventoryManage.BookStore.BookId": "书籍",
+  "Db.InventoryManage.BookStore.BookName": "书籍",
+  "Db.InventoryManage.BookStore.BookshelfId": "书架",
+  "Db.InventoryManage.BookStore.BookshelfLocation": "书架",
+  "Db.InventoryManage.BookStore.Inventory": "数量",
+  "Db.InventoryManage.BookStore.CreateTime": "创建时间",
+  "Db.InventoryManage.BookStore.UpdateTime": "更新时间",
+
+
+
 
   "Forms.Membership.ChangePassword.ConfirmPassword": "确认密码",
   "Forms.Membership.ChangePassword.FormTitle": "修改密码",
@@ -242,6 +255,7 @@
   "Navigation.InventoryManage": "库存",
   "Navigation.InventoryManage/DownBookshelf": "下架",
   "Navigation.InventoryManage/UpBookshelf": "上架",
+  "Navigation.InventoryManage/BookStore": "收录",
   "Navigation.ReaderManage": "读者",
   "Navigation.ReaderManage/CardLevel": "等级",
   "Navigation.ReaderManage/LibraryCardLose": "挂失",

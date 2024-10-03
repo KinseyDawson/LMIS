@@ -139,6 +139,17 @@ namespace LMIS.Texts {
 
         namespace InventoryManage {
 
+            namespace BookStore {
+                export const BookId: string;
+                export const BookName: string;
+                export const BookStoreId: string;
+                export const BookshelfId: string;
+                export const BookshelfLocation: string;
+                export const CreateTime: string;
+                export const Inventory: string;
+                export const UpdateTime: string;
+            }
+
             namespace DownBookshelf {
                 export const BookId: string;
                 export const BookName: string;
@@ -321,6 +332,7 @@ namespace LMIS.Texts {
                 Publisher: {}
             },
             InventoryManage: {
+                BookStore: {},
                 DownBookshelf: {},
                 UpBookshelf: {}
             },

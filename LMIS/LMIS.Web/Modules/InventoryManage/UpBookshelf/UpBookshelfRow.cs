@@ -42,7 +42,7 @@ public sealed class UpBookshelfRow : Row<UpBookshelfRow.RowFields>, IIdRow
     [DisplayName("Update Time"), NotNull]
     public DateTime? UpdateTime { get => fields.UpdateTime[this]; set => fields.UpdateTime[this] = value; }
 
-    [DisplayName("Book Name"), Expression($"{jBook}.[BookName]")]
+    [DisplayName("Book Name"), Expression($"{jBook}.[BookName]"),QuickSearch]
     public string BookName { get => fields.BookName[this]; set => fields.BookName[this] = value; }
 
     [DisplayName("Bookshelf Location"), Expression($"{jBookshelf}.[Location]")]

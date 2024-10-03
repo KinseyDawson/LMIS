@@ -60,6 +60,19 @@ public class DefaultDB_20240904_0002_Book : AutoReversingMigration
           .WithColumn("CreateTime").AsDateTime().NotNullable()
           .WithColumn("UpdateTime").AsDateTime().NotNullable());
 
+
+        this.CreateTableWithId64("BookStores", "BookStoreId", s => s
+        .WithColumn("BookId").AsInt64().NotNullable()
+        .ForeignKey("FK_BookStores_BookId", "Books", "BookId")
+        .WithColumn("BookshelfId").AsInt64().NotNullable()
+        .ForeignKey("FK_BookStores_BookshelfId", "Bookshelfs", "BookshelfId")
+        .WithColumn("Inventory").AsInt64().NotNullable()
+        .WithColumn("CreateTime").AsDateTime().NotNullable()
+        .WithColumn("UpdateTime").AsDateTime().NotNullable());
+        this.Create.UniqueConstraint("UK_UpBookshelfs_BookId_BookshelfId")
+            .OnTable("BookStores")
+            .Columns("BookId", "BookshelfId");
+
         this.CreateTableWithId64("UpBookshelfs", "UpBookshelfId", s => s
           .WithColumn("BookId").AsInt64().NotNullable()
           .ForeignKey("FK_UpBookshelfs_BookId", "Books", "BookId")
@@ -78,6 +91,7 @@ public class DefaultDB_20240904_0002_Book : AutoReversingMigration
           .ForeignKey("FK_DownBookshelfs_BookshelfId", "Bookshelfs", "BookshelfId")
           .WithColumn("OperateUserId").AsInt64().NotNullable()
           .ForeignKey("FK_DownBookshelfs_OperateUserId", "Users", "UserId")
+          .WithColumn("Inventory").AsInt64().NotNullable()
           .WithColumn("CreateTime").AsDateTime().NotNullable()
           .WithColumn("UpdateTime").AsDateTime().NotNullable());
     }
