@@ -8,13 +8,12 @@ export interface LibraryCardRow {
     Status?: number;
     CreateTime?: string;
     UpdateTime?: string;
-    Username?: string;
-    LevelCardLevelName?: string;
+    UserName?: string;
+    CardLevelName?: string;
 }
 
 export abstract class LibraryCardRow {
     static readonly idProperty = 'LibraryCardId';
-    static readonly nameProperty = 'LibraryCardNo';
     static readonly localTextPrefix = 'ReaderManage.LibraryCard';
     static readonly deletePermission = 'ReaderManage:LibraryCard';
     static readonly insertPermission = 'ReaderManage:LibraryCard';

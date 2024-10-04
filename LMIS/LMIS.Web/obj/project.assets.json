@@ -3037,6 +3037,15 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "Yitter.IdGenerator/1.0.14": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Yitter.IdGenerator.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Yitter.IdGenerator.dll": {}
+        }
+      },
       "ZstdSharp.Port/0.8.0": {
         "type": "package",
         "compile": {
@@ -9153,6 +9162,18 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "Yitter.IdGenerator/1.0.14": {
+      "sha512": "F4nOJ7Geq41vgNWX9E6/vkxRzFInACGpDp4Kad2mA2WIKhEwgPyE9FpulBAuEmDByrfHHz6mOII3IIeLJAh91g==",
+      "type": "package",
+      "path": "yitter.idgenerator/1.0.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Yitter.IdGenerator.dll",
+        "yitter.idgenerator.1.0.14.nupkg.sha512",
+        "yitter.idgenerator.nuspec"
+      ]
+    },
     "ZstdSharp.Port/0.8.0": {
       "sha512": "Z62eNBIu8E8YtbqlMy57tK3dV1+m2b9NhPeaYovB5exmLKvrGCqOhJTzrEUH5VyUWU6vwX3c1XHJGhW5HVs8dA==",
       "type": "package",
@@ -9186,7 +9207,8 @@
       "Serenity.Demo.BasicSamples >= 8.6.4",
       "Serenity.Demo.Northwind >= 8.6.4",
       "Serenity.Extensions >= 8.6.4",
-      "Serenity.Net.Web >= 8.6.4"
+      "Serenity.Net.Web >= 8.6.4",
+      "Yitter.IdGenerator >= 1.0.14"
     ]
   },
   "packageFolders": {
@@ -9288,6 +9310,10 @@
           "Serenity.Net.Web": {
             "target": "Package",
             "version": "[8.6.4, )"
+          },
+          "Yitter.IdGenerator": {
+            "target": "Package",
+            "version": "[1.0.14, )"
           }
         },
         "imports": [

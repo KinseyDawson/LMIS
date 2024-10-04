@@ -3,6 +3,7 @@
 export interface CardLevelRow {
     CardLevelId?: number;
     CardLevelName?: string;
+    Fee?: number;
     Discount?: number;
     Penalty?: number;
     BorrowDays?: number;

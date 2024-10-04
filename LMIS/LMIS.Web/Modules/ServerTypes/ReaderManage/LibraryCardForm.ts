@@ -1,12 +1,10 @@
-﻿import { StringEditor, LookupEditor, ServiceLookupEditor, IntegerEditor, DateEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
+﻿import { LookupEditor, ServiceLookupEditor, EnumEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
+import { LibraryCardStatusEnum } from "../Modules/ReaderManage.LibraryCard.LibraryCardStatusEnum";
 
 export interface LibraryCardForm {
-    LibraryCardNo: StringEditor;
     UserId: LookupEditor;
     LevelId: ServiceLookupEditor;
-    Status: IntegerEditor;
-    CreateTime: DateEditor;
-    UpdateTime: DateEditor;
+    Status: EnumEditor;
 }
 
 export class LibraryCardForm extends PrefixedContext {
@@ -19,20 +17,17 @@ export class LibraryCardForm extends PrefixedContext {
         if (!LibraryCardForm.init)  {
             LibraryCardForm.init = true;
 
-            var w0 = StringEditor;
-            var w1 = LookupEditor;
-            var w2 = ServiceLookupEditor;
-            var w3 = IntegerEditor;
-            var w4 = DateEditor;
+            var w0 = LookupEditor;
+            var w1 = ServiceLookupEditor;
+            var w2 = EnumEditor;
 
             initFormType(LibraryCardForm, [
-                'LibraryCardNo', w0,
-                'UserId', w1,
-                'LevelId', w2,
-                'Status', w3,
-                'CreateTime', w4,
-                'UpdateTime', w4
+                'UserId', w0,
+                'LevelId', w1,
+                'Status', w2
             ]);
         }
     }
 }
+
+[LibraryCardStatusEnum]; // referenced types

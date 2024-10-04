@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System;
@@ -11,7 +11,7 @@ namespace LMIS.ReaderManage;
 [ReadPermission("ReaderManage:LibraryCard")]
 [ModifyPermission("ReaderManage:LibraryCard")]
 [ServiceLookupPermission("ReaderManage:LibraryCard")]
-public sealed class LibraryCardRow : Row<LibraryCardRow.RowFields>, IIdRow, INameRow
+public sealed class LibraryCardRow : Row<LibraryCardRow.RowFields>, IIdRow
 {
     const string jUser = nameof(jUser);
     const string jLevel = nameof(jLevel);
@@ -19,14 +19,15 @@ public sealed class LibraryCardRow : Row<LibraryCardRow.RowFields>, IIdRow, INam
     [DisplayName("Library Card Id"), Identity, IdProperty]
     public long? LibraryCardId { get => fields.LibraryCardId[this]; set => fields.LibraryCardId[this] = value; }
 
-    [DisplayName("Library Card No"), Size(50), NotNull, QuickSearch, NameProperty]
+    [DisplayName("Library Card No"), Size(50), NotNull, QuickSearch,Updatable(false)]
     public string LibraryCardNo { get => fields.LibraryCardNo[this]; set => fields.LibraryCardNo[this] = value; }
 
-    [DisplayName("User"), NotNull, ForeignKey(typeof(Administration.UserRow)), LeftJoin(jUser), TextualField(nameof(Username))]
+    [DisplayName("User"), NotNull, ForeignKey(typeof(Administration.UserRow)), LeftJoin(jUser), TextualField(nameof(UserName))]
     [LookupEditor(typeof(Administration.UserRow), Async = true)]
+    [Updatable(false)]
     public long? UserId { get => fields.UserId[this]; set => fields.UserId[this] = value; }
 
-    [DisplayName("Level"), NotNull, ForeignKey(typeof(CardLevelRow)), LeftJoin(jLevel), TextualField(nameof(LevelCardLevelName))]
+    [DisplayName("Level"), NotNull, ForeignKey(typeof(CardLevelRow)), LeftJoin(jLevel), TextualField(nameof(CardLevelName))]
     [ServiceLookupEditor(typeof(CardLevelRow))]
     public long? LevelId { get => fields.LevelId[this]; set => fields.LevelId[this] = value; }
 
@@ -39,11 +40,11 @@ public sealed class LibraryCardRow : Row<LibraryCardRow.RowFields>, IIdRow, INam
     [DisplayName("Update Time"), NotNull]
     public DateTime? UpdateTime { get => fields.UpdateTime[this]; set => fields.UpdateTime[this] = value; }
 
-    [DisplayName("User Username"), Origin(jUser, nameof(Administration.UserRow.Username))]
-    public string Username { get => fields.Username[this]; set => fields.Username[this] = value; }
+    [DisplayName("User Name"), Origin(jUser, nameof(Administration.UserRow.DisplayName))]
+    public string UserName { get => fields.UserName[this]; set => fields.UserName[this] = value; }
 
-    [DisplayName("Level Card Level Name"), Origin(jLevel, nameof(CardLevelRow.CardLevelName))]
-    public string LevelCardLevelName { get => fields.LevelCardLevelName[this]; set => fields.LevelCardLevelName[this] = value; }
+    [DisplayName("Card Level Name"), Origin(jLevel, nameof(CardLevelRow.CardLevelName))]
+    public string CardLevelName { get => fields.CardLevelName[this]; set => fields.CardLevelName[this] = value; }
 
     public class RowFields : RowFieldsBase
     {
@@ -55,7 +56,7 @@ public sealed class LibraryCardRow : Row<LibraryCardRow.RowFields>, IIdRow, INam
         public DateTimeField CreateTime;
         public DateTimeField UpdateTime;
 
-        public StringField Username;
-        public StringField LevelCardLevelName;
+        public StringField UserName;
+        public StringField CardLevelName;
     }
 }

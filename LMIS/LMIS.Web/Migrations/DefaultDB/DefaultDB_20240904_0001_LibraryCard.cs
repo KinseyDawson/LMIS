@@ -9,6 +9,7 @@ public class DefaultDB_20240904_0001_LibraryCard : AutoReversingMigration
     {
         this.CreateTableWithId64("CardLevels", "CardLevelId", s => s
             .WithColumn("CardLevelName").AsString(50).NotNullable().Unique("UK_CardLevels_CardLevelName")
+            .WithColumn("Fee").AsDecimal().NotNullable()
             .WithColumn("Discount").AsDecimal().NotNullable()
             .WithColumn("Penalty").AsDecimal().NotNullable()
             .WithColumn("BorrowDays").AsInt32().NotNullable()
@@ -20,6 +21,7 @@ public class DefaultDB_20240904_0001_LibraryCard : AutoReversingMigration
           .WithColumn("LibraryCardNo").AsString(50).NotNullable().Unique("UK_LibraryCards_LibraryCardNo")
           .WithColumn("UserId").AsInt64().NotNullable()
           .ForeignKey("FK_LibraryCards_UserId", "Users", "UserId")
+          .Unique("UK_LibraryCards_UserId")
           .WithColumn("LevelId").AsInt64().NotNullable()
           .ForeignKey("FK_LibraryCards_CardLevelId", "CardLevels", "CardLevelId")
           .WithColumn("Status").AsInt16().NotNullable()
@@ -33,6 +35,5 @@ public class DefaultDB_20240904_0001_LibraryCard : AutoReversingMigration
           .ForeignKey("FK_LibraryCardLoses_OperateUserId", "Users", "UserId")
           .WithColumn("CreateTime").AsDateTime().NotNullable()
           .WithColumn("UpdateTime").AsDateTime().NotNullable());
-
     }
 }

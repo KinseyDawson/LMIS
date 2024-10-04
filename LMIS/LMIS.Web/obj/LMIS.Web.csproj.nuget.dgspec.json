@@ -99,6 +99,10 @@
             "Serenity.Net.Web": {
               "target": "Package",
               "version": "[8.6.4, )"
+            },
+            "Yitter.IdGenerator": {
+              "target": "Package",
+              "version": "[1.0.14, )"
             }
           },
           "imports": [

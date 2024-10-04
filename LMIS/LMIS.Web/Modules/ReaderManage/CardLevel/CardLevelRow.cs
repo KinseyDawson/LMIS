@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System;
@@ -19,10 +19,13 @@ public sealed class CardLevelRow : Row<CardLevelRow.RowFields>, IIdRow, INameRow
     [DisplayName("Card Level Name"), Size(50), NotNull, QuickSearch, NameProperty]
     public string CardLevelName { get => fields.CardLevelName[this]; set => fields.CardLevelName[this] = value; }
 
-    [DisplayName("Discount"), Size(19), Scale(5), NotNull]
+    [DisplayName("Fee"), Size(50), NotNull]
+    public decimal? Fee { get => fields.Fee[this]; set => fields.Fee[this] = value; }
+    
+    [DisplayName("Discount"), NotNull]
     public decimal? Discount { get => fields.Discount[this]; set => fields.Discount[this] = value; }
 
-    [DisplayName("Penalty"), Size(19), Scale(5), NotNull]
+    [DisplayName("Penalty"), NotNull]
     public decimal? Penalty { get => fields.Penalty[this]; set => fields.Penalty[this] = value; }
 
     [DisplayName("Borrow Days"), NotNull]
@@ -41,6 +44,7 @@ public sealed class CardLevelRow : Row<CardLevelRow.RowFields>, IIdRow, INameRow
     {
         public Int64Field CardLevelId;
         public StringField CardLevelName;
+        public DecimalField Fee;
         public DecimalField Discount;
         public DecimalField Penalty;
         public Int32Field BorrowDays;

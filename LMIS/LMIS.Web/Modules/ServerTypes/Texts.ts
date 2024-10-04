@@ -188,20 +188,21 @@ namespace LMIS.Texts {
                 export const CardLevelName: string;
                 export const CreateTime: string;
                 export const Discount: string;
+                export const Fee: string;
                 export const Penalty: string;
                 export const UpdateTime: string;
             }
 
             namespace LibraryCard {
+                export const CardLevelName: string;
                 export const CreateTime: string;
-                export const LevelCardLevelName: string;
                 export const LevelId: string;
                 export const LibraryCardId: string;
                 export const LibraryCardNo: string;
                 export const Status: string;
                 export const UpdateTime: string;
                 export const UserId: string;
-                export const Username: string;
+                export const UserName: string;
             }
 
             namespace LibraryCardLose {
@@ -212,6 +213,17 @@ namespace LMIS.Texts {
                 export const OperateUserId: string;
                 export const OperateUserUsername: string;
                 export const UpdateTime: string;
+            }
+
+            namespace UserBill {
+                export const CreateTime: string;
+                export const Fee: string;
+                export const Remark: string;
+                export const Type: string;
+                export const UpdateTime: string;
+                export const UserBillId: string;
+                export const UserId: string;
+                export const UserName: string;
             }
         }
     }
@@ -304,6 +316,7 @@ namespace LMIS.Texts {
         export const BookUniqueError: string;
         export const BookshelfUniqueError: string;
         export const BookshlefExceedCapacity: string;
+        export const CardLevelUniqueError: string;
         export const CategoryUniqueError: string;
         export const CurrentPasswordMismatch: string;
         export const DeleteForeignKeyError: string;
@@ -311,6 +324,7 @@ namespace LMIS.Texts {
         export const EmailInUse: string;
         export const InvalidActivateToken: string;
         export const InvalidResetToken: string;
+        export const LibraryCardUniqueError: string;
         export const MinRequiredPasswordLength: string;
         export const PasswordConfirmMismatch: string;
         export const PublisherUniqueError: string;
@@ -343,7 +357,8 @@ namespace LMIS.Texts {
             ReaderManage: {
                 CardLevel: {},
                 LibraryCard: {},
-                LibraryCardLose: {}
+                LibraryCardLose: {},
+                UserBill: {}
             }
         },
         Forms: {

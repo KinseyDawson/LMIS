@@ -55,10 +55,11 @@
   "Db.ReaderManage.CardLevel.EntitySingular": "等级",
   "Db.ReaderManage.CardLevel.CardLevelId": "等级ID",
   "Db.ReaderManage.CardLevel.CardLevelName": "等级名",
+  "Db.ReaderManage.CardLevel.Fee": "费用",
   "Db.ReaderManage.CardLevel.Discount": "折扣",
-  "Db.ReaderManage.CardLevel.Penalty": "罚金（每天）",
-  "Db.ReaderManage.CardLevel.BorrowDays": "借阅期限（天）",
-  "Db.ReaderManage.CardLevel.BorrowBooks": "借阅数量（本）",
+  "Db.ReaderManage.CardLevel.Penalty": "罚金(每天)",
+  "Db.ReaderManage.CardLevel.BorrowDays": "借阅期限(天)",
+  "Db.ReaderManage.CardLevel.BorrowBooks": "借阅数量(本)",
   "Db.ReaderManage.CardLevel.CreateTime": "创建时间",
   "Db.ReaderManage.CardLevel.UpdateTime": "更新时间",
 
@@ -67,8 +68,10 @@
   "Db.ReaderManage.LibraryCard.EntitySingular": "借阅卡",
   "Db.ReaderManage.LibraryCard.LibraryCardId": "借阅卡ID",
   "Db.ReaderManage.LibraryCard.LibraryCardNo": "借阅卡号",
-  "Db.ReaderManage.LibraryCard.UserId": "读者",
+  "Db.ReaderManage.LibraryCard.UserId": "用户",
+  "Db.ReaderManage.LibraryCard.UserName": "用户",
   "Db.ReaderManage.LibraryCard.LevelId": "等级",
+  "Db.ReaderManage.LibraryCard.CardLevelName": "等级",
   "Db.ReaderManage.LibraryCard.Status": "状态",
   "Db.ReaderManage.LibraryCard.CreateTime": "创建时间",
   "Db.ReaderManage.LibraryCard.UpdateTime": "更新时间",
@@ -82,6 +85,17 @@
   "Db.ReaderManage.LibraryCardLose.OperateUserName": "操作人",
   "Db.ReaderManage.LibraryCardLose.CreateTime": "创建时间",
   "Db.ReaderManage.LibraryCardLose.UpdateTime": "更新时间",
+
+  "Db.ReaderManage.UserBill.EntityPlural": "账单",
+  "Db.ReaderManage.UserBill.EntitySingular": "账单",
+  "Db.ReaderManage.UserBill.UserBillId": "账单ID",
+  "Db.ReaderManage.UserBill.UserId": "用户",
+  "Db.ReaderManage.UserBill.UserName": "用户",
+  "Db.ReaderManage.UserBill.Type": "类型",
+  "Db.ReaderManage.UserBill.Fee": "金额",
+  "Db.ReaderManage.UserBill.Remark": "备注",
+  "Db.ReaderManage.UserBill.CreateTime": "创建时间",
+  "Db.ReaderManage.UserBill.UpdateTime": "更新时间",
 
 
   "Db.BookManage.Category.EntityPlural": "类别",
@@ -190,6 +204,9 @@
 
 
 
+
+
+
   "Forms.Membership.ChangePassword.ConfirmPassword": "确认密码",
   "Forms.Membership.ChangePassword.FormTitle": "修改密码",
   "Forms.Membership.ChangePassword.NewPassword": "新密码",
@@ -263,6 +280,9 @@
   "Navigation.ReaderManage/CardLevel": "等级",
   "Navigation.ReaderManage/LibraryCardLose": "挂失",
   "Navigation.ReaderManage/LibraryCard": "借阅卡",
+  "Navigation.ReaderManage/UserBill": "账单",
+
+
   "Permission.Administration:": "管理",
   "Permission.Administration:Security": "用户，角色管理和权限",
   "Permission.Administration:Translation": "语言和翻译",
@@ -300,5 +320,7 @@
   "Validation.BookshelfUniqueError": "书架重复，请重新输入位置！",
   "Validation.BookUniqueError": "书籍重复，请重新输入LSBN！",
   "Validation.BookshlefExceedCapacity": "书架容量超限，请减少上架数量！",
-  "Validation.BookStoreHasNotEnoughInventory": "当前收录库存不够，请减少下架数量！"
+  "Validation.BookStoreHasNotEnoughInventory": "当前收录库存不够，请减少下架数量！",
+  "Validation.CardLevelUniqueError": "借阅卡等级重复，请重新输入等级名称！",
+  "Validation.LibraryCardUniqueError": "借阅卡重复，当前用户已经办过借阅卡！"
 }

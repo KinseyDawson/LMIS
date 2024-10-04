@@ -1,13 +1,12 @@
-﻿import { StringEditor, DecimalEditor, IntegerEditor, DateEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
+﻿import { StringEditor, DecimalEditor, IntegerEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
 
 export interface CardLevelForm {
     CardLevelName: StringEditor;
+    Fee: DecimalEditor;
     Discount: DecimalEditor;
     Penalty: DecimalEditor;
     BorrowDays: IntegerEditor;
     BorrowBooks: IntegerEditor;
-    CreateTime: DateEditor;
-    UpdateTime: DateEditor;
 }
 
 export class CardLevelForm extends PrefixedContext {
@@ -23,16 +22,14 @@ export class CardLevelForm extends PrefixedContext {
             var w0 = StringEditor;
             var w1 = DecimalEditor;
             var w2 = IntegerEditor;
-            var w3 = DateEditor;
 
             initFormType(CardLevelForm, [
                 'CardLevelName', w0,
+                'Fee', w1,
                 'Discount', w1,
                 'Penalty', w1,
                 'BorrowDays', w2,
-                'BorrowBooks', w2,
-                'CreateTime', w3,
-                'UpdateTime', w3
+                'BorrowBooks', w2
             ]);
         }
     }
