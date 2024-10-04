@@ -1,4 +1,5 @@
 using FluentMigrator;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.Text;
 
 namespace LMIS.Migrations.DefaultDB;
 
@@ -10,6 +11,7 @@ public class DefaultDB_20240904_0001_LibraryCard : AutoReversingMigration
         this.CreateTableWithId64("CardLevels", "CardLevelId", s => s
             .WithColumn("CardLevelName").AsString(50).NotNullable().Unique("UK_CardLevels_CardLevelName")
             .WithColumn("Fee").AsDecimal().NotNullable()
+            .WithColumn("Rent").AsDecimal().NotNullable()
             .WithColumn("Discount").AsDecimal().NotNullable()
             .WithColumn("Penalty").AsDecimal().NotNullable()
             .WithColumn("BorrowDays").AsInt32().NotNullable()

@@ -13,6 +13,8 @@ public class CardLevelColumns
     [EditLink]
     public string CardLevelName { get; set; }
     public decimal Fee { get; set; }
+    public decimal Rent { get; set; }
+
     public decimal Discount { get; set; }
     public decimal Penalty { get; set; }
     [Width(100)]

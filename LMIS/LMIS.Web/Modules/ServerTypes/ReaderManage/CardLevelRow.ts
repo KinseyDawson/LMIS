@@ -4,6 +4,7 @@ export interface CardLevelRow {
     CardLevelId?: number;
     CardLevelName?: string;
     Fee?: number;
+    Rent?: number;
     Discount?: number;
     Penalty?: number;
     BorrowDays?: number;

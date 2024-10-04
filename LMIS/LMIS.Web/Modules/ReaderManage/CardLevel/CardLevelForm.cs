@@ -11,6 +11,8 @@ public class CardLevelForm
     [DecimalEditor]
     public decimal Fee { get; set; }
     [DecimalEditor]
+    public decimal Rent { get; set; }
+    [DecimalEditor]
     public decimal Discount { get; set; }
     [DecimalEditor]
     public decimal Penalty { get; set; }

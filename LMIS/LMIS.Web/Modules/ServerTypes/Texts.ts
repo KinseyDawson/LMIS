@@ -190,6 +190,7 @@ namespace LMIS.Texts {
                 export const Discount: string;
                 export const Fee: string;
                 export const Penalty: string;
+                export const Rent: string;
                 export const UpdateTime: string;
             }
 

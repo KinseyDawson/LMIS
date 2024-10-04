@@ -6,6 +6,7 @@ export interface CardLevelColumns {
     CardLevelId: Column<CardLevelRow>;
     CardLevelName: Column<CardLevelRow>;
     Fee: Column<CardLevelRow>;
+    Rent: Column<CardLevelRow>;
     Discount: Column<CardLevelRow>;
     Penalty: Column<CardLevelRow>;
     BorrowDays: Column<CardLevelRow>;

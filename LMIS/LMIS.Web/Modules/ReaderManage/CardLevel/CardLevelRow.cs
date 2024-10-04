@@ -21,7 +21,10 @@ public sealed class CardLevelRow : Row<CardLevelRow.RowFields>, IIdRow, INameRow
 
     [DisplayName("Fee"), Size(50), NotNull]
     public decimal? Fee { get => fields.Fee[this]; set => fields.Fee[this] = value; }
-    
+
+    [DisplayName("Rent"), Size(50), NotNull]
+    public decimal? Rent { get => fields.Rent[this]; set => fields.Rent[this] = value; }
+
     [DisplayName("Discount"), NotNull]
     public decimal? Discount { get => fields.Discount[this]; set => fields.Discount[this] = value; }
 
@@ -45,6 +48,7 @@ public sealed class CardLevelRow : Row<CardLevelRow.RowFields>, IIdRow, INameRow
         public Int64Field CardLevelId;
         public StringField CardLevelName;
         public DecimalField Fee;
+        public DecimalField Rent;
         public DecimalField Discount;
         public DecimalField Penalty;
         public Int32Field BorrowDays;

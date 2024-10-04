@@ -12,6 +12,7 @@ public class CardLevelHelper
                 Fld.CardLevelId,
                 Fld.CardLevelName,
                 Fld.Fee,
+                Fld.Rent,
                 Fld.Discount,
                 Fld.Penalty,
                 Fld.BorrowBooks,

@@ -3,6 +3,7 @@
 export interface CardLevelForm {
     CardLevelName: StringEditor;
     Fee: DecimalEditor;
+    Rent: DecimalEditor;
     Discount: DecimalEditor;
     Penalty: DecimalEditor;
     BorrowDays: IntegerEditor;
@@ -26,6 +27,7 @@ export class CardLevelForm extends PrefixedContext {
             initFormType(CardLevelForm, [
                 'CardLevelName', w0,
                 'Fee', w1,
+                'Rent', w1,
                 'Discount', w1,
                 'Penalty', w1,
                 'BorrowDays', w2,

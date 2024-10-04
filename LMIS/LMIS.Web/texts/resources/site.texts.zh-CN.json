@@ -56,6 +56,7 @@
   "Db.ReaderManage.CardLevel.CardLevelId": "等级ID",
   "Db.ReaderManage.CardLevel.CardLevelName": "等级名",
   "Db.ReaderManage.CardLevel.Fee": "费用",
+  "Db.ReaderManage.CardLevel.Rent": "租金",
   "Db.ReaderManage.CardLevel.Discount": "折扣",
   "Db.ReaderManage.CardLevel.Penalty": "罚金(每天)",
   "Db.ReaderManage.CardLevel.BorrowDays": "借阅期限(天)",
