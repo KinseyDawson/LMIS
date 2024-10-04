@@ -27,6 +27,7 @@ public class LibraryCardSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyRes
                 throw new ValidationError(Texts.Validation.LibraryCardUniqueError.ToString(Localizer));
             }
             Row.LibraryCardNo = SerialNumberHelper.GenerateWithYitter();
+            Row.Status= (int)LibraryCardStatusEnum.Normal;
             Row.CreateTime = DateTime.Now;
         }
         else

@@ -8,7 +8,7 @@ namespace LMIS.InventoryManage.Columns;
 [BasedOnRow(typeof(DownBookshelfRow), CheckNames = true)]
 public class DownBookshelfColumns
 {
-    [EditLink,AlignRight]
+    [AlignRight]
     public long DownBookshelfId { get; set; }
     public string BookName { get; set; }
     public string BookshelfLocation { get; set; }

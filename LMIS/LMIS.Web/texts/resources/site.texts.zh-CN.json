@@ -88,6 +88,20 @@
   "Db.ReaderManage.UserBill.CreateTime": "创建时间",
   "Db.ReaderManage.UserBill.UpdateTime": "更新时间",
 
+  "Db.ReaderManage.Borrow.EntityPlural": "借阅",
+  "Db.ReaderManage.Borrow.EntitySingular": "借阅",
+  "Db.ReaderManage.Borrow.BorrowNo": "借阅号",
+  "Db.ReaderManage.Borrow.BorrowId": "借阅ID",
+  "Db.ReaderManage.Borrow.UserId": "用户",
+  "Db.ReaderManage.Borrow.UserName": "用户",
+  "Db.ReaderManage.Borrow.BookId": "书籍",
+  "Db.ReaderManage.Borrow.BookName": "书籍",
+  "Db.ReaderManage.Borrow.BorrowStatus": "状态",
+  "Db.ReaderManage.Borrow.BorrowDate": "借阅日期",
+  "Db.ReaderManage.Borrow.BorrowReturnDate": "归还日期",
+  "Db.ReaderManage.Borrow.CreateTime": "创建时间",
+  "Db.ReaderManage.Borrow.UpdateTime": "更新时间",
+
 
   "Db.BookManage.Category.EntityPlural": "类别",
   "Db.BookManage.Category.EntitySingular": "类别",
@@ -271,6 +285,7 @@
   "Navigation.ReaderManage/CardLevel": "等级",
   "Navigation.ReaderManage/LibraryCard": "借阅卡",
   "Navigation.ReaderManage/UserBill": "账单",
+  "Navigation.ReaderManage/Borrow": "借阅",
 
 
   "Permission.Administration:": "管理",
@@ -310,8 +325,12 @@
   "Validation.BookshelfUniqueError": "书架重复，请重新输入位置！",
   "Validation.BookUniqueError": "书籍重复，请重新输入LSBN！",
   "Validation.BookshlefExceedCapacity": "书架容量超限，请减少上架数量！",
-  "Validation.BookStoreHasNotEnoughInventory": "当前收录库存不够，请减少下架数量！",
+  "Validation.BookStoreHasNotEnoughInventory": "该收录库存不够，请减少下架数量！",
   "Validation.CardLevelUniqueError": "借阅卡等级重复，请重新输入等级名称！",
-  "Validation.LibraryCardUniqueError": "借阅卡重复，当前用户已经办过借阅卡！",
-  "Validation.LibraryCardOperateIllegalityError": "借阅卡操作不合法！"
+  "Validation.LibraryCardUniqueError": "借阅卡重复，该用户已经办过借阅卡！",
+  "Validation.LibraryCardOperateIllegalityError": "借阅卡操作不合法！",
+  "Validation.BookUnborrowableEoor": "该书籍不可借阅！",
+  "Validation.BookHasNotEnoughInventoryError": "该书籍库存不足！",
+  "Validation.UserHasNotLibraryCardError": "该用户没有借阅卡！",
+  "Validation.BorrowedCountExceedError": "该用户借阅数量超限！"
 }

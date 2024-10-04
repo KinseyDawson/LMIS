@@ -13,7 +13,6 @@ export interface UserBillRow {
 
 export abstract class UserBillRow {
     static readonly idProperty = 'UserBillId';
-    static readonly nameProperty = 'Remark';
     static readonly localTextPrefix = 'ReaderManage.UserBill';
     static readonly deletePermission = 'ReaderManage:UserBill';
     static readonly insertPermission = 'ReaderManage:UserBill';

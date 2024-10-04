@@ -11,7 +11,7 @@ namespace LMIS.ReaderManage;
 [ReadPermission("ReaderManage:UserBill")]
 [ModifyPermission("ReaderManage:UserBill")]
 [ServiceLookupPermission("ReaderManage:UserBill")]
-public sealed class UserBillRow : Row<UserBillRow.RowFields>, IIdRow, INameRow
+public sealed class UserBillRow : Row<UserBillRow.RowFields>, IIdRow
 {
     const string jUser = nameof(jUser);
 
@@ -28,7 +28,7 @@ public sealed class UserBillRow : Row<UserBillRow.RowFields>, IIdRow, INameRow
     [DisplayName("Fee"), Size(19), Scale(5), NotNull]
     public decimal? Fee { get => fields.Fee[this]; set => fields.Fee[this] = value; }
 
-    [DisplayName("Remark"), Size(50), NameProperty]
+    [DisplayName("Remark"), Size(50)]
     public string Remark { get => fields.Remark[this]; set => fields.Remark[this] = value; }
 
     [DisplayName("Create Time"), NotNull]

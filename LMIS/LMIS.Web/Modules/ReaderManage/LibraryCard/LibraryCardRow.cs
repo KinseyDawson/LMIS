@@ -32,6 +32,7 @@ public sealed class LibraryCardRow : Row<LibraryCardRow.RowFields>, IIdRow
     public long? LevelId { get => fields.LevelId[this]; set => fields.LevelId[this] = value; }
 
     [DisplayName("Status"), NotNull,QuickFilter]
+    [HideOnInsert]
     public short? Status { get => fields.Status[this]; set => fields.Status[this] = value; }
 
     [DisplayName("Create Time"), NotNull]

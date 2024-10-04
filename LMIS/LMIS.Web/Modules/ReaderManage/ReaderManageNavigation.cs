@@ -5,3 +5,4 @@ using MyPages = LMIS.ReaderManage.Pages;
 [assembly: NavigationLink(5100, "ReaderManage/CardLevel", typeof(MyPages.CardLevelPage), icon: "fa-level-up")]
 [assembly: NavigationLink(5200, "ReaderManage/LibraryCard", typeof(MyPages.LibraryCardPage), icon: "fa-address-card")]
 [assembly: NavigationLink(5300, "ReaderManage/UserBill", typeof(MyPages.UserBillPage), icon: "fa fa-money")]
+[assembly: NavigationLink(5400, "ReaderManage/Borrow", typeof(MyPages.BorrowPage), icon: "fa-hand-paper-o")]

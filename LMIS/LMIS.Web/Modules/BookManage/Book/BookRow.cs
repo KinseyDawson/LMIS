@@ -55,6 +55,7 @@ public sealed class BookRow : Row<BookRow.RowFields>, IIdRow, INameRow
     public long? BorrowableInventory { get => fields.BorrowableInventory[this]; set => fields.BorrowableInventory[this] = value; }
     
     [DisplayName("Book Status"), NotNull]
+    [HideOnInsert]
     public short? BookStatus { get => fields.BookStatus[this]; set => fields.BookStatus[this] = value; }
 
     [DisplayName("Book Image"), Size(100)]

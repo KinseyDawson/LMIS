@@ -181,6 +181,20 @@ namespace LMIS.Texts {
 
         namespace ReaderManage {
 
+            namespace Borrow {
+                export const BookId: string;
+                export const BookName: string;
+                export const BorrowDate: string;
+                export const BorrowId: string;
+                export const BorrowNo: string;
+                export const BorrowReturnDate: string;
+                export const BorrowStatus: string;
+                export const CreateTime: string;
+                export const UpdateTime: string;
+                export const UserId: string;
+                export const UserName: string;
+            }
+
             namespace CardLevel {
                 export const BorrowBooks: string;
                 export const BorrowDays: string;
@@ -303,10 +317,13 @@ namespace LMIS.Texts {
     export declare namespace Validation {
         export const AuthenticationError: string;
         export const AuthorUniqueError: string;
+        export const BookHasNotEnoughInventoryError: string;
         export const BookStoreHasNotEnoughInventory: string;
+        export const BookUnborrowableEoor: string;
         export const BookUniqueError: string;
         export const BookshelfUniqueError: string;
         export const BookshlefExceedCapacity: string;
+        export const BorrowedCountExceedError: string;
         export const CardLevelUniqueError: string;
         export const CategoryUniqueError: string;
         export const CurrentPasswordMismatch: string;
@@ -321,6 +338,7 @@ namespace LMIS.Texts {
         export const PasswordConfirmMismatch: string;
         export const PublisherUniqueError: string;
         export const SavePrimaryKeyError: string;
+        export const UserHasNotLibraryCardError: string;
     }
 
     LMIS['Texts'] = proxyTexts(Texts, '', {
@@ -347,6 +365,7 @@ namespace LMIS.Texts {
                 UpBookshelf: {}
             },
             ReaderManage: {
+                Borrow: {},
                 CardLevel: {},
                 LibraryCard: {},
                 UserBill: {}

@@ -33,6 +33,7 @@ public class BookSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>,
             Row.CreateTime = DateTime.Now;
             Row.Inventory = 0;
             Row.BorrowableInventory = 0;
+            Row.BookStatus = 1;
         }
         Row.UpdateTime = DateTime.Now;
         base.ValidateRequest();

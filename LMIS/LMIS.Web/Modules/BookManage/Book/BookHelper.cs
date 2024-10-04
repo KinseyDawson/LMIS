@@ -24,4 +24,31 @@ public class BookHelper
                         where BookId=@BookId";
         connection.Execute(sqlText, new { BookId = bookId, Amount = amount });
     }
+
+    public static MyRow QueryByBookId(IDbConnection connection, long bookId)
+    {
+        var row = new MyRow();
+        if (new SqlQuery().From(row)
+            .Select(
+                Fld.BookId,
+                Fld.BookName,
+                Fld.Inventory,
+                Fld.BorrowableInventory,
+                Fld.BookStatus)
+            .Where(new Criteria(Fld.BookId) == bookId)
+            .GetFirst(connection))
+        {
+            return row;
+        }
+        return null;
+    }
+    public static void DncreaseBorrowableInventory(IDbConnection connection, long bookId, long amount)
+    {
+        var sqlText = @"update Books
+                        set
+                        BorrowableInventory =BorrowableInventory -@Amount
+                        where BookId=@BookId";
+        connection.Execute(sqlText, new { BookId = bookId, Amount = amount });
+    }
+
 }
