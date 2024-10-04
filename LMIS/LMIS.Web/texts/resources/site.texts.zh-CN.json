@@ -76,16 +76,6 @@
   "Db.ReaderManage.LibraryCard.CreateTime": "创建时间",
   "Db.ReaderManage.LibraryCard.UpdateTime": "更新时间",
 
-
-  "Db.ReaderManage.LibraryCardLose.EntityPlural": "挂失",
-  "Db.ReaderManage.LibraryCardLose.EntitySingular": "挂失",
-  "Db.ReaderManage.LibraryCardLose.LibraryCardLostId": "挂失ID",
-  "Db.ReaderManage.LibraryCardLose.LibraryCardId": "借阅卡",
-  "Db.ReaderManage.LibraryCardLose.OperateUserId": "操作人",
-  "Db.ReaderManage.LibraryCardLose.OperateUserName": "操作人",
-  "Db.ReaderManage.LibraryCardLose.CreateTime": "创建时间",
-  "Db.ReaderManage.LibraryCardLose.UpdateTime": "更新时间",
-
   "Db.ReaderManage.UserBill.EntityPlural": "账单",
   "Db.ReaderManage.UserBill.EntitySingular": "账单",
   "Db.ReaderManage.UserBill.UserBillId": "账单ID",
@@ -278,7 +268,6 @@
   "Navigation.InventoryManage/BookStore": "收录",
   "Navigation.ReaderManage": "读者",
   "Navigation.ReaderManage/CardLevel": "等级",
-  "Navigation.ReaderManage/LibraryCardLose": "挂失",
   "Navigation.ReaderManage/LibraryCard": "借阅卡",
   "Navigation.ReaderManage/UserBill": "账单",
 
@@ -322,5 +311,6 @@
   "Validation.BookshlefExceedCapacity": "书架容量超限，请减少上架数量！",
   "Validation.BookStoreHasNotEnoughInventory": "当前收录库存不够，请减少下架数量！",
   "Validation.CardLevelUniqueError": "借阅卡等级重复，请重新输入等级名称！",
-  "Validation.LibraryCardUniqueError": "借阅卡重复，当前用户已经办过借阅卡！"
+  "Validation.LibraryCardUniqueError": "借阅卡重复，当前用户已经办过借阅卡！",
+  "Validation.LibraryCardOperateIllegalityError": "借阅卡操作不合法！"
 }

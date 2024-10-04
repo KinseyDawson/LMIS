@@ -12,6 +12,7 @@ public class UserBillColumns
     [EditLink, AlignRight]
     public long UserBillId { get; set; }
     public string UserName { get; set; }
+    [Width(100)]
     public BillTypeEnum Type { get; set; }
     public decimal Fee { get; set; }
     [Width(200)]

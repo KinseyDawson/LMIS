@@ -205,16 +205,6 @@ namespace LMIS.Texts {
                 export const UserName: string;
             }
 
-            namespace LibraryCardLose {
-                export const CreateTime: string;
-                export const LibraryCardId: string;
-                export const LibraryCardLoseId: string;
-                export const LibraryCardNo: string;
-                export const OperateUserId: string;
-                export const OperateUserUsername: string;
-                export const UpdateTime: string;
-            }
-
             namespace UserBill {
                 export const CreateTime: string;
                 export const Fee: string;
@@ -324,6 +314,7 @@ namespace LMIS.Texts {
         export const EmailInUse: string;
         export const InvalidActivateToken: string;
         export const InvalidResetToken: string;
+        export const LibraryCardOperateIllegalityError: string;
         export const LibraryCardUniqueError: string;
         export const MinRequiredPasswordLength: string;
         export const PasswordConfirmMismatch: string;
@@ -357,7 +348,6 @@ namespace LMIS.Texts {
             ReaderManage: {
                 CardLevel: {},
                 LibraryCard: {},
-                LibraryCardLose: {},
                 UserBill: {}
             }
         },

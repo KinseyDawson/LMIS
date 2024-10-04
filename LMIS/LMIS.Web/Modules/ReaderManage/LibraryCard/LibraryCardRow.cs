@@ -31,7 +31,7 @@ public sealed class LibraryCardRow : Row<LibraryCardRow.RowFields>, IIdRow
     [ServiceLookupEditor(typeof(CardLevelRow))]
     public long? LevelId { get => fields.LevelId[this]; set => fields.LevelId[this] = value; }
 
-    [DisplayName("Status"), NotNull]
+    [DisplayName("Status"), NotNull,QuickFilter]
     public short? Status { get => fields.Status[this]; set => fields.Status[this] = value; }
 
     [DisplayName("Create Time"), NotNull]

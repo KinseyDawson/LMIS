@@ -1,8 +1,7 @@
 using DawsonErp;
 using LMIS.Modules.ReaderManage.CardLevel;
+using LMIS.Modules.ReaderManage.LibraryCard;
 using LMIS.Modules.ReaderManage.UserBill;
-using MySql.Data.MySqlClient;
-using Serenity.Services;
 using MyRequest = Serenity.Services.SaveRequest<LMIS.ReaderManage.LibraryCardRow>;
 using MyResponse = Serenity.Services.SaveResponse;
 using MyRow = LMIS.ReaderManage.LibraryCardRow;
@@ -18,38 +17,67 @@ public class LibraryCardSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyRes
     {
 
     }
-    protected override void ExecuteSave()
-    {
-        try
-        {
-            base.ExecuteSave();
-        }
-        catch (MySqlException ex) when (ex.Message.StartsWith("duplicate", StringComparison.OrdinalIgnoreCase))
-        {
-            throw new ValidationError(Texts.Validation.LibraryCardUniqueError.ToString(Localizer));
-        }
-    }
     protected override void ValidateRequest()
     {
         if (IsCreate)
         {
+            var exist = LibraryCardHelper.QueryByUserId(Connection, Request.Entity.UserId ?? 0, LibraryCardStatusEnum.Normal);
+            if (exist != null)
+            {
+                throw new ValidationError(Texts.Validation.LibraryCardUniqueError.ToString(Localizer));
+            }
             Row.LibraryCardNo = SerialNumberHelper.GenerateWithYitter();
             Row.CreateTime = DateTime.Now;
+        }
+        else
+        {
+            if (Old.Status == (int)LibraryCardStatusEnum.Lose)
+            {
+                throw new ValidationError(Texts.Validation.LibraryCardOperateIllegalityError.ToString(Localizer));
+            }
         }
         Row.UpdateTime = DateTime.Now;
         base.ValidateRequest();
     }
     protected override void AfterSave()
     {
-        if (IsCreate)//办卡
+        if (IsCreate)
         {
-            var cardLevelRow = CardLevelHelper.QueryByCardLevelId(Connection,
-            Request.Entity.LevelId ?? 0);
-            CardBillHelper.Insert(Connection,
-                Request.Entity.UserId ?? 0,
-                BillTypeEnum.Card,
-                cardLevelRow.Fee ?? 0,
-                $"办卡:{Row.LibraryCardNo}");
+            var exist = LibraryCardHelper.QueryByUserId(Connection, Request.Entity.UserId ?? 0, LibraryCardStatusEnum.Lose);
+            if (exist == null)//办卡,补卡没有费用
+            {
+                var cardLevelRow = CardLevelHelper.QueryByCardLevelId(Connection, Request.Entity.LevelId ?? 0);
+                CardBillHelper.Insert(Connection,
+                    Request.Entity.UserId ?? 0,
+                    BillTypeEnum.Card,
+                    cardLevelRow.Fee ?? 0,
+                    $"办卡:{Row.LibraryCardNo}");
+            }
+        }
+        else
+        {
+            if (Old.Status != Request.Entity.Status && Old.LevelId != Request.Entity.LevelId)
+            {
+                throw new ValidationError(Texts.Validation.LibraryCardOperateIllegalityError.ToString(Localizer));
+            }
+            else//借阅卡升级
+            {
+                if (Old.LevelId != Request.Entity.LevelId)
+                {
+                    var oldLevelRow = CardLevelHelper.QueryByCardLevelId(Connection, Old.LevelId ?? 0);
+                    var newLevelRow = CardLevelHelper.QueryByCardLevelId(Connection, Request.Entity.LevelId ?? 0);
+                    if (oldLevelRow.Fee > newLevelRow.Fee)
+                    {
+                        throw new ValidationError(Texts.Validation.LibraryCardUniqueError.ToString(Localizer));
+                    }
+                    var fee = (newLevelRow.Fee ?? 0) - (oldLevelRow.Fee ?? 0);
+                    CardBillHelper.Insert(Connection,
+                        Old.UserId ?? 0,
+                        BillTypeEnum.CardUpLevel,
+                        newLevelRow.Fee ?? 0,
+                        $"升级:{Row.LibraryCardNo}");
+                }
+            }
         }
         base.AfterSave();
     }

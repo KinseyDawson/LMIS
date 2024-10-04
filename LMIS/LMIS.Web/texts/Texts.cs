@@ -139,5 +139,6 @@ public static partial class Texts
         public static readonly LocalText BookStoreHasNotEnoughInventory = "BookStore has not enough inventory. Please reduce inventory!";
         public static readonly LocalText CardLevelUniqueError = "Card level duplicates. Please type new Name!";
         public static readonly LocalText LibraryCardUniqueError = "LibraryCard duplicates. Current user has card already!";
+        public static readonly LocalText LibraryCardOperateIllegalityError = "LibraryCard operates illegally!";
     }
 }
