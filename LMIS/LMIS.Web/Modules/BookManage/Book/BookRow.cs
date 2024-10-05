@@ -75,6 +75,7 @@ public sealed class BookRow : Row<BookRow.RowFields>, IIdRow, INameRow
     public string AuthorName { get => fields.AuthorName[this]; set => fields.AuthorName[this] = value; }
 
     [DisplayName("Publisher Name"), Origin(jPublisher, nameof(PublisherRow.PublisherName))]
+    [QuickSearch]
     public string PublisherName { get => fields.PublisherName[this]; set => fields.PublisherName[this] = value; }
 
     public class RowFields : RowFieldsBase
