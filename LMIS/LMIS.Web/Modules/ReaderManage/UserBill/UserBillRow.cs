@@ -1,3 +1,4 @@
+using LMIS.Modules.ReaderManage;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
@@ -8,8 +9,8 @@ namespace LMIS.ReaderManage;
 
 [ConnectionKey("Default"), Module("ReaderManage"), TableName("userbills")]
 [DisplayName("User Bill"), InstanceName("User Bill")]
-[ReadPermission("ReaderManage:UserBill")]
-[ModifyPermission("ReaderManage:UserBill")]
+[ReadPermission(ReaderManagePermissionKeys.UserBill)]
+[ModifyPermission(ReaderManagePermissionKeys.UserBill)]
 [ServiceLookupPermission("*")]
 public sealed class UserBillRow : Row<UserBillRow.RowFields>, IIdRow
 {

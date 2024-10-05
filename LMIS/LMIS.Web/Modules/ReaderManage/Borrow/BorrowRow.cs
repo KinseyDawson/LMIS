@@ -1,3 +1,4 @@
+using LMIS.Modules.ReaderManage;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
@@ -8,8 +9,8 @@ namespace LMIS.ReaderManage;
 
 [ConnectionKey("Default"), Module("ReaderManage"), TableName("borrows")]
 [DisplayName("Borrow"), InstanceName("Borrow")]
-[ReadPermission("ReaderManage:Borrow")]
-[ModifyPermission("ReaderManage:Borrow")]
+[ReadPermission(ReaderManagePermissionKeys.ReadBorrow)]
+[ModifyPermission(ReaderManagePermissionKeys.ModifyBorrow)]
 [ServiceLookupPermission("*")]
 public sealed class BorrowRow : Row<BorrowRow.RowFields>, IIdRow, INameRow
 {

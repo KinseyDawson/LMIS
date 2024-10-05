@@ -308,6 +308,14 @@
   "Permission.InventoryManage:ModifyDownBookshelf": "编辑下架",
 
 
+  "Permission.ReaderManage:": "读者",
+  "Permission.ReaderManage:ReadBorrow": "查询借阅",
+  "Permission.ReaderManage:ModifyBorrow": "编辑借阅",
+  "Permission.ReaderManage:CardLevel": "借阅卡等级",
+  "Permission.ReaderManage:ReadLibraryCard": "查询借阅卡",
+  "Permission.ReaderManage:ModifyLibraryCard": "编辑借阅卡",
+  "Permission.ReaderManage:UserBill": "账单",
+
 
   "Site.AccessDenied.ClickToChangeUser": "点击此处以其他用户身份登录",
   "Site.AccessDenied.ClickToLogin": "点击此处返回登录页",

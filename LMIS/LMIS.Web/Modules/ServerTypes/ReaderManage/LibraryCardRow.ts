@@ -15,10 +15,10 @@ export interface LibraryCardRow {
 export abstract class LibraryCardRow {
     static readonly idProperty = 'LibraryCardId';
     static readonly localTextPrefix = 'ReaderManage.LibraryCard';
-    static readonly deletePermission = 'ReaderManage:LibraryCard';
-    static readonly insertPermission = 'ReaderManage:LibraryCard';
-    static readonly readPermission = 'ReaderManage:LibraryCard';
-    static readonly updatePermission = 'ReaderManage:LibraryCard';
+    static readonly deletePermission = 'ReaderManage:ModifyLibraryCard';
+    static readonly insertPermission = 'ReaderManage:ModifyLibraryCard';
+    static readonly readPermission = 'ReaderManage:ReadLibraryCard';
+    static readonly updatePermission = 'ReaderManage:ModifyLibraryCard';
 
     static readonly Fields = fieldsProxy<LibraryCardRow>();
 }

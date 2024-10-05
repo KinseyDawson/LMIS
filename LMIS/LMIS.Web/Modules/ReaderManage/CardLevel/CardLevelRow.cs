@@ -1,3 +1,4 @@
+using LMIS.Modules.ReaderManage;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
@@ -8,8 +9,8 @@ namespace LMIS.ReaderManage;
 
 [ConnectionKey("Default"), Module("ReaderManage"), TableName("cardlevels")]
 [DisplayName("Card Level"), InstanceName("Card Level")]
-[ReadPermission("ReaderManage:CardLevel")]
-[ModifyPermission("ReaderManage:CardLevel")]
+[ReadPermission(ReaderManagePermissionKeys.CardLevel)]
+[ModifyPermission(ReaderManagePermissionKeys.CardLevel)]
 [ServiceLookupPermission("*")]
 public sealed class CardLevelRow : Row<CardLevelRow.RowFields>, IIdRow, INameRow
 {
