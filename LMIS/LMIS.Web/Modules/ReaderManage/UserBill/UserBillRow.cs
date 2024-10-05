@@ -24,6 +24,7 @@ public sealed class UserBillRow : Row<UserBillRow.RowFields>, IIdRow
     public long? UserId { get => fields.UserId[this]; set => fields.UserId[this] = value; }
 
     [DisplayName("Type"), NotNull]
+    [QuickFilter]
     public short? Type { get => fields.Type[this]; set => fields.Type[this] = value; }
 
     [DisplayName("Fee"), Size(19), Scale(5), NotNull]

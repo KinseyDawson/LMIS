@@ -44,6 +44,7 @@ public sealed class BookshelfRow : Row<BookshelfRow.RowFields>, IIdRow, INameRow
     public DateTime? UpdateTime { get => fields.UpdateTime[this]; set => fields.UpdateTime[this] = value; }
 
     [DisplayName("Category Name"), Origin(jCategory, nameof(CategoryRow.CategoryName))]
+    [QuickSearch]
     public string CategoryName { get => fields.CategoryName[this]; set => fields.CategoryName[this] = value; }
 
     public class RowFields : RowFieldsBase

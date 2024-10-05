@@ -36,6 +36,7 @@ public sealed class BorrowRow : Row<BorrowRow.RowFields>, IIdRow, INameRow
 
     [DisplayName("Borrow Status"), NotNull]
     [HideOnInsert]
+    [QuickFilter]
     public short? BorrowStatus { get => fields.BorrowStatus[this]; set => fields.BorrowStatus[this] = value; }
 
     [DisplayName("Borrow Date"), NotNull]

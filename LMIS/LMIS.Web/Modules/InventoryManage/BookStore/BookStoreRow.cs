@@ -41,6 +41,7 @@ public sealed class BookStoreRow : Row<BookStoreRow.RowFields>, IIdRow
     public string BookName { get => fields.BookName[this]; set => fields.BookName[this] = value; }
 
     [DisplayName("Bookshelf Location"), Origin(jBookshelf, nameof(BookManage.BookshelfRow.Location))]
+    [QuickSearch]
     public string BookshelfLocation { get => fields.BookshelfLocation[this]; set => fields.BookshelfLocation[this] = value; }
 
     public class RowFields : RowFieldsBase
