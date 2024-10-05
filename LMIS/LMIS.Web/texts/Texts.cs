@@ -144,5 +144,8 @@ public static partial class Texts
         public static readonly LocalText BookHasNotEnoughInventoryError = "There are not enough invBookentory!";
         public static readonly LocalText UserHasNotLibraryCardError = "User has not library card!";
         public static readonly LocalText BorrowedCountExceedError = "Borrowed Count Exceeds!";
+        public static readonly LocalText BorrowOperateIllegalityError = "Borrow operates illegally!";
+        public static readonly LocalText BorrowExpiredError = "Borrowed Book has been expired already!";
+        public static readonly LocalText BorrowNotExpiredError = "Borrowed Book has not been expired already!";
     }
 }

@@ -24,6 +24,14 @@ public class BookHelper
                         where BookId=@BookId";
         connection.Execute(sqlText, new { BookId = bookId, Amount = amount });
     }
+    public static void DncreaseStockInventory(IDbConnection connection, long bookId, long amount)
+    {
+        var sqlText = @"update Books
+                        set
+                        Inventory =Inventory -@Amount
+                        where BookId=@BookId";
+        connection.Execute(sqlText, new { BookId = bookId, Amount = amount });
+    }
 
     public static MyRow QueryByBookId(IDbConnection connection, long bookId)
     {
@@ -32,6 +40,7 @@ public class BookHelper
             .Select(
                 Fld.BookId,
                 Fld.BookName,
+                Fld.Price,
                 Fld.Inventory,
                 Fld.BorrowableInventory,
                 Fld.BookStatus)
@@ -47,6 +56,14 @@ public class BookHelper
         var sqlText = @"update Books
                         set
                         BorrowableInventory =BorrowableInventory -@Amount
+                        where BookId=@BookId";
+        connection.Execute(sqlText, new { BookId = bookId, Amount = amount });
+    }
+    public static void IncreaseBorrowableInventory(IDbConnection connection, long bookId, long amount)
+    {
+        var sqlText = @"update Books
+                        set
+                        BorrowableInventory =BorrowableInventory +@Amount
                         where BookId=@BookId";
         connection.Execute(sqlText, new { BookId = bookId, Amount = amount });
     }

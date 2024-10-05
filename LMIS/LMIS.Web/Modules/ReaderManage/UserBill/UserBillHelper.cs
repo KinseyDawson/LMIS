@@ -1,7 +1,7 @@
 namespace LMIS.Modules.ReaderManage.UserBill;
 using MyRow = LMIS.ReaderManage.UserBillRow;
 
-public class CardBillHelper
+public class UserBillHelper
 {
     private static MyRow.RowFields Fld => MyRow.Fields;
 

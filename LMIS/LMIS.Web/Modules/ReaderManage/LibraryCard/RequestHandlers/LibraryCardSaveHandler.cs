@@ -48,7 +48,7 @@ public class LibraryCardSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyRes
             if (exist == null)//办卡,补卡没有费用
             {
                 var cardLevelRow = CardLevelHelper.QueryByCardLevelId(Connection, Request.Entity.LevelId ?? 0);
-                CardBillHelper.Insert(Connection,
+                UserBillHelper.Insert(Connection,
                     Request.Entity.UserId ?? 0,
                     BillTypeEnum.Card,
                     cardLevelRow.Fee ?? 0,
@@ -72,7 +72,7 @@ public class LibraryCardSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyRes
                         throw new ValidationError(Texts.Validation.LibraryCardUniqueError.ToString(Localizer));
                     }
                     var fee = (newLevelRow.Fee ?? 0) - (oldLevelRow.Fee ?? 0);
-                    CardBillHelper.Insert(Connection,
+                    UserBillHelper.Insert(Connection,
                         Old.UserId ?? 0,
                         BillTypeEnum.CardUpLevel,
                         newLevelRow.Fee ?? 0,

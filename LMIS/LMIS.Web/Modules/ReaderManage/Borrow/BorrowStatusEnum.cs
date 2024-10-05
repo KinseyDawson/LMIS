@@ -7,5 +7,7 @@ public enum BorrowStatusEnum
     [Description("已归还")]
     Returned = 2,
     [Description("过期归还")]
-    ExpiredAndReturned = 3
+    ExpiredAndReturned = 3,
+    [Description("损坏")]
+    Damaged = 4,
 }

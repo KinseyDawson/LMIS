@@ -2,7 +2,9 @@
 
 export enum BillTypeEnum {
     Card = 1,
-    AppCard = 2,
-    CardUpLevel = 3
+    CardUpLevel = 2,
+    BookRent = 3,
+    ExpireedPenalty = 4,
+    BookCompensation = 5
 }
 Decorators.registerEnumType(BillTypeEnum, 'LMIS.Modules.ReaderManage.UserBill.BillTypeEnum');

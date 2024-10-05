@@ -323,6 +323,9 @@ namespace LMIS.Texts {
         export const BookUniqueError: string;
         export const BookshelfUniqueError: string;
         export const BookshlefExceedCapacity: string;
+        export const BorrowExpiredError: string;
+        export const BorrowNotExpiredError: string;
+        export const BorrowOperateIllegalityError: string;
         export const BorrowedCountExceedError: string;
         export const CardLevelUniqueError: string;
         export const CategoryUniqueError: string;

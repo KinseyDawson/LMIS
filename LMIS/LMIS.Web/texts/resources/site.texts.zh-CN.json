@@ -332,5 +332,8 @@
   "Validation.BookUnborrowableEoor": "该书籍不可借阅！",
   "Validation.BookHasNotEnoughInventoryError": "该书籍库存不足！",
   "Validation.UserHasNotLibraryCardError": "该用户没有借阅卡！",
-  "Validation.BorrowedCountExceedError": "该用户借阅数量超限！"
+  "Validation.BorrowedCountExceedError": "该用户借阅数量超限！",
+  "Validation.BorrowOperateIllegalityError": "借阅操作不合法！",
+  "Validation.BorrowExpiredError": "借阅已过期！",
+  "Validation.BorrowNotExpiredError": "借阅尚未过期！"
 }

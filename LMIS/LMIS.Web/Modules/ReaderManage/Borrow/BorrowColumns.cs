@@ -17,11 +17,11 @@ public class BorrowColumns
     public string UserName { get; set; }
     public string BookName { get; set; }
     public BorrowStatusEnum BorrowStatus { get; set; }
-    [Width(150)]
-    [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
+    [Width(100)]
+    [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd")]
     public DateTime BorrowDate { get; set; }
-    [Width(150)]
-    [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
+    [Width(100)]
+    [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd")]
     public DateTime BorrowReturnDate { get; set; }
     [Width(150)]
     [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
