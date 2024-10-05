@@ -119,6 +119,8 @@ public static partial class Texts
 
     public static partial class Validation
     {
+        public static readonly LocalText InvalidUsername = "Username is Invalid.Usernames should start with letters, only contain letters and numbers!";
+        public static readonly LocalText UniqueViolation = "Username duplicates.Please type new Name!";
         public static readonly LocalText AuthenticationError = "Invalid username or password!";
         public static readonly LocalText CurrentPasswordMismatch = "Your current password is not valid!";
         public static readonly LocalText MinRequiredPasswordLength = "Entered password doesn't have enough characters (min {0})!";

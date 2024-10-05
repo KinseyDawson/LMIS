@@ -1,3 +1,4 @@
+using LMIS.Modules.InventoryManage;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
@@ -8,8 +9,8 @@ namespace LMIS.InventoryManage;
 
 [ConnectionKey("Default"), Module("InventoryManage"), TableName("bookstores")]
 [DisplayName("Book Store"), InstanceName("Book Store")]
-[ReadPermission("InventoryManage:BookStore")]
-[ModifyPermission("InventoryManage:BookStore")]
+[ReadPermission(InventoryManagePermissionKeys.BookStore)]
+[ModifyPermission(InventoryManagePermissionKeys.BookStore)]
 public sealed class BookStoreRow : Row<BookStoreRow.RowFields>, IIdRow
 {
     const string jBook = nameof(jBook);

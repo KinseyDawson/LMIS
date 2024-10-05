@@ -10,7 +10,7 @@ namespace LMIS.ReaderManage;
 [DisplayName("User Bill"), InstanceName("User Bill")]
 [ReadPermission("ReaderManage:UserBill")]
 [ModifyPermission("ReaderManage:UserBill")]
-[ServiceLookupPermission("ReaderManage:UserBill")]
+[ServiceLookupPermission("*")]
 public sealed class UserBillRow : Row<UserBillRow.RowFields>, IIdRow
 {
     const string jUser = nameof(jUser);

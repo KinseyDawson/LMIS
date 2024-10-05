@@ -17,10 +17,10 @@ export interface DownBookshelfRow {
 export abstract class DownBookshelfRow {
     static readonly idProperty = 'DownBookshelfId';
     static readonly localTextPrefix = 'InventoryManage.DownBookshelf';
-    static readonly deletePermission = 'InventoryManage:DownBookshelf';
-    static readonly insertPermission = 'InventoryManage:DownBookshelf';
-    static readonly readPermission = 'InventoryManage:DownBookshelf';
-    static readonly updatePermission = 'InventoryManage:DownBookshelf';
+    static readonly deletePermission = 'InventoryManage:ModifyDownBookshelf';
+    static readonly insertPermission = 'InventoryManage:ModifyDownBookshelf';
+    static readonly readPermission = 'InventoryManage:ReadDownBookshelf';
+    static readonly updatePermission = 'InventoryManage:ModifyDownBookshelf';
 
     static readonly Fields = fieldsProxy<DownBookshelfRow>();
 }

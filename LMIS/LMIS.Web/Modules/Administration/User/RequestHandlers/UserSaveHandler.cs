@@ -37,8 +37,7 @@ public class UserSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>,
             throw DataValidation.RequiredError(Fld.Username, localizer);
 
         if (!UserHelper.IsValidUsername(username))
-            throw new ValidationError("InvalidUsername", "Username",
-                "Usernames should start with letters, only contain letters and numbers!");
+            throw new ValidationError(Texts.Validation.InvalidUsername.ToString(localizer));
 
         var existing = UserHelper.GetUser(connection,
             new Criteria(Fld.Username) == username |

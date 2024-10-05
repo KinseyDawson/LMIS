@@ -10,7 +10,7 @@ namespace LMIS.ReaderManage;
 [DisplayName("Card Level"), InstanceName("Card Level")]
 [ReadPermission("ReaderManage:CardLevel")]
 [ModifyPermission("ReaderManage:CardLevel")]
-[ServiceLookupPermission("ReaderManage:CardLevel")]
+[ServiceLookupPermission("*")]
 public sealed class CardLevelRow : Row<CardLevelRow.RowFields>, IIdRow, INameRow
 {
     [DisplayName("Card Level Id"), Identity, IdProperty]

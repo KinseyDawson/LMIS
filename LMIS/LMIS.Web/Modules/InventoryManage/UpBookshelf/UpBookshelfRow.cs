@@ -1,4 +1,5 @@
 using LMIS.BookManage;
+using LMIS.Modules.InventoryManage;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
@@ -9,8 +10,8 @@ namespace LMIS.InventoryManage;
 
 [ConnectionKey("Default"), Module("InventoryManage"), TableName("upbookshelfs")]
 [DisplayName("Up Bookshelf"), InstanceName("Up Bookshelf")]
-[ReadPermission("InventoryManage:UpBookshelf")]
-[ModifyPermission("InventoryManage:UpBookshelf")]
+[ReadPermission(InventoryManagePermissionKeys.ReadUpBookshelf)]
+[ModifyPermission(InventoryManagePermissionKeys.ModifyUpBookshelf)]
 public sealed class UpBookshelfRow : Row<UpBookshelfRow.RowFields>, IIdRow
 {
     const string jBook = nameof(jBook);

@@ -335,12 +335,14 @@ namespace LMIS.Texts {
         export const EmailInUse: string;
         export const InvalidActivateToken: string;
         export const InvalidResetToken: string;
+        export const InvalidUsername: string;
         export const LibraryCardOperateIllegalityError: string;
         export const LibraryCardUniqueError: string;
         export const MinRequiredPasswordLength: string;
         export const PasswordConfirmMismatch: string;
         export const PublisherUniqueError: string;
         export const SavePrimaryKeyError: string;
+        export const UniqueViolation: string;
         export const UserHasNotLibraryCardError: string;
     }
 

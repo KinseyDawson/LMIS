@@ -10,7 +10,7 @@ namespace LMIS.ReaderManage;
 [DisplayName("Library Card"), InstanceName("Library Card")]
 [ReadPermission("ReaderManage:LibraryCard")]
 [ModifyPermission("ReaderManage:LibraryCard")]
-[ServiceLookupPermission("ReaderManage:LibraryCard")]
+[ServiceLookupPermission("*")]
 public sealed class LibraryCardRow : Row<LibraryCardRow.RowFields>, IIdRow
 {
     const string jUser = nameof(jUser);

@@ -1,4 +1,5 @@
-﻿using Serenity.ComponentModel;
+using LMIS.Modules.BookManage;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System;
@@ -8,9 +9,10 @@ namespace LMIS.BookManage;
 
 [ConnectionKey("Default"), Module("BookManage"), TableName("categories")]
 [DisplayName("Category"), InstanceName("Category")]
-[ReadPermission("BookManage:Category")]
-[ModifyPermission("BookManage:Category")]
-[ServiceLookupPermission("BookManage:Category")]
+[ReadPermission(BookManagePermissionKeys.Category)]
+[ModifyPermission(BookManagePermissionKeys.Category)]
+[ServiceLookupPermission("*")]
+[LookupScript(Permission = "*")]
 public sealed class CategoryRow : Row<CategoryRow.RowFields>, IIdRow, INameRow
 {
     [DisplayName("Category Id"), Identity, IdProperty]

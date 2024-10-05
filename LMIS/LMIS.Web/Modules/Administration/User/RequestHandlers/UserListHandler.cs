@@ -1,4 +1,4 @@
-﻿using MyRequest = LMIS.Administration.UserListRequest;
+using MyRequest = LMIS.Administration.UserListRequest;
 using MyResponse = Serenity.Services.ListResponse<LMIS.Administration.UserRow>;
 using MyRow = LMIS.Administration.UserRow;
 
@@ -10,5 +10,9 @@ public class UserListHandler : ListRequestHandler<MyRow, MyRequest, MyResponse>,
     public UserListHandler(IRequestContext context)
          : base(context)
     {
+    }
+    protected override void ExecuteQuery()
+    {
+        base.ExecuteQuery();
     }
 }

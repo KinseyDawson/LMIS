@@ -1,4 +1,5 @@
-﻿using Serenity.ComponentModel;
+using LMIS.Modules.BookManage;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System;
@@ -8,9 +9,10 @@ namespace LMIS.BookManage;
 
 [ConnectionKey("Default"), Module("BookManage"), TableName("publishers")]
 [DisplayName("Publisher"), InstanceName("Publisher")]
-[ReadPermission("BookManage:Publisher")]
-[ModifyPermission("BookManage:Publisher")]
-[ServiceLookupPermission("BookManage:Publisher")]
+[ReadPermission(BookManagePermissionKeys.Publisher)]
+[ModifyPermission(BookManagePermissionKeys.Publisher)]
+[ServiceLookupPermission("*")]
+[LookupScript(Permission = "*")]
 public sealed class PublisherRow : Row<PublisherRow.RowFields>, IIdRow, INameRow
 {
     [DisplayName("Publisher Id"), Identity, IdProperty]

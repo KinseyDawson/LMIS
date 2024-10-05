@@ -1,4 +1,4 @@
-﻿import { fieldsProxy } from "@serenity-is/corelib";
+﻿import { getLookup, getLookupAsync, fieldsProxy } from "@serenity-is/corelib";
 
 export interface AuthorRow {
     AuthorId?: number;
@@ -14,6 +14,12 @@ export abstract class AuthorRow {
     static readonly idProperty = 'AuthorId';
     static readonly nameProperty = 'AuthorName';
     static readonly localTextPrefix = 'BookManage.Author';
+    static readonly lookupKey = 'BookManage.Author';
+
+    /** @deprecated use getLookupAsync instead */
+    static getLookup() { return getLookup<AuthorRow>('BookManage.Author') }
+    static async getLookupAsync() { return getLookupAsync<AuthorRow>('BookManage.Author') }
+
     static readonly deletePermission = 'BookManage:Author';
     static readonly insertPermission = 'BookManage:Author';
     static readonly readPermission = 'BookManage:Author';

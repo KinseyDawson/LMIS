@@ -44,7 +44,7 @@ public sealed class UserRow : Serenity.Extensions.Entities.LoggingRow<UserRow.Ro
 
     [DisplayName("Roles"), LinkingSetRelation(typeof(UserRoleRow), nameof(UserRoleRow.UserId), nameof(UserRoleRow.RoleId))]
     [AsyncLookupEditor(typeof(RoleRow), Multiple = true)]
-    public List<int> Roles { get => fields.Roles[this]; set => fields.Roles[this] = value; }
+    public List<long> Roles { get => fields.Roles[this]; set => fields.Roles[this] = value; }
 
     StringField IDisplayNameRow.DisplayNameField => fields.DisplayName;
     StringField IEmailRow.EmailField => fields.Email;
@@ -67,6 +67,6 @@ public sealed class UserRow : Serenity.Extensions.Entities.LoggingRow<UserRow.Ro
         public StringField Password;
         public StringField PasswordConfirm;
 
-        public ListField<int> Roles;
+        public ListField<long> Roles;
     }
 }

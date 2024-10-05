@@ -291,6 +291,24 @@
   "Permission.Administration:": "管理",
   "Permission.Administration:Security": "用户，角色管理和权限",
   "Permission.Administration:Translation": "语言和翻译",
+
+  "Permission.BookManage:": "藏书",
+  "Permission.BookManage:Author": "作者",
+  "Permission.BookManage:ReadBook": "书籍查阅",
+  "Permission.BookManage:ModifyBook": "书籍编辑",
+  "Permission.BookManage:Bookshelf": "书架",
+  "Permission.BookManage:Category": "书籍类别",
+  "Permission.BookManage:Publisher": "出版社",
+
+  "Permission.InventoryManage:": "库存",
+  "Permission.InventoryManage:BookStore": "收录",
+  "Permission.InventoryManage:ReadUpBookshelf": "查询上架",
+  "Permission.InventoryManage:ModifyUpBookshelf": "编辑上架",
+  "Permission.InventoryManage:ReadDownBookshelf": "查询下架",
+  "Permission.InventoryManage:ModifyDownBookshelf": "编辑下架",
+
+
+
   "Site.AccessDenied.ClickToChangeUser": "点击此处以其他用户身份登录",
   "Site.AccessDenied.ClickToLogin": "点击此处返回登录页",
   "Site.AccessDenied.LackPermissions": "您没有访问此页面所需的权限！",
@@ -309,6 +327,9 @@
   "Site.UserPermissionDialog.Revoke": "撤销",
   "Site.UserPermissionDialog.SaveSuccess": "用户权限已更新。",
   "Site.ValidationError.Title": "错误",
+
+  "Validation.InvalidUsername": "用户名无效，用户名应以字母开头，仅包含字母和数字！",
+  "Validation.UniqueViolation": "用户名重复，请输入新的用户名！",
   "Validation.AuthenticationError": "验证错误：无效的用户名或密码！",
   "Validation.CurrentPasswordMismatch": "您当前的密码无效！",
   "Validation.DeleteForeignKeyError": "无法删除记录。 '{0}'表中有依赖于此记录的记录！",

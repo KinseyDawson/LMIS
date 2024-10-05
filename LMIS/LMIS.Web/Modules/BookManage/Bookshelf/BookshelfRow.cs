@@ -1,3 +1,4 @@
+using LMIS.Modules.BookManage;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
@@ -8,9 +9,10 @@ namespace LMIS.BookManage;
 
 [ConnectionKey("Default"), Module("BookManage"), TableName("bookshelfs")]
 [DisplayName("Bookshelf"), InstanceName("Bookshelf")]
-[ReadPermission("BookManage:Bookshelf")]
-[ModifyPermission("BookManage:Bookshelf")]
-[ServiceLookupPermission("BookManage:Bookshelf")]
+[ReadPermission(BookManagePermissionKeys.Bookshelf)]
+[ModifyPermission(BookManagePermissionKeys.Bookshelf)]
+[ServiceLookupPermission("*")]
+[LookupScript(Permission = "*")]
 public sealed class BookshelfRow : Row<BookshelfRow.RowFields>, IIdRow, INameRow
 {
     const string jCategory = nameof(jCategory);

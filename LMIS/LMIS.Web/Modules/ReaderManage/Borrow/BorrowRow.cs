@@ -10,7 +10,7 @@ namespace LMIS.ReaderManage;
 [DisplayName("Borrow"), InstanceName("Borrow")]
 [ReadPermission("ReaderManage:Borrow")]
 [ModifyPermission("ReaderManage:Borrow")]
-[ServiceLookupPermission("ReaderManage:Borrow")]
+[ServiceLookupPermission("*")]
 public sealed class BorrowRow : Row<BorrowRow.RowFields>, IIdRow, INameRow
 {
     const string jUser = nameof(jUser);

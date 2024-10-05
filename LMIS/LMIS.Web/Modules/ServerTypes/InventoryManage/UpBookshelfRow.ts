@@ -17,10 +17,10 @@ export interface UpBookshelfRow {
 export abstract class UpBookshelfRow {
     static readonly idProperty = 'UpBookshelfId';
     static readonly localTextPrefix = 'InventoryManage.UpBookshelf';
-    static readonly deletePermission = 'InventoryManage:UpBookshelf';
-    static readonly insertPermission = 'InventoryManage:UpBookshelf';
-    static readonly readPermission = 'InventoryManage:UpBookshelf';
-    static readonly updatePermission = 'InventoryManage:UpBookshelf';
+    static readonly deletePermission = 'InventoryManage:ModifyUpBookshelf';
+    static readonly insertPermission = 'InventoryManage:ModifyUpBookshelf';
+    static readonly readPermission = 'InventoryManage:ReadUpBookshelf';
+    static readonly updatePermission = 'InventoryManage:ModifyUpBookshelf';
 
     static readonly Fields = fieldsProxy<UpBookshelfRow>();
 }
