@@ -67,6 +67,7 @@ public class UserSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>,
 
         if (IsCreate)
         {
+            Row.IsActive = 1;
             Row.Username = ValidateUsername(Connection, Row.Username, null, Localizer);
             Row.DisplayName = UserHelper.ValidateDisplayName(Row.DisplayName, Localizer);
         }

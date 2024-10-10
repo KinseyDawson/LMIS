@@ -16,5 +16,4 @@ public class UserForm
     public string Password { get; set; }
     [PasswordEditor, Required(true)]
     public string PasswordConfirm { get; set; }
-    public bool IsActive { get; set; }
 }
