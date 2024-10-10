@@ -256,7 +256,7 @@
   "Forms.Membership.SignUp.SubmitButton": "注册",
   "Forms.Membership.SignUp.Success": "您的电子邮件地址已发送一封电子邮件，其中包含激活您的帐户的说明。请检查您的电子邮件。",
   "Forms.SiteTitle": null,
-  "Navigation.Administration": "管理",
+  "Navigation.Administration": "用户管理",
   "Navigation.Administration/Data Audit Log": "数据审计日志",
   "Navigation.Administration/Data Explorer": "数据浏览器",
   "Navigation.Administration/Email Queue": "邮件队列",
@@ -267,7 +267,7 @@
   "Navigation.Administration/Roles": "角色",
   "Navigation.Administration/Security": "安全",
   "Navigation.Administration/Translations": "翻译",
-  "Navigation.Administration/User Management": "用户管理",
+  "Navigation.Administration/User Management": "用户",
   "Navigation.Dashboard": "仪表盘",
   "Navigation.LogoutLink": "退出",
   "Navigation.SiteTitle": null,
@@ -288,7 +288,7 @@
   "Navigation.ReaderManage/Borrow": "借阅",
 
 
-  "Permission.Administration:": "管理",
+  "Permission.Administration:": "用户管理",
   "Permission.Administration:Security": "用户，角色管理和权限",
   "Permission.Administration:Translation": "语言和翻译",
 

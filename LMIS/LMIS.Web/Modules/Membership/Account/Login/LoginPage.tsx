@@ -81,11 +81,11 @@ class LoginPanel extends PropertyPanel<LoginRequest, any> {
                 <h5 class="text-center my-4">{myTexts.LoginToYourAccount}</h5>
                 <form id={id.Form} action="">
                     <div id={id.PropertyGrid}></div>
-                    <div class="px-field">
+                    {/* <div class="px-field">
                         <a class="float-end text-decoration-none" href={resolveUrl('~/Account/ForgotPassword')}>
                             {myTexts.ForgotPassword}
                         </a>
-                    </div>
+                    </div> */}
                     <div class="px-field">
                         <button id={id.LoginButton} type="submit" class="btn btn-primary my-3 w-100"
                             onClick={e => {
