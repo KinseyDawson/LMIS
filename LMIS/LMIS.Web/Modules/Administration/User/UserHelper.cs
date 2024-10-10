@@ -52,6 +52,7 @@ public static class UserHelper
 
     public static string GenerateHash(string password, ref string salt)
     {
+        //随机生成五位字符作为加密盐值，拼接进明文中，最后通过SHA512加密算法生成密文
         salt ??= Serenity.IO.TemporaryFileHelper.RandomFileCode()[..5];
         return CalculateHash(password, salt);
     }

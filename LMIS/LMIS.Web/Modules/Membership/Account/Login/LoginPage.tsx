@@ -97,9 +97,11 @@ class LoginPanel extends PropertyPanel<LoginRequest, any> {
                     </div>
                 </form>
             </div>
-            <div class="text-center mt-2">
+            {/*
+                <div class="text-center mt-2">
                 <a class="text-decoration-none" href={resolveUrl('~/Account/SignUp')}>{myTexts.SignUpButton}</a>
             </div>
+                */}
         </>);
     }
 }

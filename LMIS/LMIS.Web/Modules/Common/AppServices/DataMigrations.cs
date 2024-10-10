@@ -1,4 +1,4 @@
-﻿using FluentMigrator.Runner;
+using FluentMigrator.Runner;
 using FluentMigrator.Runner.Conventions;
 using FluentMigrator.Runner.Initialization;
 using FluentMigrator.Runner.Processors;
@@ -29,11 +29,6 @@ public class DataMigrations(ITypeSource typeSource,
             RunMigrations(databaseKey);
         }
     }
-
-    /// <summary>
-    /// Automatically creates a database for the template if it doesn't already exists.
-    /// You might delete this method to disable auto create functionality.
-    /// </summary>
     private void EnsureDatabase(string databaseKey)
     {
         MigrationUtils.EnsureDatabase(databaseKey,
