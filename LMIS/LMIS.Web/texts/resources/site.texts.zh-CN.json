@@ -290,9 +290,8 @@
 
   "Permission.Administration:": "用户管理",
   "Permission.Administration:Security": "用户，角色管理和权限",
-  "Permission.Administration:Translation": "语言和翻译",
 
-  "Permission.BookManage:": "藏书",
+  "Permission.BookManage:": "书籍管理",
   "Permission.BookManage:Author": "作者",
   "Permission.BookManage:ReadBook": "书籍查阅",
   "Permission.BookManage:ModifyBook": "书籍编辑",
@@ -300,20 +299,20 @@
   "Permission.BookManage:Category": "书籍类别",
   "Permission.BookManage:Publisher": "出版社",
 
-  "Permission.InventoryManage:": "库存",
-  "Permission.InventoryManage:BookStore": "收录",
-  "Permission.InventoryManage:ReadUpBookshelf": "查询上架",
-  "Permission.InventoryManage:ModifyUpBookshelf": "编辑上架",
-  "Permission.InventoryManage:ReadDownBookshelf": "查询下架",
-  "Permission.InventoryManage:ModifyDownBookshelf": "编辑下架",
+  "Permission.InventoryManage:": "库存管理",
+  "Permission.InventoryManage:BookStore": "收录情况",
+  "Permission.InventoryManage:ReadUpBookshelf": "书籍上架查询",
+  "Permission.InventoryManage:ModifyUpBookshelf": "书籍上架编辑",
+  "Permission.InventoryManage:ReadDownBookshelf": "书籍下架查询",
+  "Permission.InventoryManage:ModifyDownBookshelf": "书籍下架编辑",
 
 
-  "Permission.ReaderManage:": "读者",
-  "Permission.ReaderManage:ReadBorrow": "查询借阅",
-  "Permission.ReaderManage:ModifyBorrow": "编辑借阅",
+  "Permission.ReaderManage:": "读者服务",
+  "Permission.ReaderManage:ReadBorrow": "借阅记录查询",
+  "Permission.ReaderManage:ModifyBorrow": "借阅记录编辑",
   "Permission.ReaderManage:CardLevel": "借阅卡等级",
-  "Permission.ReaderManage:ReadLibraryCard": "查询借阅卡",
-  "Permission.ReaderManage:ModifyLibraryCard": "编辑借阅卡",
+  "Permission.ReaderManage:ReadLibraryCard": "借阅卡查询",
+  "Permission.ReaderManage:ModifyLibraryCard": "借阅卡编辑",
   "Permission.ReaderManage:UserBill": "账单",
 
 
