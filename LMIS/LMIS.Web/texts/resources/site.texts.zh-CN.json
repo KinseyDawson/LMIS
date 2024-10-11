@@ -51,8 +51,8 @@
   "Db.Administration.UserRole.Username": "用户名",
   "Db.Administration.UserRole.UserRoleId": "用户角色ID",
 
-  "Db.ReaderManage.CardLevel.EntityPlural": "等级",
-  "Db.ReaderManage.CardLevel.EntitySingular": "等级",
+  "Db.ReaderManage.CardLevel.EntityPlural": "借阅卡等级",
+  "Db.ReaderManage.CardLevel.EntitySingular": "借阅卡等级",
   "Db.ReaderManage.CardLevel.CardLevelId": "等级ID",
   "Db.ReaderManage.CardLevel.CardLevelName": "等级名",
   "Db.ReaderManage.CardLevel.Fee": "费用",
@@ -88,8 +88,8 @@
   "Db.ReaderManage.UserBill.CreateTime": "创建时间",
   "Db.ReaderManage.UserBill.UpdateTime": "更新时间",
 
-  "Db.ReaderManage.Borrow.EntityPlural": "借阅",
-  "Db.ReaderManage.Borrow.EntitySingular": "借阅",
+  "Db.ReaderManage.Borrow.EntityPlural": "借阅记录",
+  "Db.ReaderManage.Borrow.EntitySingular": "借阅记录",
   "Db.ReaderManage.Borrow.BorrowNo": "借阅号",
   "Db.ReaderManage.Borrow.BorrowId": "借阅ID",
   "Db.ReaderManage.Borrow.UserId": "用户",
@@ -103,8 +103,8 @@
   "Db.ReaderManage.Borrow.UpdateTime": "更新时间",
 
 
-  "Db.BookManage.Category.EntityPlural": "类别",
-  "Db.BookManage.Category.EntitySingular": "类别",
+  "Db.BookManage.Category.EntityPlural": "书籍类别",
+  "Db.BookManage.Category.EntitySingular": "书籍类别",
   "Db.BookManage.Category.CategoryId": "类别ID",
   "Db.BookManage.Category.CategoryName": "类别名",
   "Db.BookManage.Category.CreateTime": "创建时间",
@@ -275,17 +275,17 @@
   "Navigation.BookManage/Author": "作者",
   "Navigation.BookManage/Book": "书籍",
   "Navigation.BookManage/Bookshelf": "书架",
-  "Navigation.BookManage/Category": "类别",
+  "Navigation.BookManage/Category": "书籍类别",
   "Navigation.BookManage/Publisher": "出版社",
   "Navigation.InventoryManage": "库存管理",
   "Navigation.InventoryManage/DownBookshelf": "下架",
   "Navigation.InventoryManage/UpBookshelf": "上架",
   "Navigation.InventoryManage/BookStore": "收录",
   "Navigation.ReaderManage": "读者服务",
-  "Navigation.ReaderManage/CardLevel": "等级",
+  "Navigation.ReaderManage/CardLevel": "借阅卡等级",
   "Navigation.ReaderManage/LibraryCard": "借阅卡",
   "Navigation.ReaderManage/UserBill": "账单",
-  "Navigation.ReaderManage/Borrow": "借阅",
+  "Navigation.ReaderManage/Borrow": "借阅记录",
 
 
   "Permission.Administration:": "用户管理",
