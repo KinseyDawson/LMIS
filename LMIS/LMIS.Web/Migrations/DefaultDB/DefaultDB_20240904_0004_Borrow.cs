@@ -13,6 +13,8 @@ public class DefaultDB_20240904_0004_Borrow : AutoReversingMigration
         .ForeignKey("FK_Borrows_UserId", "Users", "UserId")
         .WithColumn("BookId").AsInt64().NotNullable()
         .ForeignKey("FK_Borrows_BookId", "Books", "BookId")
+        .WithColumn("BookshelfId").AsInt64().NotNullable()
+        .ForeignKey("FK_Borrows_BookshelfId", "Bookshelfs", "BookshelfId")
         .WithColumn("BorrowStatus").AsInt16().NotNullable()
         .WithColumn("BorrowDate").AsDate().NotNullable()
         .WithColumn("BorrowReturnDate").AsDate().NotNullable()

@@ -16,6 +16,8 @@ public class BorrowColumns
     public string BorrowNo { get; set; }
     public string UserName { get; set; }
     public string BookName { get; set; }
+    public string Location { get; set; }
+
     public BorrowStatusEnum BorrowStatus { get; set; }
     [Width(100)]
     [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd")]

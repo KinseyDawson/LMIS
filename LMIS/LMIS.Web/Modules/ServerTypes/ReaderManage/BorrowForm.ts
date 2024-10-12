@@ -4,6 +4,7 @@ import { BorrowStatusEnum } from "../Modules/ReaderManage.Borrow.BorrowStatusEnu
 export interface BorrowForm {
     UserId: LookupEditor;
     BookId: ServiceLookupEditor;
+    BookshelfId: ServiceLookupEditor;
     BorrowStatus: EnumEditor;
 }
 
@@ -24,6 +25,7 @@ export class BorrowForm extends PrefixedContext {
             initFormType(BorrowForm, [
                 'UserId', w0,
                 'BookId', w1,
+                'BookshelfId', w1,
                 'BorrowStatus', w2
             ]);
         }

@@ -96,6 +96,8 @@
   "Db.ReaderManage.Borrow.UserName": "用户",
   "Db.ReaderManage.Borrow.BookId": "书籍",
   "Db.ReaderManage.Borrow.BookName": "书籍",
+  "Db.ReaderManage.Borrow.Location": "来源书架",
+  "Db.ReaderManage.Borrow.BookshelfId": "来源书架",
   "Db.ReaderManage.Borrow.BorrowStatus": "状态",
   "Db.ReaderManage.Borrow.BorrowDate": "借阅日期",
   "Db.ReaderManage.Borrow.BorrowReturnDate": "归还日期",
@@ -363,5 +365,6 @@
   "Validation.BorrowedCountExceedError": "该用户借阅数量超限！",
   "Validation.BorrowOperateIllegalityError": "借阅操作不合法！",
   "Validation.BorrowExpiredError": "借阅已过期！",
-  "Validation.BorrowNotExpiredError": "借阅尚未过期！"
+  "Validation.BorrowNotExpiredError": "借阅尚未过期！",
+  "Validation.NotBookOnTheBookshelfError": "该书架没有收录这本书籍！"
 }

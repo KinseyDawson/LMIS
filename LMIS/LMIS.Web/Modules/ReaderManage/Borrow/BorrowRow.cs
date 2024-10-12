@@ -1,9 +1,4 @@
 using LMIS.Modules.ReaderManage;
-using Serenity.ComponentModel;
-using Serenity.Data;
-using Serenity.Data.Mapping;
-using System;
-using System.ComponentModel;
 
 namespace LMIS.ReaderManage;
 
@@ -16,6 +11,7 @@ public sealed class BorrowRow : Row<BorrowRow.RowFields>, IIdRow, INameRow
 {
     const string jUser = nameof(jUser);
     const string jBook = nameof(jBook);
+    const string jBookshelf = nameof(jBookshelf);
 
     [DisplayName("Borrow Id"), Identity, IdProperty]
     public long? BorrowId { get => fields.BorrowId[this]; set => fields.BorrowId[this] = value; }
@@ -33,6 +29,13 @@ public sealed class BorrowRow : Row<BorrowRow.RowFields>, IIdRow, INameRow
     [ServiceLookupEditor(typeof(BookManage.BookRow), Service = "BookManage/Book/List")]
     [Updatable(false)]
     public long? BookId { get => fields.BookId[this]; set => fields.BookId[this] = value; }
+
+
+
+    [DisplayName("Bookshelf"), NotNull, ForeignKey(typeof(BookManage.BookshelfRow)), LeftJoin(jBookshelf), TextualField("Location")]
+    [ServiceLookupEditor(typeof(BookManage.BookshelfRow), Service = "BookManage/Bookshelf/List")]
+    [Updatable(false)]
+    public long? BookshelfId { get => fields.BookshelfId[this]; set => fields.BookshelfId[this] = value; }
 
     [DisplayName("Borrow Status"), NotNull]
     [HideOnInsert]
@@ -59,12 +62,17 @@ public sealed class BorrowRow : Row<BorrowRow.RowFields>, IIdRow, INameRow
     [DisplayName("Book  Name"), Origin(jBook, nameof(BookManage.BookRow.BookName))]
     public string BookName { get => fields.BookName[this]; set => fields.BookName[this] = value; }
 
+
+    [DisplayName("Location"), Origin(jBookshelf, nameof(BookManage.BookshelfRow.Location))]
+    public string Location { get => fields.Location[this]; set => fields.Location[this] = value; }
+
     public class RowFields : RowFieldsBase
     {
         public Int64Field BorrowId;
         public StringField BorrowNo;
         public Int64Field UserId;
         public Int64Field BookId;
+        public Int64Field BookshelfId;
         public Int16Field BorrowStatus;
         public DateTimeField BorrowDate;
         public DateTimeField BorrowReturnDate;
@@ -73,5 +81,6 @@ public sealed class BorrowRow : Row<BorrowRow.RowFields>, IIdRow, INameRow
 
         public StringField UserName;
         public StringField BookName;
+        public StringField Location;
     }
 }

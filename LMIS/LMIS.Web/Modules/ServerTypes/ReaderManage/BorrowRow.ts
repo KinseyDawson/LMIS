@@ -5,6 +5,7 @@ export interface BorrowRow {
     BorrowNo?: string;
     UserId?: number;
     BookId?: number;
+    BookshelfId?: number;
     BorrowStatus?: number;
     BorrowDate?: string;
     BorrowReturnDate?: string;
@@ -12,6 +13,7 @@ export interface BorrowRow {
     UpdateTime?: string;
     UserName?: string;
     BookName?: string;
+    Location?: string;
 }
 
 export abstract class BorrowRow {

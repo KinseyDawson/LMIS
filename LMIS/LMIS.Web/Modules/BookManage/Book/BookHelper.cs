@@ -24,7 +24,7 @@ public class BookHelper
                         where BookId=@BookId";
         connection.Execute(sqlText, new { BookId = bookId, Amount = amount });
     }
-    public static void DncreaseStockInventory(IDbConnection connection, long bookId, long amount)
+    public static void DecreaseStockInventory(IDbConnection connection, long bookId, long amount)
     {
         var sqlText = @"update Books
                         set

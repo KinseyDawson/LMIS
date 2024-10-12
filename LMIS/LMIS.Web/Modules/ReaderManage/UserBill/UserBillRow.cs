@@ -31,6 +31,7 @@ public sealed class UserBillRow : Row<UserBillRow.RowFields>, IIdRow
     public decimal? Fee { get => fields.Fee[this]; set => fields.Fee[this] = value; }
 
     [DisplayName("Remark"), Size(50)]
+    [QuickSearch]
     public string Remark { get => fields.Remark[this]; set => fields.Remark[this] = value; }
 
     [DisplayName("Create Time"), NotNull]
@@ -39,7 +40,7 @@ public sealed class UserBillRow : Row<UserBillRow.RowFields>, IIdRow
     [DisplayName("Update Time"), NotNull]
     public DateTime? UpdateTime { get => fields.UpdateTime[this]; set => fields.UpdateTime[this] = value; }
 
-    [DisplayName("User Name"), Origin(jUser, nameof(Administration.UserRow.DisplayName)),QuickSearch]
+    [DisplayName("User Name"), Origin(jUser, nameof(Administration.UserRow.DisplayName)), QuickSearch]
     public string UserName { get => fields.UserName[this]; set => fields.UserName[this] = value; }
 
     public class RowFields : RowFieldsBase

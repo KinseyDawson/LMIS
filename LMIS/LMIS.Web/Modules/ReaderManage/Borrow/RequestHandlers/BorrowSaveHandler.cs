@@ -1,5 +1,7 @@
 using DawsonErp;
 using LMIS.Modules.BookManage.Book;
+using LMIS.Modules.BookManage.Bookshelf;
+using LMIS.Modules.InventoryManage.BookStore;
 using LMIS.Modules.ReaderManage.Borrow;
 using LMIS.Modules.ReaderManage.CardLevel;
 using LMIS.Modules.ReaderManage.LibraryCard;
@@ -42,6 +44,11 @@ public class BorrowSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse
             {
                 throw new ValidationError(Texts.Validation.BookHasNotEnoughInventoryError.ToString(Localizer));
             }
+            var bookStoreRow = BookStoreHelper.QueryByBookIdAndBookshelfId(Connection, Request.Entity.BookId ?? 0, Request.Entity.BookshelfId ?? 0);
+            if (bookStoreRow == null || bookStoreRow.Inventory < 1)
+            {
+                throw new ValidationError(Texts.Validation.NotBookOnTheBookshelfError.ToString(Localizer));
+            }
             Row.BorrowNo = $"BW{SerialNumberHelper.GenerateWithYitter()}";
             Row.BorrowStatus = (int)BorrowStatusEnum.Borrowed;
             Row.BorrowDate = DateTime.Today;
@@ -50,7 +57,11 @@ public class BorrowSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse
         }
         else
         {
-            if (Request.Entity.BorrowStatus == (int)BorrowStatusEnum.Borrowed)
+            if (Old.BorrowStatus != (int)BorrowStatusEnum.Borrowed)
+            {
+                throw new ValidationError(Texts.Validation.BorrowOperateIllegalityError.ToString(Localizer));
+            }
+            else if (Request.Entity.BorrowStatus == (int)BorrowStatusEnum.Borrowed)
             {
                 throw new ValidationError(Texts.Validation.BorrowOperateIllegalityError.ToString(Localizer));
             }
@@ -83,16 +94,18 @@ public class BorrowSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse
         {
             var cardRow = LibraryCardHelper.QueryByUserId(Connection, Old.UserId ?? 0, LibraryCardStatusEnum.Normal);
             var cardLevelRow = CardLevelHelper.QueryByCardLevelId(Connection, cardRow.LevelId ?? 0);
-            if (Request.Entity.BorrowStatus == (int)BorrowStatusEnum.Damaged)//损坏扣除库存
+            if (Request.Entity.BorrowStatus == (int)BorrowStatusEnum.Damaged)//损坏
             {
                 var bookRow = BookHelper.QueryByBookId(Connection, Old.BookId ?? 0);
-                BookHelper.DncreaseStockInventory(Connection, Old.BookId ?? 0, 1);
+                BookHelper.DecreaseStockInventory(Connection, Old.BookId ?? 0, 1);//扣除库存
                 UserBillHelper.Insert(Connection, Old.UserId ?? 0,
                     BillTypeEnum.BookRent,
                     cardLevelRow.Rent ?? 0, $"还书-借阅单号:{Old.BorrowNo}");
                 UserBillHelper.Insert(Connection, Old.UserId ?? 0,
                     BillTypeEnum.BookCompensation,
                     bookRow.Price ?? 0, $"书籍损坏-借阅单号:{Old.BorrowNo}");
+                BookshelfHelper.Down(Connection, Old.BookshelfId ?? 0, 1);//扣除书架书籍数量
+                BookStoreHelper.Decrease(Connection, Old.BookId ?? 0, Old.BookshelfId ?? 0, 1);//扣除书籍收录数量
             }
             else if (Request.Entity.BorrowStatus == (int)BorrowStatusEnum.Returned)//正常归还恢复可借用数量
             {

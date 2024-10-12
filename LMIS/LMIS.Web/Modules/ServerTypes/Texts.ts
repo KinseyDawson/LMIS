@@ -184,12 +184,14 @@ namespace LMIS.Texts {
             namespace Borrow {
                 export const BookId: string;
                 export const BookName: string;
+                export const BookshelfId: string;
                 export const BorrowDate: string;
                 export const BorrowId: string;
                 export const BorrowNo: string;
                 export const BorrowReturnDate: string;
                 export const BorrowStatus: string;
                 export const CreateTime: string;
+                export const Location: string;
                 export const UpdateTime: string;
                 export const UserId: string;
                 export const UserName: string;
@@ -339,6 +341,7 @@ namespace LMIS.Texts {
         export const LibraryCardOperateIllegalityError: string;
         export const LibraryCardUniqueError: string;
         export const MinRequiredPasswordLength: string;
+        export const NotBookOnTheBookshelfError: string;
         export const PasswordConfirmMismatch: string;
         export const PublisherUniqueError: string;
         export const SavePrimaryKeyError: string;

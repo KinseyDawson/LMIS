@@ -9,7 +9,6 @@ export interface UserBillColumns {
     Type: Column<UserBillRow>;
     Fee: Column<UserBillRow>;
     Remark: Column<UserBillRow>;
-    CreateTime: Column<UserBillRow>;
     UpdateTime: Column<UserBillRow>;
 }
 

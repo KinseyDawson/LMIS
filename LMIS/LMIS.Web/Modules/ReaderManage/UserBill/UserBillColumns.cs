@@ -9,17 +9,14 @@ namespace LMIS.ReaderManage.Columns;
 [BasedOnRow(typeof(UserBillRow), CheckNames = true)]
 public class UserBillColumns
 {
-    [EditLink, AlignRight]
+    [AlignRight]
     public long UserBillId { get; set; }
     public string UserName { get; set; }
     [Width(100)]
     public BillTypeEnum Type { get; set; }
     public decimal Fee { get; set; }
-    [Width(200)]
+    [Width(300)]
     public string Remark { get; set; }
-    [Width(150)]
-    [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
-    public DateTime CreateTime { get; set; }
     [Width(150)]
     [DateTimeFormatter(DisplayFormat = "yyyy/MM/dd HH:mm:ss")]
     public DateTime UpdateTime { get; set; }

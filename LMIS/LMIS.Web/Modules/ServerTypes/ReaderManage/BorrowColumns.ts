@@ -8,6 +8,7 @@ export interface BorrowColumns {
     BorrowNo: Column<BorrowRow>;
     UserName: Column<BorrowRow>;
     BookName: Column<BorrowRow>;
+    Location: Column<BorrowRow>;
     BorrowStatus: Column<BorrowRow>;
     BorrowDate: Column<BorrowRow>;
     BorrowReturnDate: Column<BorrowRow>;
