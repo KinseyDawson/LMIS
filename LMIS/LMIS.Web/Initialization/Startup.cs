@@ -42,10 +42,10 @@ public partial class Startup
 
         services.Configure<RequestLocalizationOptions>(options =>
         {
+            //注入本地化处理模块，拦截HTTP请求
             options.SupportedUICultures = AppServices.UserCultureProvider.SupportedCultures;
             options.SupportedCultures = AppServices.UserCultureProvider.SupportedCultures;
-            options.RequestCultureProviders.Insert(Math.Max(options.RequestCultureProviders.Count - 1, 0),
-                new AppServices.UserCultureProvider()); // insert it before AcceptLanguage header provider
+            options.RequestCultureProviders.Insert(Math.Max(options.RequestCultureProviders.Count - 1, 0), new AppServices.UserCultureProvider());
         });
 
         var dataProtectionKeysFolder = Configuration?["DataProtectionKeysFolder"];
@@ -116,6 +116,7 @@ public partial class Startup
 
     public static void InitializeLocalTexts(IServiceProvider services)
     {
+        //加载本地化各个语种词汇配置资源
         var env = services.GetRequiredService<IWebHostEnvironment>();
         services.AddBaseTexts(env.WebRootFileProvider)
             .AddJsonTexts(env.WebRootFileProvider, "Scripts/site/texts")
@@ -135,11 +136,8 @@ public partial class Startup
                 app.StartNodeScript(script);
             }
         }
-
         InitializeLocalTexts(app.ApplicationServices);
-
         app.UseRequestLocalization();
-
         if (Configuration["UseForwardedHeaders"] == "True")
             app.UseForwardedHeaders();
 
@@ -180,16 +178,6 @@ public partial class Startup
     public static void RegisterDataProviders()
     {
         DbProviderFactories.RegisterFactory("System.Data.SqlClient", SqlClientFactory.Instance);
-        //DbProviderFactories.RegisterFactory("Microsoft.Data.SqlClient", SqlClientFactory.Instance);
-        //DbProviderFactories.RegisterFactory("Microsoft.Data.Sqlite", Microsoft.Data.Sqlite.SqliteFactory.Instance);
-
-        // to enable FIREBIRD: add FirebirdSql.Data.FirebirdClient reference, set connections, and uncomment line below
-        // DbProviderFactories.RegisterFactory("FirebirdSql.Data.FirebirdClient", FirebirdSql.Data.FirebirdClient.FirebirdClientFactory.Instance);
-
-        // to enable MYSQL: add MySql.Data reference, set connections, and uncomment line below
-        DbProviderFactories.RegisterFactory("MySql.Data.MySqlClient",MySqlClientFactory.Instance);
-
-        // to enable POSTGRES: add Npgsql reference, set connections, and uncomment line below
-        // DbProviderFactories.RegisterFactory("Npgsql", Npgsql.NpgsqlFactory.Instance);
+        DbProviderFactories.RegisterFactory("MySql.Data.MySqlClient", MySqlClientFactory.Instance);
     }
 }

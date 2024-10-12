@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using System.Threading.Tasks;
@@ -28,24 +28,12 @@ public class UserCultureProvider : RequestCultureProvider
         new(StringComparer.OrdinalIgnoreCase)
     {
         { "en", "en-US" },
-        { "zh", "zh-CN" },
-        { "vi", "vi-VN" },
-        { "fa", "fa-IR" }
+        { "zh", "zh-CN" }
     };
 
     private static List<CultureInfo> supportedCultures;
     private static readonly string[] supportedCultureIdentifiers = new string[] {
-        "de-DE",
         "en-US",
-        "en-GB",
-        "es-ES",
-        "fa-IR",
-        "it-IT",
-        "pt-PT",
-        "pt-BR",
-        "ru-RU",
-        "tr-TR",
-        "vi-VN",
         "zh-CN"
     };
 
