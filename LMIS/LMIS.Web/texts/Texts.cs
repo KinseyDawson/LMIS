@@ -143,7 +143,7 @@ public static partial class Texts
         public static readonly LocalText LibraryCardUniqueError = "LibraryCard duplicates. Current user has card already!";
         public static readonly LocalText LibraryCardOperateIllegalityError = "LibraryCard operates illegally!";
         public static readonly LocalText BookUnborrowableEoor = "Book is Unborrowable!";
-        public static readonly LocalText BookHasNotEnoughInventoryError = "There are not enough invBookentory!";
+        public static readonly LocalText BookHasNotEnoughInventoryError = "There are not enough Book inventory!";
         public static readonly LocalText UserHasNotLibraryCardError = "User has not library card!";
         public static readonly LocalText BorrowedCountExceedError = "Borrowed Count Exceeds!";
         public static readonly LocalText BorrowOperateIllegalityError = "Borrow operates illegally!";

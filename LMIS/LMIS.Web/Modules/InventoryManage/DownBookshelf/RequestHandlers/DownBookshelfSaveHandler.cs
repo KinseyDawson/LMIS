@@ -30,11 +30,11 @@ public class DownBookshelfSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyR
         var bookStoreRow = BookStoreHelper.QueryByBookIdAndBookshelfId(Connection,
             Request.Entity.BookId ?? 0,
             Request.Entity.BookshelfId ?? 0);
-        if (bookStoreRow == null || bookStoreRow.Inventory < Request.Entity.Inventory)
-        {
-            throw new ValidationError(Texts.Validation.BookStoreHasNotEnoughInventory.ToString(Localizer));
-        }
         if (bookRow == null || bookRow.BorrowableInventory < Request.Entity.Inventory)
+        {
+            throw new ValidationError(Texts.Validation.BookHasNotEnoughInventoryError.ToString(Localizer));
+        }
+        if (bookStoreRow == null || bookStoreRow.Inventory < Request.Entity.Inventory)
         {
             throw new ValidationError(Texts.Validation.BookStoreHasNotEnoughInventory.ToString(Localizer));
         }
@@ -42,7 +42,7 @@ public class DownBookshelfSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyR
     }
     protected override void AfterSave()
     {
-        BookHelper.DncreaseInventory(Connection,
+        BookHelper.DecreaseInventory(Connection,
             Request.Entity.BookId ?? 0,
             Request.Entity.Inventory ?? 0);
         BookStoreHelper.Decrease(Connection,
