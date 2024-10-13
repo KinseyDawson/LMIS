@@ -145,7 +145,7 @@ ViewData["PageId"] = "Dashboard";
 </div>
 
 <div class="row">
-    <section class="col-lg-7">
+    <section class="col-lg-12">
         <div class="card s-dashboard-card">
             <div class="card-body">
                 <ul class="nav nav-tabs" role="tablist">
@@ -190,7 +190,7 @@ ViewData["PageId"] = "Dashboard";
         </div>
     </section>
 
-    <section class="col-lg-5">
+@*     <section class="col-lg-5">
         <div class="card s-dashboard-card bg-world-map">
             <div class="card-header d-flex">
                 <h3 class="card-title text-white">
@@ -262,7 +262,7 @@ ViewData["PageId"] = "Dashboard";
                 </div>
             </div>
         </div>
-    </section>
+    </section> *@
 </div>
 
 <script>
@@ -301,32 +301,32 @@ ViewData["PageId"] = "Dashboard";
             "RU": 3000 //Russia
         };
 
-        $('#world-map').vectorMap({
-            map: 'world_mill_en',
-            backgroundColor: "transparent",
-            regionStyle: {
-                initial: {
-                    fill: 'rgba(64, 80, 96, 0.5)',
-                    "fill-opacity": 1,
-                    stroke: 'none',
-                    "stroke-width": 0,
-                    "stroke-opacity": 1
-                }
-            },
-            series: {
-                regions: [{
-                    values: visitorsData,
-                    scale: ["#72b1dc", "#f3f7ff"],
-                    normalizeFunction: 'polynomial'
-                }]
-            },
-            onRegionLabelShow: function (e, el, code) {
-                if (typeof visitorsData[code] != "undefined")
-                    el.html(el.html() + ': ' + visitorsData[code] + ' new visitors');
-            }
-        });
+        // $('#world-map').vectorMap({
+        //     map: 'world_mill_en',
+        //     backgroundColor: "transparent",
+        //     regionStyle: {
+        //         initial: {
+        //             fill: 'rgba(64, 80, 96, 0.5)',
+        //             "fill-opacity": 1,
+        //             stroke: 'none',
+        //             "stroke-width": 0,
+        //             "stroke-opacity": 1
+        //         }
+        //     },
+        //     series: {
+        //         regions: [{
+        //             values: visitorsData,
+        //             scale: ["#72b1dc", "#f3f7ff"],
+        //             normalizeFunction: 'polynomial'
+        //         }]
+        //     },
+        //     onRegionLabelShow: function (e, el, code) {
+        //         if (typeof visitorsData[code] != "undefined")
+        //             el.html(el.html() + ': ' + visitorsData[code] + ' new visitors');
+        //     }
+        // });
 
-        $("#calendar").datepicker();
+        // $("#calendar").datepicker();
 
         const scaleGrid = {
             color: 'rgba(140, 142, 150, 0.15)',
