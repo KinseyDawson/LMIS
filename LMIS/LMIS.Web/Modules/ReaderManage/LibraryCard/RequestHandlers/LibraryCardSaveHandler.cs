@@ -27,7 +27,7 @@ public class LibraryCardSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyRes
                 throw new ValidationError(Texts.Validation.LibraryCardUniqueError.ToString(Localizer));
             }
             Row.LibraryCardNo = SerialNumberHelper.GenerateWithYitter();
-            Row.Status= (int)LibraryCardStatusEnum.Normal;
+            Row.Status = (int)LibraryCardStatusEnum.Normal;
             Row.CreateTime = DateTime.Now;
         }
         else
@@ -75,7 +75,7 @@ public class LibraryCardSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyRes
                     UserBillHelper.Insert(Connection,
                         Old.UserId ?? 0,
                         BillTypeEnum.CardUpLevel,
-                        newLevelRow.Fee ?? 0,
+                        fee,
                         $"升级:{Row.LibraryCardNo}");
                 }
             }

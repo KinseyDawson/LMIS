@@ -23,7 +23,6 @@ public class DefaultDB_20240904_0001_LibraryCard : AutoReversingMigration
           .WithColumn("LibraryCardNo").AsString(50).NotNullable().Unique("UK_LibraryCards_LibraryCardNo")
           .WithColumn("UserId").AsInt64().NotNullable()
           .ForeignKey("FK_LibraryCards_UserId", "Users", "UserId")
-          .Unique("UK_LibraryCards_UserId")
           .WithColumn("LevelId").AsInt64().NotNullable()
           .ForeignKey("FK_LibraryCards_CardLevelId", "CardLevels", "CardLevelId")
           .WithColumn("Status").AsInt16().NotNullable()
