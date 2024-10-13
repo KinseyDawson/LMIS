@@ -1,4 +1,7 @@
-﻿
+
+using LMIS.Modules.ReaderManage.Borrow;
+using LMIS.ReaderManage;
+
 namespace LMIS.Common.Pages;
 
 [Route("Dashboard/[action]")]
@@ -8,31 +11,30 @@ public class DashboardPage : Controller
     public ActionResult Index([FromServices] ITwoLevelCache cache, [FromServices] ISqlConnections sqlConnections)
     {
         if (cache is null)
-        	throw new System.ArgumentNullException(nameof(cache));
+            throw new System.ArgumentNullException(nameof(cache));
 
         if (sqlConnections is null)
-        	throw new System.ArgumentNullException(nameof(sqlConnections));
+            throw new System.ArgumentNullException(nameof(sqlConnections));
 
-        var o = Serenity.Demo.Northwind.OrderRow.Fields;
+        var o = BorrowRow.Fields;
 
+        var borrowedCriteria = (o.BorrowStatus == (int)BorrowStatusEnum.Borrowed) && (o.BorrowReturnDate >= DateTime.Today.ToString("yyyy-MM-dd HH:mm:ss"));
+        var expiredAndBorrowedCriteria = (o.BorrowStatus == (int)BorrowStatusEnum.Borrowed) && (o.BorrowReturnDate < DateTime.Today.ToString("yyyy-MM-dd HH:mm:ss"));
+        var returnedCriteria = (o.BorrowStatus == (int)BorrowStatusEnum.Returned) || (o.BorrowStatus == (int)BorrowStatusEnum.ExpiredAndReturned);
+        var damageCriteria = (o.BorrowStatus == (int)BorrowStatusEnum.Damaged);
         var cachedModel = cache.GetLocalStoreOnly("DashboardPageModel", TimeSpan.FromMinutes(5),
-            o.GenerationKey, () =>
-            {
-                var model = new DashboardPageModel();
-                using (var connection = sqlConnections.NewFor<Serenity.Demo.Northwind.OrderRow>())
-                {
-                    model.OpenOrders = connection.Count<Serenity.Demo.Northwind.OrderRow>(
-                        o.ShippingState == (int)Serenity.Demo.Northwind.OrderShippingState.NotShipped);
-                    var closedOrders = connection.Count<Serenity.Demo.Northwind.OrderRow>(
-                        o.ShippingState == (int)Serenity.Demo.Northwind.OrderShippingState.Shipped);
-                    var totalOrders = model.OpenOrders + closedOrders;
-                    model.ClosedOrderPercent = (int)Math.Round(totalOrders == 0 ? 100 :
-                        ((double)closedOrders / totalOrders * 100));
-                    model.CustomerCount = connection.Count<Serenity.Demo.Northwind.CustomerRow>();
-                    model.ProductCount = connection.Count<Serenity.Demo.Northwind.ProductRow>();
-                }
-                return model;
-            });
+                    o.GenerationKey, () =>
+                    {
+                        var model = new DashboardPageModel();
+                        using (var connection = sqlConnections.NewFor<BorrowRow>())
+                        {
+                            model.BorrowedCount = connection.Count<BorrowRow>(borrowedCriteria);
+                            model.ExpiredAndBorrowedCount = connection.Count<BorrowRow>(expiredAndBorrowedCriteria);
+                            model.ReturnedCount = connection.Count<BorrowRow>(returnedCriteria);
+                            model.DamageCount = connection.Count<BorrowRow>(damageCriteria);
+                        }
+                        return model;
+                    });
         return View(MVC.Views.Common.Dashboard.DashboardIndex, cachedModel);
     }
 }

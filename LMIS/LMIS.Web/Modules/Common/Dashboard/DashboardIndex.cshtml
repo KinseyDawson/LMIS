@@ -1,4 +1,4 @@
-﻿@model LMIS.Common.DashboardPageModel
+@model LMIS.Common.DashboardPageModel
 @inject ITextLocalizer Localizer
 @{
     ViewData["Title"] = "Dashboard";
@@ -99,46 +99,46 @@ ViewData["PageId"] = "Dashboard";
 
 <div class="row">
     <div class="col-lg-3 col-sm-6">
-        <div class="card s-dashboard-card-sm bg-primary bg-opacity-50">
+        <div class="card s-dashboard-card-sm bg-info bg-opacity-50">
             <div class="card-body">
-                <h3>@Model.OpenOrders</h3>
-                <p>Open Orders</p>
+                <h3>@Model.BorrowedCount</h3>
+                <p>正常未归还数量</p>
             </div>
             <div class="icon">
-                <i class="fa fa-shopping-cart"></i>
+                <i class="fa fa-book"></i>
             </div>
         </div>
     </div>
     <div class="col-lg-3 col-sm-6">
-        <div class="card s-dashboard-card-sm s-alt bg-info bg-opacity-50">
+        <div class="card s-dashboard-card-sm s-alt bg-warning bg-opacity-50">
             <div class="card-body">
-                <h3>@Model.ClosedOrderPercent<sup style="font-size: 20px">%</sup></h3>
-                <p>Closed Orders</p>
+                <h3>@Model.ExpiredAndBorrowedCount<sup style="font-size: 20px">%</sup></h3>
+                <p>逾期未归还数量</p>
             </div>
             <div class="icon">
-                <i class="fa fa-truck"></i>
+                <i class="fa fa-clock-o"></i>
             </div>
         </div>
     </div>
     <div class="col-lg-3 col-sm-6">
-        <div class="card s-dashboard-card-sm bg-warning bg-opacity-50">
+        <div class="card s-dashboard-card-sm bg-success bg-opacity-50">
             <div class="card-body">
-                <h3>@Model.CustomerCount</h3>
-                <p>Total Customers</p>
+                <h3>@Model.ReturnedCount</h3>
+                <p> 已经归还的数量</p>
             </div>
             <div class="icon">
-                <i class="fa fa-user-plus"></i>
+                <i class="fa fa-flag"></i>
             </div>
         </div>
     </div>
     <div class="col-lg-3 col-sm-6">
-        <div class="card s-dashboard-card-sm s-alt bg-success bg-opacity-50">
+        <div class="card s-dashboard-card-sm s-alt bg-danger bg-opacity-50">
             <div class="card-body">
-                <h3>@Model.ProductCount</h3>
-                <p>Product Types</p>
+                <h3>@Model.DamageCount</h3>
+                <p>损坏的数量</p>
             </div>
             <div class="icon">
-                <i class="fa fa-tag"></i>
+                <i class="fa fa-bomb"></i>
             </div>
         </div>
     </div>
