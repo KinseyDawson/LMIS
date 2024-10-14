@@ -28,10 +28,14 @@ public class DashboardPage : Controller
                         var model = new DashboardPageModel();
                         using (var connection = sqlConnections.NewFor<BorrowRow>())
                         {
-                            model.BorrowedCount = connection.Count<BorrowRow>(borrowedCriteria);
-                            model.ExpiredAndBorrowedCount = connection.Count<BorrowRow>(expiredAndBorrowedCriteria);
-                            model.ReturnedCount = connection.Count<BorrowRow>(returnedCriteria);
-                            model.DamageCount = connection.Count<BorrowRow>(damageCriteria);
+                            //model.BorrowedCount = connection.Count<BorrowRow>(borrowedCriteria);
+                            //model.ExpiredAndBorrowedCount = connection.Count<BorrowRow>(expiredAndBorrowedCriteria);
+                            //model.ReturnedCount = connection.Count<BorrowRow>(returnedCriteria);
+                            //model.DamageCount = connection.Count<BorrowRow>(damageCriteria);
+                            model.BorrowedCount = 4;
+                            model.ExpiredAndBorrowedCount = 3;
+                            model.ReturnedCount = 5;
+                            model.DamageCount = 1;
                         }
                         return model;
                     });
