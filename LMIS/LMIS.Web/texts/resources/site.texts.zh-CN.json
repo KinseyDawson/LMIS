@@ -366,5 +366,6 @@
   "Validation.BorrowOperateIllegalityError": "借阅操作不合法！",
   "Validation.BorrowExpiredError": "借阅已过期！",
   "Validation.BorrowNotExpiredError": "借阅尚未过期！",
-  "Validation.NotBookOnTheBookshelfError": "该书架没有收录这本书籍！"
+  "Validation.NotBookOnTheBookshelfError": "该书架没有收录这本书籍！",
+  "Validation.BorrowRepeatlyError": "该用户已经借阅过此书籍！"
 }

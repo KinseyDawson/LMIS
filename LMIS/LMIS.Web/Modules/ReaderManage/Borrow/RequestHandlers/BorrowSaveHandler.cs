@@ -24,6 +24,11 @@ public class BorrowSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse
     {
         if (IsCreate)
         {
+            var existBorrowBookCount = BorrowHelper.QueryNotReturned(Connection, Request.Entity.UserId ?? 0, Request.Entity.BookId ?? 0);
+            if (existBorrowBookCount > 0)
+            {
+                throw new ValidationError(Texts.Validation.BorrowRepeatlyError.ToString(Localizer));
+            }
             var cardRow = LibraryCardHelper.QueryByUserId(Connection, Request.Entity.UserId ?? 0, LibraryCardStatusEnum.Normal);
             if (cardRow == null)
             {
