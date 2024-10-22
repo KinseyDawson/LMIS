@@ -84,6 +84,11 @@ public class BorrowSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse
                     throw new ValidationError(Texts.Validation.BorrowNotExpiredError.ToString(Localizer));
                 }
             }
+            var cardRow = LibraryCardHelper.QueryByUserId(Connection, Old.UserId ?? 0, LibraryCardStatusEnum.Normal);
+            if (cardRow == null)
+            {
+                throw new ValidationError(Texts.Validation.LibraryCardInvalidError.ToString(Localizer));
+            }
         }
         Row.UpdateTime = DateTime.Now;
         base.ValidateRequest();

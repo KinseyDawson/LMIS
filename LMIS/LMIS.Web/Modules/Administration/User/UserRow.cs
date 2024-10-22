@@ -5,7 +5,7 @@ namespace LMIS.Administration;
 [DisplayName("Users"), InstanceName("User")]
 [ReadPermission(PermissionKeys.Security)]
 [ModifyPermission(PermissionKeys.Security)]
-[LookupScript(Permission = PermissionKeys.Security)]
+[LookupScript(Permission ="*")]
 public sealed class UserRow : Serenity.Extensions.Entities.LoggingRow<UserRow.RowFields>, IIdRow, INameRow, IIsActiveRow, IDisplayNameRow, IEmailRow, IPasswordRow
 {
     [DisplayName("User Id"), Identity, IdProperty]

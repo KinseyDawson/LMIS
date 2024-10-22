@@ -151,5 +151,7 @@ public static partial class Texts
         public static readonly LocalText BorrowExpiredError = "Borrowed Book has been expired already!";
         public static readonly LocalText BorrowNotExpiredError = "Borrowed Book has not been expired already!";
         public static readonly LocalText NotBookOnTheBookshelfError = "There are none book in the bookshelf !";
+        public static readonly LocalText LibraryCardInvalidError = "There is no valid library card!";
+        public static readonly LocalText MakeUpLibraryCardLevelError = "Replacement card grades are inconsistent!";
     }
 }

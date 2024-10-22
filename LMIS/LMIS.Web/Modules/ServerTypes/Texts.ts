@@ -339,8 +339,10 @@ namespace LMIS.Texts {
         export const InvalidActivateToken: string;
         export const InvalidResetToken: string;
         export const InvalidUsername: string;
+        export const LibraryCardInvalidError: string;
         export const LibraryCardOperateIllegalityError: string;
         export const LibraryCardUniqueError: string;
+        export const MakeUpLibraryCardLevelError: string;
         export const MinRequiredPasswordLength: string;
         export const NotBookOnTheBookshelfError: string;
         export const PasswordConfirmMismatch: string;
