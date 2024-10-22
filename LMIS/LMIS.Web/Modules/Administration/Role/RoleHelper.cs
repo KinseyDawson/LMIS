@@ -19,4 +19,17 @@ public static class RoleHelper
                 return connection.List<MyRow>().ToDictionary(x => x.RoleId.Value);
             });
     }
+
+    public static IEnumerable<MyRow> GetRoles(IDbConnection dbConnection, int userId)
+    {
+        var sqlText = @"SELECT
+	                        b.*
+                        FROM
+	                        userroles a
+                        LEFT JOIN roles b ON
+	                        (a.RoleId = b.RoleId)
+                        WHERE
+	                        a.UserId = @UserId";
+        return dbConnection.Query<MyRow>(sqlText, new { UserId = userId });
+    }
 }
