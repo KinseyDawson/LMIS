@@ -14,7 +14,6 @@ public class DataMigrations(ITypeSource typeSource,
 {
     private static readonly string[] databaseKeys = [
         "Default"
-        , "Northwind"
     ];
 
     private readonly ITypeSource typeSource = typeSource ?? throw new ArgumentNullException(nameof(typeSource));

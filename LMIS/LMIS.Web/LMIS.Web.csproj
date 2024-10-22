@@ -11,7 +11,6 @@
     <DotNetSergenDir>$(SerenitySrc)Serenity.Net.CodeGenerator\bin\</DotNetSergenDir>
     <DotNetSergen Condition="Exists('$(DotNetSergenDir)sergen')">$(DotNetSergenDir)sergen</DotNetSergen>
     <DotNetSergen Condition="Exists('$(DotNetSergenDir)sergen.exe')">$(DotNetSergenDir)sergen.exe</DotNetSergen>
-    <DefineConstants>$(DefineConstants);Northwind;BasicSamples</DefineConstants>
     <UseProjectRefs Condition="!Exists('$(SerenitySrc)Serenity.Net.sln')">false</UseProjectRefs>
     <!--#endif-->
   </PropertyGroup>
@@ -37,9 +36,6 @@
     <PackageReference Include="Serenity.Corelib" Version="8.6.4" />
     <PackageReference Include="Serenity.Net.Web" Version="8.6.4" />
     <PackageReference Include="Serenity.Extensions" Version="8.6.4" />
-    <!--#if (Northwind)-->
-    <PackageReference Include="Serenity.Demo.Northwind" Version="8.6.4" />
-    <!--#endif-->
   </ItemGroup>
   <Target Name="NpmInstall" BeforeTargets="BeforeBuild" Condition="!Exists('node_modules\.bin\esbuild')">
     <Message Text="Installing NPM packages..." Importance="high" />
