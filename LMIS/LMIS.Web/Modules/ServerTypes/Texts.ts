@@ -328,6 +328,7 @@ namespace LMIS.Texts {
         export const BorrowExpiredError: string;
         export const BorrowNotExpiredError: string;
         export const BorrowOperateIllegalityError: string;
+        export const BorrowRepeatlyError: string;
         export const BorrowedCountExceedError: string;
         export const CardLevelUniqueError: string;
         export const CategoryUniqueError: string;
