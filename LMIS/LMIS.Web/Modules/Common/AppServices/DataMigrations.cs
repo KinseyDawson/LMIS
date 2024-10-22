@@ -39,15 +39,8 @@ public class DataMigrations(ITypeSource typeSource,
     {
         var cs = sqlConnections.TryGetConnectionString(databaseKey) ??
             throw new ArgumentOutOfRangeException(nameof(databaseKey));
-        string serverType = cs.Dialect.ServerType;
-        bool isOracle = serverType.StartsWith("Oracle", StringComparison.OrdinalIgnoreCase);
-        bool isFirebird = serverType.StartsWith("Firebird", StringComparison.OrdinalIgnoreCase);
-
-        string databaseType = isOracle ? "OracleManaged" : serverType;
-
         var conventionSet = new DefaultConventionSet(defaultSchemaName: null,
             Path.GetDirectoryName(typeof(DataMigrations).Assembly.Location));
-
         var serviceProvider = new ServiceCollection()
             .AddLogging(lb => lb.AddFluentMigratorConsole())
             .AddFluentMigratorCore()
@@ -63,19 +56,7 @@ public class DataMigrations(ITypeSource typeSource,
             })
             .ConfigureRunner(builder =>
             {
-                if (databaseType == OracleDialect.Instance.ServerType)
-                    builder.AddOracleManaged();
-                else if (databaseType == SqliteDialect.Instance.ServerType)
-                    builder.AddSQLite();
-                else if (databaseType == FirebirdDialect.Instance.ServerType)
-                    builder.AddFirebird();
-                else if (databaseType == MySqlDialect.Instance.ServerType)
-                    builder.AddMySql5();
-                else if (databaseType == PostgresDialect.Instance.ServerType)
-                    builder.AddPostgres();
-                else
-                    builder.AddSqlServer();
-
+                builder.AddMySql5();
                 builder.WithGlobalConnectionString(cs.ConnectionString);
                 builder.ScanIn(((IGetAssemblies)typeSource).GetAssemblies().ToArray()).For.Migrations();
             })
@@ -84,9 +65,6 @@ public class DataMigrations(ITypeSource typeSource,
         var culture = CultureInfo.CurrentCulture;
         try
         {
-            if (isFirebird)
-                Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-
             using var scope = serviceProvider.CreateScope();
             var runner = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
             runner.MigrateUp();
@@ -94,11 +72,6 @@ public class DataMigrations(ITypeSource typeSource,
         catch (Exception ex)
         {
             throw new InvalidOperationException("Error executing migration!", ex);
-        }
-        finally
-        {
-            if (isFirebird)
-                Thread.CurrentThread.CurrentCulture = culture;
         }
     }
 }
