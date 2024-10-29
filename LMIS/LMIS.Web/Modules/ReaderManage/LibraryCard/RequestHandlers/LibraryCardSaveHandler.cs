@@ -1,4 +1,3 @@
-using DawsonErp;
 using LMIS.Modules.ReaderManage.CardLevel;
 using LMIS.Modules.ReaderManage.LibraryCard;
 using LMIS.Modules.ReaderManage.UserBill;
@@ -27,7 +26,7 @@ public class LibraryCardSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyRes
                 throw new ValidationError(Texts.Validation.LibraryCardUniqueError.ToString(Localizer));
             }
             exist = LibraryCardHelper.QueryByUserId(Connection, Request.Entity.UserId ?? 0, LibraryCardStatusEnum.Lose);
-            if (exist != null&&exist.LevelId!=Request.Entity.LevelId)//补卡必须等级一致
+            if (exist != null && exist.LevelId != Request.Entity.LevelId)//补卡必须等级一致
             {
                 throw new ValidationError(Texts.Validation.MakeUpLibraryCardLevelError.ToString(Localizer));
             }

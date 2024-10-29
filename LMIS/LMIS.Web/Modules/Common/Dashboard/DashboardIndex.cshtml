@@ -169,28 +169,17 @@
 </div>
 <script>
     $(function () {
+        var borrowTypeData = @(new HtmlString(Model.BorrowType.ToJson()));
+        var billTypeData = @(new HtmlString(Model.BillType.ToJson()));
+        debugger;
         var borrowTypeChart = new Chart(document.getElementById('borrow-type-chart'), {
             type: "bar",
             data: {
-                labels: ["人文", "地理", "政治", "历史", "计算机", "科学"],
+                labels: borrowTypeData.Labels,
                 datasets: [{
-                    data: [2, 1, 0, 2, 5, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
-                        'rgba(255, 205, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(54, 162, 235, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(255, 159, 64)',
-                        'rgb(255, 205, 86)',
-                        'rgb(75, 192, 192)',
-                        'rgb(54, 162, 235)',
-                        'rgb(54, 162, 235)'
-                    ],
+                    data: borrowTypeData.Datas,
+                    backgroundColor: borrowTypeData.BackgroundColors,
+                    borderColor: borrowTypeData.BorderColors,
                     borderWidth: 2
                 }],
             },
@@ -213,24 +202,12 @@
         var billTypeChart = new Chart(document.getElementById('bill-type-chart'), {
             type: 'bar',
             data: {
-                labels: ["办理借阅卡", "借阅卡升级", "借阅租金", "过期处罚", "书籍赔偿"],
+                labels: billTypeData.Labels,
                 datasets: [
                     {
-                        data: [50, 0, 8, 5, 18],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 205, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(54, 162, 235, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(255, 159, 64)',
-                            'rgb(255, 205, 86)',
-                            'rgb(75, 192, 192)',
-                            'rgb(54, 162, 235)'
-                        ],
+                        data: billTypeData.Datas,
+                        backgroundColor: billTypeData.BackgroundColors,
+                        borderColor: billTypeData.BorderColors,
                         borderWidth: 2
                     }
                 ]

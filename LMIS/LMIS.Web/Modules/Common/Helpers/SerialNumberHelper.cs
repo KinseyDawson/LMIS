@@ -1,6 +1,6 @@
 using Yitter.IdGenerator;
 
-namespace DawsonErp;
+namespace LMIS;
 
 public static class SerialNumberHelper
 {
