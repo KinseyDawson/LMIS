@@ -31,7 +31,7 @@ public class BorrowSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse
             var cardRow = LibraryCardHelper.QueryByUserId(Connection, Request.Entity.UserId ?? 0, LibraryCardStatusEnum.Normal);
             if (cardRow == null)
             {
-                throw new ValidationError(Texts.Validation.BookUnborrowableEoor.ToString(Localizer));
+                throw new ValidationError(Texts.Validation.UserHasNotLibraryCardError.ToString(Localizer));
             }
             var cardLevelRow = CardLevelHelper.QueryByCardLevelId(Connection, cardRow.LevelId ?? 0);
             var existBorrowCount = BorrowHelper.QueryBorrowedCount(Connection, Request.Entity.UserId ?? 0);
