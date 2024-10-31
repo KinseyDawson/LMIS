@@ -2,8 +2,8 @@ namespace LMIS.Administration;
 
 [ConnectionKey("Default"), Module("Administration"), TableName("Languages")]
 [DisplayName("Languages"), InstanceName("Language")]
-[ReadPermission(PermissionKeys.Translation)]
-[ModifyPermission(PermissionKeys.Translation)]
+[ReadPermission(permission: "*")]
+[ModifyPermission(permission: "*")]
 [LookupScript(typeof(Lookups.LanguageLookup))]
 public sealed class LanguageRow : Row<LanguageRow.RowFields>, IIdRow, INameRow
 {

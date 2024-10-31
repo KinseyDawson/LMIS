@@ -15,7 +15,7 @@ public class DashboardPageModel
 public class ChartStatistics
 {
     public List<string> Labels { get; set; }
-    public List<int> Datas { get; set; }
+    public List<decimal> Datas { get; set; }
     public List<string> BackgroundColors { get; set; }
     public List<string> BorderColors { get; set; }
     public static ChartStatistics Empty
@@ -26,7 +26,7 @@ public class ChartStatistics
             {
                 BackgroundColors = new List<string>(),
                 BorderColors = new List<string>(),
-                Datas = new List<int>(),
+                Datas = new List<decimal>(),
                 Labels = new List<string>(),
             };
         }

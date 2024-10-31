@@ -1,6 +1,6 @@
-﻿namespace LMIS.Administration.Pages;
+namespace LMIS.Administration.Pages;
 
-[PageAuthorize(PermissionKeys.Translation)]
+[PageAuthorize(permission: "*")]
 public class TranslationPage : Controller
 {
     [Route("Administration/Translation")]

@@ -48,9 +48,9 @@ public class DashboardPage : Controller
                             if (isNormal.Item1)
                             {
                                 borrowedCriteria = borrowedCriteria && o.UserId == isNormal.Item2;
-                                expiredAndBorrowedCriteria = borrowedCriteria && o.UserId == isNormal.Item2;
-                                returnedCriteria = borrowedCriteria && o.UserId == isNormal.Item2;
-                                damageCriteria = borrowedCriteria && o.UserId == isNormal.Item2;
+                                expiredAndBorrowedCriteria = expiredAndBorrowedCriteria && o.UserId == isNormal.Item2;
+                                returnedCriteria = returnedCriteria && o.UserId == isNormal.Item2;
+                                damageCriteria = damageCriteria && o.UserId == isNormal.Item2;
                             }
                             model.BorrowedCount = connection.Count<BorrowRow>(borrowedCriteria);
                             model.ExpiredAndBorrowedCount = connection.Count<BorrowRow>(expiredAndBorrowedCriteria);
@@ -102,7 +102,7 @@ public class DashboardPage : Controller
         {
             BackgroundColors = new List<string>(),
             BorderColors = new List<string>(),
-            Datas = new List<int>(),
+            Datas = new List<decimal>(),
             Labels = new List<string>(),
         };
         var index = 0;
@@ -133,14 +133,14 @@ public class DashboardPage : Controller
         {
             BackgroundColors = new List<string>(),
             BorderColors = new List<string>(),
-            Datas = new List<int>(),
+            Datas = new List<decimal>(),
             Labels = new List<string>(),
         };
         var index = 0;
         foreach (var group in rowDatas.GroupBy(u => u.Type))
         {
             r.Labels.Add(((BillTypeEnum)group.Key).GetDescription());
-            r.Datas.Add(group.Sum(i => Convert.ToInt32(i.Fee)));
+            r.Datas.Add(group.Sum(i => i.Fee ?? 0));
             r.BackgroundColors.Add(BackgroundColors[index % BackgroundColors.Count]);
             r.BorderColors.Add(BorderColors[index % BackgroundColors.Count]);
             index++;

@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting;
 using MyRepository = LMIS.Administration.Repositories.TranslationRepository;
 
 namespace LMIS.Administration.Endpoints;
 [Route("Services/Administration/Translation/[action]")]
-[ServiceAuthorize(PermissionKeys.Translation)]
+[ServiceAuthorize(permission: "*")]
 public class TranslationEndpoint : ServiceEndpoint
 {
     protected IWebHostEnvironment HostEnvironment { get; }
