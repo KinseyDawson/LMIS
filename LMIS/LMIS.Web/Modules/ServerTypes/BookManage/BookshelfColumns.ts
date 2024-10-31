@@ -3,7 +3,6 @@ import { Column } from "@serenity-is/sleekgrid";
 import { BookshelfRow } from "./BookshelfRow";
 
 export interface BookshelfColumns {
-    BookshelfId: Column<BookshelfRow>;
     Location: Column<BookshelfRow>;
     CategoryName: Column<BookshelfRow>;
     BookCount: Column<BookshelfRow>;

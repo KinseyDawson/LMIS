@@ -8,8 +8,8 @@ namespace LMIS.BookManage.Columns;
 [BasedOnRow(typeof(PublisherRow), CheckNames = true)]
 public class PublisherColumns
 {
-    [EditLink,AlignRight]
-    public long PublisherId { get; set; }
+    //[EditLink,AlignRight]
+    //public long PublisherId { get; set; }
     [EditLink]
     public string PublisherName { get; set; }
     public string Contact { get; set; }

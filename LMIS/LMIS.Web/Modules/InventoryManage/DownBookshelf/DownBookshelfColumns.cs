@@ -8,8 +8,8 @@ namespace LMIS.InventoryManage.Columns;
 [BasedOnRow(typeof(DownBookshelfRow), CheckNames = true)]
 public class DownBookshelfColumns
 {
-    [AlignRight]
-    public long DownBookshelfId { get; set; }
+    //[AlignRight]
+    //public long DownBookshelfId { get; set; }
     public string BookName { get; set; }
     public string BookshelfLocation { get; set; }
     public long Inventory { get; set; }

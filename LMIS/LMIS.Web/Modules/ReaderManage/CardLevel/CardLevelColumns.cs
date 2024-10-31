@@ -8,8 +8,8 @@ namespace LMIS.ReaderManage.Columns;
 [BasedOnRow(typeof(CardLevelRow), CheckNames = true)]
 public class CardLevelColumns
 {
-    [EditLink,AlignRight]
-    public long CardLevelId { get; set; }
+    //[EditLink,AlignRight]
+    //public long CardLevelId { get; set; }
     [EditLink]
     public string CardLevelName { get; set; }
     public decimal Fee { get; set; }

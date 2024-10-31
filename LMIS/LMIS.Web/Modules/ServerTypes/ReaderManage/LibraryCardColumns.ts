@@ -4,7 +4,6 @@ import { LibraryCardStatusEnum } from "../Modules/ReaderManage.LibraryCard.Libra
 import { LibraryCardRow } from "./LibraryCardRow";
 
 export interface LibraryCardColumns {
-    LibraryCardId: Column<LibraryCardRow>;
     LibraryCardNo: Column<LibraryCardRow>;
     UserName: Column<LibraryCardRow>;
     CardLevelName: Column<LibraryCardRow>;

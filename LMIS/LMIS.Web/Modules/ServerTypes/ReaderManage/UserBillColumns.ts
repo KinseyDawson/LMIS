@@ -4,7 +4,6 @@ import { BillTypeEnum } from "../Modules/ReaderManage.UserBill.BillTypeEnum";
 import { UserBillRow } from "./UserBillRow";
 
 export interface UserBillColumns {
-    UserBillId: Column<UserBillRow>;
     UserName: Column<UserBillRow>;
     Type: Column<UserBillRow>;
     Fee: Column<UserBillRow>;

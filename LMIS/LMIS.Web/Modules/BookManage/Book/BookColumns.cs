@@ -9,8 +9,8 @@ namespace LMIS.BookManage.Columns;
 [BasedOnRow(typeof(BookRow), CheckNames = true)]
 public class BookColumns
 {
-    [EditLink, AlignRight]
-    public long BookId { get; set; }
+    //[EditLink, AlignRight]
+    //public long BookId { get; set; }
     [EditLink]
     public string BookName { get; set; }
     public string CN { get; set; }

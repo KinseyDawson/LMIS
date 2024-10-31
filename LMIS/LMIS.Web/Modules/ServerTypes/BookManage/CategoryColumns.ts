@@ -3,7 +3,6 @@ import { Column } from "@serenity-is/sleekgrid";
 import { CategoryRow } from "./CategoryRow";
 
 export interface CategoryColumns {
-    CategoryId: Column<CategoryRow>;
     CategoryName: Column<CategoryRow>;
     UpdateTime: Column<CategoryRow>;
 }

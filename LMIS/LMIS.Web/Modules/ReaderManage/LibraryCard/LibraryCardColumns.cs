@@ -9,8 +9,8 @@ namespace LMIS.ReaderManage.Columns;
 [BasedOnRow(typeof(LibraryCardRow), CheckNames = true)]
 public class LibraryCardColumns
 {
-    [EditLink,AlignRight]
-    public long LibraryCardId { get; set; }
+    //[EditLink,AlignRight]
+    //public long LibraryCardId { get; set; }
     [EditLink]
     public string LibraryCardNo { get; set; }
     public string UserName { get; set; }

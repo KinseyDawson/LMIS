@@ -3,7 +3,6 @@ import { Column } from "@serenity-is/sleekgrid";
 import { UserRow } from "./UserRow";
 
 export interface UserColumns {
-    UserId: Column<UserRow>;
     Username: Column<UserRow>;
     DisplayName: Column<UserRow>;
     Email: Column<UserRow>;

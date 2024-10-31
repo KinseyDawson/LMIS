@@ -4,8 +4,8 @@ namespace LMIS.Administration.Columns;
 [BasedOnRow(typeof(UserRow), CheckNames = true)]
 public class UserColumns
 {
-    [EditLink, AlignRight, Width(55)]
-    public string UserId { get; set; }
+    //[EditLink, AlignRight, Width(55)]
+    //public string UserId { get; set; }
     [EditLink, Width(150)]
     public string Username { get; set; }
     [Width(150)]

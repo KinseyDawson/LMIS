@@ -8,8 +8,8 @@ namespace LMIS.BookManage.Columns;
 [BasedOnRow(typeof(BookshelfRow), CheckNames = true)]
 public class BookshelfColumns
 {
-    [EditLink, AlignRight]
-    public long BookshelfId { get; set; }
+    //[EditLink, AlignRight]
+    //public long BookshelfId { get; set; }
     [EditLink]
     public string Location { get; set; }
     public string CategoryName { get; set; }

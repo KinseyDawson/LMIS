@@ -4,7 +4,6 @@ import { BorrowStatusEnum } from "../Modules/ReaderManage.Borrow.BorrowStatusEnu
 import { BorrowRow } from "./BorrowRow";
 
 export interface BorrowColumns {
-    BorrowId: Column<BorrowRow>;
     BorrowNo: Column<BorrowRow>;
     UserName: Column<BorrowRow>;
     BookName: Column<BorrowRow>;

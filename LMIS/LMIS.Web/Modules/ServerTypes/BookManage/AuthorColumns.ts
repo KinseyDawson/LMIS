@@ -4,7 +4,6 @@ import { SexEnum } from "../Modules/Common.Enums.SexEnum";
 import { AuthorRow } from "./AuthorRow";
 
 export interface AuthorColumns {
-    AuthorId: Column<AuthorRow>;
     AuthorName: Column<AuthorRow>;
     Sex: Column<AuthorRow>;
     Email: Column<AuthorRow>;

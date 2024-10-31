@@ -4,7 +4,6 @@ import { BookStatusEnum } from "../Modules/BookManage.Book.BookStatusEnum";
 import { BookRow } from "./BookRow";
 
 export interface BookColumns {
-    BookId: Column<BookRow>;
     BookName: Column<BookRow>;
     CN: Column<BookRow>;
     ISSN: Column<BookRow>;

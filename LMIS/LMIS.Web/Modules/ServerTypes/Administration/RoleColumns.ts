@@ -3,7 +3,6 @@ import { Column } from "@serenity-is/sleekgrid";
 import { RoleRow } from "./RoleRow";
 
 export interface RoleColumns {
-    RoleId: Column<RoleRow>;
     RoleName: Column<RoleRow>;
 }
 

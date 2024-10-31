@@ -3,7 +3,6 @@ import { Column } from "@serenity-is/sleekgrid";
 import { CardLevelRow } from "./CardLevelRow";
 
 export interface CardLevelColumns {
-    CardLevelId: Column<CardLevelRow>;
     CardLevelName: Column<CardLevelRow>;
     Fee: Column<CardLevelRow>;
     Rent: Column<CardLevelRow>;

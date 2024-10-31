@@ -9,8 +9,8 @@ namespace LMIS.ReaderManage.Columns;
 [BasedOnRow(typeof(BorrowRow), CheckNames = true)]
 public class BorrowColumns
 {
-    [EditLink, AlignRight]
-    public long BorrowId { get; set; }
+    //[EditLink, AlignRight]
+    //public long BorrowId { get; set; }
     [EditLink]
     [Width(200)]
     public string BorrowNo { get; set; }

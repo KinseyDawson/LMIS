@@ -3,7 +3,6 @@ import { Column } from "@serenity-is/sleekgrid";
 import { PublisherRow } from "./PublisherRow";
 
 export interface PublisherColumns {
-    PublisherId: Column<PublisherRow>;
     PublisherName: Column<PublisherRow>;
     Contact: Column<PublisherRow>;
     ContactPhone: Column<PublisherRow>;

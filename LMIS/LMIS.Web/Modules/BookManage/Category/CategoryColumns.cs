@@ -8,8 +8,8 @@ namespace LMIS.BookManage.Columns;
 [BasedOnRow(typeof(CategoryRow), CheckNames = true)]
 public class CategoryColumns
 {
-    [EditLink, AlignRight]
-    public long CategoryId { get; set; }
+    //[EditLink, AlignRight]
+    //public long CategoryId { get; set; }
     [EditLink]
     public string CategoryName { get; set; }
     [Width(150)]

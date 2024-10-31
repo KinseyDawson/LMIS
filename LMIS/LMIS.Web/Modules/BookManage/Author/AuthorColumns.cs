@@ -9,8 +9,8 @@ namespace LMIS.BookManage.Columns;
 [BasedOnRow(typeof(AuthorRow), CheckNames = true)]
 public class AuthorColumns
 {
-    [EditLink, AlignRight]
-    public long AuthorId { get; set; }
+    //[EditLink, AlignRight]
+    //public long AuthorId { get; set; }
     [EditLink]
     public string AuthorName { get; set; }
     public SexEnum Sex { get; set; }

@@ -9,8 +9,8 @@ namespace LMIS.ReaderManage.Columns;
 [BasedOnRow(typeof(UserBillRow), CheckNames = true)]
 public class UserBillColumns
 {
-    [AlignRight]
-    public long UserBillId { get; set; }
+    //[AlignRight]
+    //public long UserBillId { get; set; }
     public string UserName { get; set; }
     [Width(100)]
     public BillTypeEnum Type { get; set; }
